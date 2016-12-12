@@ -332,13 +332,26 @@ __EOF__
 name=$(basename ${DESTDIR})
 pushd "$(dirname ${DESTDIR})"
 tar zcvf $name.tgz $name || exit 3
-rm -rf $name
+#rm -rf $name
 ARCHIVE_DIR="/media/garrett/STEAMLINK/steamlink/apps"
 cp $name.tgz $ARCHIVE_DIR && echo "Archive copied to $ARCHIVE_DIR/${name}.tgz"
 sync
 popd
 
 #
+# Create GDB init file
+#
+cat > "${TOP}/steamlink/apps/kodi/lib/kodi/.gdbinit" <<__EOF__
+set sysroot ${MARVELL_ROOTFS}
+set auto-load safe-path ${MARVELL_SDK_PATH}
+set debug-file-directory ${MARVELL_SDK_PATH}/toolchain/usr/lib/debug/usr/armv7a-cros-linux-gnueabi
+file ${DESTDIR}/lib/kodi/kodi-steamlink
+
+# Uncomment the following line with your connection info
+#target extended-remote 10.0.0.103:8080
+__EOF__
+
+
 # All done!
 #
 echo "Build complete!"
