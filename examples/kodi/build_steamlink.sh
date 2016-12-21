@@ -402,6 +402,9 @@ name=$(basename ${DESTDIR})
 pushd "$(dirname ${DESTDIR})"
 tar zcvf $name.tgz $name || exit 3
 rm -rf $name
+ARCHIVE_DIR="/media/garrett/STEAMLINK/steamlink/apps"
+cp $name.tgz $ARCHIVE_DIR && echo "Archive copied to $ARCHIVE_DIR/${name}.tgz"
+sync
 popd
 
 #
