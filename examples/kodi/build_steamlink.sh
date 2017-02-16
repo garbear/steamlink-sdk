@@ -140,7 +140,7 @@ if [ ! -L "${DEPS_INSTALL_PATH}/lib/libssl.so" ]; then
 fi
 
 # Build binary add-ons
-make -C target/binary-addons -j20 || exit 3
+make -C target/binary-addons -j20 ADDONS="peripheral.joystick" || exit 3
 
 # All done!
 
