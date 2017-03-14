@@ -194,7 +194,8 @@ do
         cp -v "${library}" "${target}" || exit 6
         chmod 755 "${target}"
     else
-        echo "Warning: Couldn't find $i"
+        echo "Error: Couldn't find $i"
+        exit 6
     fi
 done
 
