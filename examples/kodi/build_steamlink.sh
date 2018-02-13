@@ -21,7 +21,7 @@ esac
 # Download the source to Kodi
 #
 if [ ! -d "${SRC}" ]; then
-	git clone --depth=1 --single-branch -b "18.0-Leia" https://github.com/xbmc/xbmc.git "${SRC}" || exit 1
+	git clone -b "steamlink-18" git@github.com:garbear/kodi-steamlink.git "${SRC}" || exit 1
 	rm -f "${BUILD}/.patch-applied"
 fi
 
