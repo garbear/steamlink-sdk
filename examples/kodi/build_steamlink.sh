@@ -21,7 +21,7 @@ esac
 # Download the source to Kodi
 #
 if [ ! -d "${SRC}" ]; then
-	git clone --depth=1 --single-branch -b "17.6-Krypton" https://github.com/xbmc/xbmc.git "${SRC}" || exit 1
+	git clone --depth=1 --single-branch -b "18.0-Leia" https://github.com/xbmc/xbmc.git "${SRC}" || exit 1
 	rm -f "${BUILD}/.patch-applied"
 fi
 
@@ -47,12 +47,6 @@ if [ "${TOP}/kodi.patch" -nt "${BUILD}/.patch-applied" ]; then
 	touch "${BUILD}/.patch-applied"
 fi
 
-if [ ! -f "${SRC}/configure" ]; then
-	pushd "${SRC}"
-	./bootstrap || exit 1
-	popd
-fi
-
 if [ ! -f "${SRC}/tools/depends/configure" ]; then
 	pushd "${SRC}/tools/depends"
 	./bootstrap || exit 1
@@ -65,64 +59,23 @@ fi
 MARVELL_SDK_PATH="$(cd "${TOP}/../.." && pwd)"
 MARVELL_ROOTFS="${MARVELL_SDK_PATH}/rootfs"
 SOC_BUILD=armv7a-cros-linux-gnueabi
+BUILD_MODE=release # or debug
 
 if [ ! -d "${MARVELL_ROOTFS}" ]; then
 	echo "Couldn't find Marvell SDK rootfs, is this script in the SDK examples directory?" >&2
 	exit 1
 fi
 
-DEPS_INSTALL_PATH="${MARVELL_SDK_PATH}/kodi-deps/${SOC_BUILD}"
-DEPS_CONFIG_SITE="${DEPS_INSTALL_PATH}/share/config.site"
-DEPS_TOOLCHAIN_CMAKE="${DEPS_INSTALL_PATH}/share/Toolchain.cmake"
-DEPS_TOOLCHAIN_CMAKE_ADDONS="${SRC}/tools/depends/target/Toolchain_binaddons.cmake"
+DEPS_INSTALL_PATH="${MARVELL_SDK_PATH}/kodi-deps/${SOC_BUILD}-${BUILD_MODE}"
 
 if [ ! -f "${SRC}/tools/depends/Makefile.include" ]; then
-	# Run this in a subshell so we don't set CC and so forth yet
-	(
-		source "${MARVELL_SDK_PATH}/setenv.sh" || exit 1
-
-		pushd "${SRC}/tools/depends"
-		./configure --with-toolchain="${MARVELL_SDK_PATH}/toolchain" --prefix="${MARVELL_SDK_PATH}/kodi-deps" --host=${SOC_BUILD} || exit 2
-
-		cat >"${DEPS_CONFIG_SITE}.new" << __EOF__
-MARVELL_SDK_PATH="${MARVELL_SDK_PATH}"
-MARVELL_ROOTFS="${MARVELL_ROOTFS}"
-
-__EOF__
-		sed \
-			-e "s,^CC=.*,CC=\"${MARVELL_SDK_PATH}/toolchain/bin/${CC}\"," \
-			-e "s,^CXX=.*,CXX=\"${MARVELL_SDK_PATH}/toolchain/bin/${CXX}\"," \
-			-e "s,^CPP=.*,CPP=\"\${CC} -E\"," \
-			"${DEPS_CONFIG_SITE}" \
-			>>"${DEPS_CONFIG_SITE}.new"
-		mv "${DEPS_CONFIG_SITE}.new" "${DEPS_CONFIG_SITE}"
-
-		sed -i \
-			-e "s,^SET(CMAKE_C_FLAGS .*,SET(CMAKE_C_FLAGS \" --sysroot=${MARVELL_ROOTFS} -marm -mfloat-abi=hard -isystem ${DEPS_INSTALL_PATH}/include\")," \
-			-e "s,^SET(CMAKE_CXX_FLAGS .*,SET(CMAKE_CXX_FLAGS \" --sysroot=${MARVELL_ROOTFS} -marm -mfloat-abi=hard -g -O2 -std=gnu++11 -isystem ${DEPS_INSTALL_PATH}/include\")," \
-			"${DEPS_TOOLCHAIN_CMAKE}"
-
-		sed -i \
-			-e "s,^CPU=.*,CPU=armv7-a," \
-			-e "s,^OS=.*,OS=linux," \
-			-e "s,^CC=.*,CC=${MARVELL_SDK_PATH}/toolchain/bin/${CC}," \
-			-e "s,^CXX=.*,CXX=${MARVELL_SDK_PATH}/toolchain/bin/${CXX}," \
-			-e "s,^CPP=.*,CPP=\$(CC) -E," \
-			Makefile.include
-
-		#
-		# Configure add-ons
-		#
-		sed -i \
-			-e "s,^set(CMAKE_C_FLAGS \",set(CMAKE_C_FLAGS \"--sysroot=${MARVELL_ROOTFS} -marm -mfloat-abi=hard -isystem ${DEPS_INSTALL_PATH}/include ," \
-			-e "s,^set(CMAKE_CXX_FLAGS \",set(CMAKE_CXX_FLAGS \"--sysroot=${MARVELL_ROOTFS} -marm -mfloat-abi=hard -g -O2 -std=gnu++11 -isystem ${DEPS_INSTALL_PATH}/include ," \
-			"${DEPS_TOOLCHAIN_CMAKE_ADDONS}"
-
-		echo "" >> "${DEPS_TOOLCHAIN_CMAKE_ADDONS}"
-		echo "set(STEAMLINK 1)" >>"${DEPS_TOOLCHAIN_CMAKE_ADDONS}"
-		echo "list(APPEND CMAKE_FIND_ROOT_PATH \"${MARVELL_ROOTFS}\")" >> \
-			"${DEPS_TOOLCHAIN_CMAKE_ADDONS}"
-	) || exit $?
+	pushd "${SRC}/tools/depends"
+	./configure \
+	    `[ ${BUILD_MODE} == debug ] && echo "--enable-debug" || echo "--disable-debug"` \
+	    --prefix="${MARVELL_SDK_PATH}/kodi-deps" \
+	    --with-platform=steamlink \
+	    --with-toolchain="${MARVELL_SDK_PATH}/toolchain" \
+	    --host=${SOC_BUILD} || exit 2
 fi
 
 # GMP from the Steam Link SDK conflicts with Kodi
@@ -156,16 +109,15 @@ function satisfy_dependency
 	# Build the dependency but don't actually install it
 	path="${SRC}/tools/depends/target/$1"
 	make -C "${path}" $2
-	touch "${path}/.installed-${SOC_BUILD}"
+	touch "${path}/.installed-${SOC_BUILD}-${BUILD_MODE}"
 }
-satisfy_dependency alsa-lib "${SOC_BUILD}/src/.libs/libasound.so"
-satisfy_dependency libsdl2 "${SOC_BUILD}/build/.libs/libSDL2.a"
+satisfy_dependency alsa-lib "${SOC_BUILD}-${BUILD_MODE}/src/.libs/libasound.so"
 
 # Fix libgpg-error
 pushd target/libgpg-error
-make ${SOC_BUILD}
-if ! grep "host_triplet = arm-unknown-linux-gnueabi" "${SOC_BUILD}/src/Makefile" >/dev/null; then
-	sed -i "s,host_triplet = .*,host_triplet = arm-unknown-linux-gnueabi," "${SOC_BUILD}/src/Makefile"
+make ${SOC_BUILD}-${BUILD_MODE}
+if ! grep "host_triplet = arm-unknown-linux-gnueabi" "${SOC_BUILD}-${BUILD_MODE}/src/Makefile" >/dev/null; then
+	sed -i "s,host_triplet = .*,host_triplet = arm-unknown-linux-gnueabi," "${SOC_BUILD}-${BUILD_MODE}/src/Makefile"
 fi
 popd
 
@@ -173,22 +125,8 @@ popd
 make -C target || exit 3
 make -C target/samba || exit 3
 
-# Build the shared library version of OpenSSL
-# We need to do this after make target because something in that process
-# sometimes removes the shared library links
-if [ ! -L "${DEPS_INSTALL_PATH}/lib/libssl.so" ]; then
-	pushd target/openssl
-	make || exit 3
-	cp -av ${SOC_BUILD}/lib*.so* "${DEPS_INSTALL_PATH}/lib"
-	popd
-	for dependency in curl librtmp; do
-		rm -rf target/${dependency}/${SOC_BUILD}
-		make -C target/${dependency}
-	done
-fi
-
 # Build binary add-ons
-make -C target/binary-addons PREFIX="${BUILD}/steamlink/apps/kodi" -j20 || exit 3
+make -C target/binary-addons PREFIX="${BUILD}/steamlink/apps/kodi/home/apps/kodi" -j20 || exit 3
 
 # All done!
 
@@ -197,35 +135,15 @@ popd
 #
 # Finally build Kodi
 #
-source "${MARVELL_SDK_PATH}/setenv.sh" || exit 1
-OLD_PKG_CONFIG_LIBDIR=$PKG_CONFIG_LIBDIR
-source "${DEPS_CONFIG_SITE}"
-export PKG_CONFIG_LIBDIR="${PKG_CONFIG_LIBDIR}:${OLD_PKG_CONFIG_LIBDIR}"
-
-export CC="${CC} -DEGL_API_FB"
-export CXX="${CXX} -DEGL_API_FB"
-export LDFLAGS="${LDFLAGS} -lstdc++"
-export CFLAGS CXXFLAGS CPPFLAGS
-export LD AR AS NM STRIP RANLIB OBJDUMP
-export PYTHON_VERSION PYTHON_CPPFLAGS PYTHON_LDFLAGS PYTHON_SITE_PKG PYTHON_NOVERSIONCHECK NATIVE_ROOT
-export UDEV_CFLAGS="-I${DEPS_INSTALL_PATH}/include"
-export PC_FREETYPE_INCLUDEDIR="${DEPS_INSTALL_PATH}/include/freetype2/"
-export FREETYPE2_CFLAGS="-I${DEPS_INSTALL_PATH}/include -I${PC_FREETYPE_INCLUDEDIR}"
-export UDEV_LIBS=-ludev
-export CEC_CFLAGS="-I${DEPS_INSTALL_PATH}/include"
-export CEC_LIBS=-lcec
-export LIBXML_CFLAGS="-I${DEPS_INSTALL_PATH}/include/libxml2"
-export PULSE_CFLAGS="-I${MARVELL_ROOTFS}/usr/include"
-export PULSE_LIBS="-lpulse -L${MARVELL_ROOTFS}/usr/lib/pulseaudio -lpulsecommon-8.0"
-export PKG_CONFIG_SYSROOT_DIR="${MARVELL_ROOTFS}"
 pushd "${SRC}"
-./configure $STEAMLINK_CONFIGURE_OPTS --prefix=/home/apps/kodi --disable-x11 || exit 4
-
-make clean
+make -C tools/depends/target/cmakebuildsys CMAKE_EXTRA_ARGUMENTS="-DCMAKE_INSTALL_PREFIX=/home/apps/kodi" || exit 5
+pushd build
 make -j${NCPU} || exit 5
 
 export DESTDIR="${BUILD}/steamlink/apps/kodi"
 make install || exit 5
+popd
+
 for dir in "${DESTDIR}/home/apps/kodi"/*; do
     cp -av "$dir" "${DESTDIR}" || exit 6
 done
@@ -237,22 +155,26 @@ if [ "${DESTDIR}/home" == "/home" ]; then
 fi
 rm -rf "${DESTDIR}/home"
 
+# Remove TexturePacker (TODO)
+echo "Removing TexturePacker (TODO: This shouldn't be installed)"
+rm "${DESTDIR}/bin/TexturePacker"
+
 # Install python
 cp -a ${DEPS_INSTALL_PATH}/lib/python2.7 ${DESTDIR}/lib/ || exit 6
 
 # Install libraries
+mkdir -p "${DESTDIR}/lib/mariadb"
 for i in \
-	libass.so.5 \
-	libbluray.so.1 \
-	libcec.so.4.0.1 \
-	libcrypto.so.1.0.0 \
-	libcurl.so.4 \
-	libnfs.so.8 \
-	libplist.so.1 \
-	libshairplay.so.0 \
+	libass.so.5`#.3.2` \
+	libbluray.so.2`#.0.2` \
+	libcec.so`#.4.0.1` \
+	libdbus-1.so.3`#.17.0` \
+	libinput.so.10 \
+	libplist.so.3.1.0 \
+	libplist++.so.3.1.0 \
+	libshairplay.so.0.0.0 \
 	libsmbclient.so.0 \
-	libssl.so.1.0.0 \
-
+	mariadb/libmariadb.so.3
 do
     library="${DEPS_INSTALL_PATH}/lib/$i"
     if [ -f "${library}" ]; then
@@ -260,15 +182,23 @@ do
         cp -v "${library}" "${target}" || exit 6
         chmod 755 "${target}"
     else
-        echo "Warning: Couldn't find $i"
+        echo "Error: Couldn't find $i"
+        exit 6
     fi
 done
 
 # Strip the binaries
+mkdir -p ${DESTDIR}/../temp
 find ${DESTDIR} -type f | while read file; do
     if file ${file} | grep ELF >/dev/null; then
-        echo "Stripping $(basename ${file})"
-        armv7a-cros-linux-gnueabi-strip ${file} || exit 6
+        filename=$(basename ${file})
+        if [ ${filename} == kodi-steamlink ] || \
+           [ ${filename} == peripheral.joystick.so.1.4.6 ]; then
+            cp ${file} ${DESTDIR}/../temp/${filename}
+            echo "Backing up ${filename}"
+        fi
+        echo "Stripping ${filename}"
+        ${MARVELL_SDK_PATH}/toolchain/bin/armv7a-cros-linux-gnueabi-strip ${file} || exit 6
     fi
 done
 
@@ -293,6 +223,7 @@ export LD_LIBRARY_PATH="\${LD_LIBRARY_PATH}:/usr/lib/pulseaudio:\${PWD}/lib"
 export KODI_HOME="\${PWD}/share/kodi"
 export KODI_HOME_BIN="\${PWD}/lib/kodi"
 export PYTHONHOME="\${PWD}"
+export XKB_CONFIG_ROOT="\${PWD}/share/X11/xkb"
 exec ./bin/kodi
 __EOF__
 chmod 755 "${DESTDIR}/kodi.sh"
