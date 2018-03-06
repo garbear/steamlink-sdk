@@ -169,6 +169,14 @@ if [ "${DESTDIR}/home" == "/home" ]; then
 fi
 rm -rf "${DESTDIR}/home"
 
+# Fix prefixes (TODO)
+sed -i \
+    -e "s,^prefix=.*,prefix=\"/home/apps/kodi\"," \
+    -e "s,^exec_prefix=.*,exec_prefix=\"/home/apps/kodi\"," \
+    -e "s,^datarootdir=.*,datarootdir=\"\${prefix}/share\"," \
+    -e "s,^LIBDIR=.*,LIBDIR=\"\${exec_prefix}/lib\"," \
+    ${DESTDIR}/bin/kodi
+
 # Install python
 cp -a ${DEPS_INSTALL_PATH}/lib/python2.7 ${DESTDIR}/lib/ || exit 6
 
