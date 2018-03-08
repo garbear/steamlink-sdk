@@ -200,10 +200,10 @@ do
 done
 
 # Strip the binaries
-find ${DESTDIR} -type f -name "*.so" | while read file; do
+find ${DESTDIR} -type f | while read file; do
     if file ${file} | grep ELF >/dev/null; then
         echo "Stripping $(basename ${file})"
-        ${MARVELL_SDK_PATH}/toolchain/bin/armv7a-cros-linux-gnueabi-strip ${file} || exit 6
+        ${MARVELL_SDK_PATH}/toolchain/bin/armv7a-cros-linux-gnueabi-strip ${file}
     fi
 done
 
