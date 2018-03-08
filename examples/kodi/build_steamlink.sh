@@ -150,7 +150,7 @@ popd
 # Finally build Kodi
 #
 pushd "${SRC}"
-make -C tools/depends/target/cmakebuildsys || exit 5
+make -C tools/depends/target/cmakebuildsys CMAKE_EXTRA_ARGUMENTS="-DCMAKE_INSTALL_PREFIX=/home/apps/kodi" || exit 5
 pushd build
 make -j${NCPU} || exit 5
 
@@ -158,7 +158,7 @@ export DESTDIR="${BUILD}/steamlink/apps/kodi"
 make install || exit 5
 popd
 
-for dir in "${DESTDIR}/${DEPS_INSTALL_PATH}"/*; do
+for dir in "${DESTDIR}/home/apps/kodi"/*; do
     cp -av "$dir" "${DESTDIR}" || exit 6
 done
 
@@ -168,14 +168,6 @@ if [ "${DESTDIR}/home" == "/home" ]; then
     exit 6
 fi
 rm -rf "${DESTDIR}/home"
-
-# Fix prefixes (TODO)
-sed -i \
-    -e "s,^prefix=.*,prefix=\"/home/apps/kodi\"," \
-    -e "s,^exec_prefix=.*,exec_prefix=\"/home/apps/kodi\"," \
-    -e "s,^datarootdir=.*,datarootdir=\"\${prefix}/share\"," \
-    -e "s,^LIBDIR=.*,LIBDIR=\"\${exec_prefix}/lib\"," \
-    ${DESTDIR}/bin/kodi
 
 # Install python
 cp -a ${DEPS_INSTALL_PATH}/lib/python2.7 ${DESTDIR}/lib/ || exit 6
