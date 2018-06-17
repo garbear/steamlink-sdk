@@ -155,6 +155,10 @@ if [ "${DESTDIR}/home" == "/home" ]; then
 fi
 rm -rf "${DESTDIR}/home"
 
+# Remove TexturePacker (TODO)
+echo "Removing TexturePacker (TODO: This shouldn't be installed)"
+rm "${DESTDIR}/bin/TexturePacker"
+
 # Install python
 cp -a ${DEPS_INSTALL_PATH}/lib/python2.7 ${DESTDIR}/lib/ || exit 6
 
