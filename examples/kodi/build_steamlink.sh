@@ -364,6 +364,8 @@ file ${DESTDIR}/lib/kodi/kodi-steamlink
 
 # Uncomment the following line with your connection info
 #target extended-remote 10.0.0.103:8080
+
+b CLinuxInputDevices::IsUdevJoystick(char const*)
 __EOF__
 
 # Restore stripped files
