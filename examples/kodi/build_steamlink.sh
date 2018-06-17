@@ -204,9 +204,16 @@ do
 done
 
 # Strip the binaries
+mkdir -p ${DESTDIR}/../temp
 find ${DESTDIR} -type f | while read file; do
     if file ${file} | grep ELF >/dev/null; then
-        echo "Stripping $(basename ${file})"
+        filename=$(basename ${file})
+        if [ ${filename} == kodi-steamlink ] || \
+           [ ${filename} == peripheral.joystick.so.1.4.6 ]; then
+            cp ${file} ${DESTDIR}/../temp/${filename}
+            echo "Backing up ${filename}"
+        fi
+        echo "Stripping ${filename}"
         ${MARVELL_SDK_PATH}/toolchain/bin/armv7a-cros-linux-gnueabi-strip ${file}
     fi
 done
@@ -359,6 +366,17 @@ file ${DESTDIR}/lib/kodi/kodi-steamlink
 #target extended-remote 10.0.0.103:8080
 __EOF__
 
+# Restore stripped files
+find ${DESTDIR} -type f | while read file; do
+    if file ${file} | grep ELF >/dev/null; then
+        filename=$(basename ${file})
+        if [ ${filename} == kodi-steamlink ] || \
+           [ ${filename} == peripheral.joystick.so.1.4.6 ]; then
+            echo "Restoring ${filename}"
+            cp ${DESTDIR}/../temp/${filename} ${file}
+        fi
+    fi
+done
 
 # All done!
 #
