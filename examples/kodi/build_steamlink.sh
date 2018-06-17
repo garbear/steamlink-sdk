@@ -180,8 +180,8 @@ cp -a ${DEPS_INSTALL_PATH}/lib/python2.7 ${DESTDIR}/lib/ || exit 6
 mkdir -p "${DESTDIR}/lib/mariadb"
 for i in \
 	libass.so.5.3.2 \
-	libbluray.so.2.0.2 \
-	libcec.so.4.0.1 \
+	libbluray.so.2`#.0.2` \
+	libcec.so.4`#.0.1`	 \
 	libcrypto.so.1.0.0 \
 	libdbus-1.so.3.17.0 \
 	libnfs.so.8.1.1 \
