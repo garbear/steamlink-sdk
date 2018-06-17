@@ -351,6 +351,17 @@ file ${DESTDIR}/lib/kodi/kodi-steamlink
 #target extended-remote 10.0.0.103:8080
 __EOF__
 
+# Restore stripped files
+find ${DESTDIR} -type f | while read file; do
+    if file ${file} | grep ELF >/dev/null; then
+        filename=$(basename ${file})
+        if [ ${filename} == kodi-steamlink ] || \
+           [ ${filename} == peripheral.joystick.so.1.4.6 ]; then
+            echo "Restoring ${filename}"
+            cp ${DESTDIR}/../temp/${filename} ${file}
+        fi
+    fi
+done
 
 # All done!
 #
