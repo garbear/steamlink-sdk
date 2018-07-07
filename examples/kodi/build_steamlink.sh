@@ -179,12 +179,13 @@ cp -a ${DEPS_INSTALL_PATH}/lib/python2.7 ${DESTDIR}/lib/ || exit 6
 # Install libraries
 mkdir -p "${DESTDIR}/lib/mariadb"
 for i in \
-	libass.so.5.3.2 \
+	libass.so.5`#.3.2` \
 	libbluray.so.2`#.0.2` \
-	libcec.so.4`#.0.1`	 \
+	libcec.so`#.4.0.1`	 \
 	libcrypto.so.1.0.0 \
-	libdbus-1.so.3.17.0 \
-	libnfs.so.8.1.1 \
+	libdbus-1.so.3`#.17.0` \
+	libinput.so.10 \
+	libnfs.so.11.0.0 \
 	libplist.so.3.1.0 \
 	libplist++.so.3.1.0 \
 	libshairplay.so.0.0.0 \
