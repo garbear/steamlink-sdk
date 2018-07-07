@@ -240,6 +240,7 @@ export LD_LIBRARY_PATH="\${LD_LIBRARY_PATH}:/usr/lib/pulseaudio:\${PWD}/lib"
 export KODI_HOME="\${PWD}/share/kodi"
 export KODI_HOME_BIN="\${PWD}/lib/kodi"
 export PYTHONHOME="\${PWD}"
+export XKB_CONFIG_ROOT="\${PWD}/share/X11/xkb"
 exec ./bin/kodi
 __EOF__
 chmod 755 "${DESTDIR}/kodi.sh"
