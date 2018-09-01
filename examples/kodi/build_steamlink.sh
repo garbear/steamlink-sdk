@@ -206,7 +206,7 @@ done
 
 # Strip the binaries
 mkdir -p ${DESTDIR}/../temp
-find ${DESTDIR} -type f | while read file; do
+find ${DESTDIR} -type f -name "*.so" | while read file; do
     if file ${file} | grep ELF >/dev/null; then
         filename=$(basename ${file})
         if [ ${filename} == kodi-steamlink ] || \
