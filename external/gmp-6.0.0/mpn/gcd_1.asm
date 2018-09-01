@@ -1,0 +1,1 @@
+../mpn/arm/v6t2/gcd_1.asm

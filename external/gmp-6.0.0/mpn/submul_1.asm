@@ -1,0 +1,1 @@
+../mpn/arm/v6/submul_1.asm
