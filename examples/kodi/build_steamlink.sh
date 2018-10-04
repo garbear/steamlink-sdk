@@ -125,20 +125,6 @@ popd
 make -C target || exit 3
 make -C target/samba || exit 3
 
-# Build the shared library version of OpenSSL
-# We need to do this after make target because something in that process
-# sometimes removes the shared library links
-if [ ! -L "${DEPS_INSTALL_PATH}/lib/libssl.so" ]; then
-	pushd target/openssl
-	make || exit 3
-	cp -av ${SOC_BUILD}-${BUILD_MODE}/lib*.so* "${DEPS_INSTALL_PATH}/lib"
-	popd
-	for dependency in curl; do
-		rm -rf target/${dependency}/${SOC_BUILD}-${BUILD_MODE}
-		make -C target/${dependency}
-	done
-fi
-
 # Build binary add-ons
 make -C target/binary-addons -j20 ADDONS="peripheral.joystick" || exit 3
 
