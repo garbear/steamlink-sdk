@@ -168,15 +168,12 @@ for i in \
 	libass.so.5`#.3.2` \
 	libbluray.so.2`#.0.2` \
 	libcec.so`#.4.0.1`	 \
-	libcrypto.so.1.0.0 \
 	libdbus-1.so.3`#.17.0` \
 	libinput.so.10 \
-	libnfs.so.11.0.0 \
 	libplist.so.3.1.0 \
 	libplist++.so.3.1.0 \
 	libshairplay.so.0.0.0 \
 	libsmbclient.so.0 \
-	libssl.so.1.0.0 \
 	mariadb/libmariadb.so.3
 do
     library="${DEPS_INSTALL_PATH}/lib/$i"
@@ -192,7 +189,7 @@ done
 
 # Strip the binaries
 mkdir -p ${DESTDIR}/../temp
-find ${DESTDIR} -type f -name "*.so" | while read file; do
+find ${DESTDIR} -type f | while read file; do
     if file ${file} | grep ELF >/dev/null; then
         filename=$(basename ${file})
         if [ ${filename} == kodi-steamlink ] || \
@@ -201,7 +198,7 @@ find ${DESTDIR} -type f -name "*.so" | while read file; do
             echo "Backing up ${filename}"
         fi
         echo "Stripping ${filename}"
-        ${MARVELL_SDK_PATH}/toolchain/bin/armv7a-cros-linux-gnueabi-strip ${file}
+        ${MARVELL_SDK_PATH}/toolchain/bin/armv7a-cros-linux-gnueabi-strip ${file} || exit 6
     fi
 done
 
