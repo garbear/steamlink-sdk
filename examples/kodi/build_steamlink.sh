@@ -351,6 +351,8 @@ file ${DESTDIR}/lib/kodi/kodi-steamlink
 #target extended-remote 10.0.0.103:8080
 
 b CLinuxInputDevices::IsUdevJoystick(char const*)
+b PERIPHERALS::CPeripheralAddon::ProcessEvents()
+b PERIPHERALS::CPeripheralAddon::CreateAddon()
 __EOF__
 
 # Restore stripped files
