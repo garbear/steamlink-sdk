@@ -59,7 +59,7 @@ fi
 MARVELL_SDK_PATH="$(cd "${TOP}/../.." && pwd)"
 MARVELL_ROOTFS="${MARVELL_SDK_PATH}/rootfs"
 SOC_BUILD=armv7a-cros-linux-gnueabi
-BUILD_MODE=release # or debug
+BUILD_MODE=debug # or release
 
 if [ ! -d "${MARVELL_ROOTFS}" ]; then
 	echo "Couldn't find Marvell SDK rootfs, is this script in the SDK examples directory?" >&2
