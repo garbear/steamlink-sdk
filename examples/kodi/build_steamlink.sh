@@ -198,7 +198,7 @@ find ${DESTDIR} -type f | while read file; do
             echo "Backing up ${filename}"
         fi
         echo "Stripping ${filename}"
-        ${MARVELL_SDK_PATH}/toolchain/bin/armv7a-cros-linux-gnueabi-strip ${file} || exit 6
+        ${MARVELL_SDK_PATH}/toolchain/bin/armv7a-cros-linux-gnueabi-strip ${file}
     fi
 done
 
