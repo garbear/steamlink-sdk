@@ -126,7 +126,7 @@ make -C target || exit 3
 make -C target/samba || exit 3
 
 # Build binary add-ons
-make -C target/binary-addons -j20 ADDONS="peripheral.joystick" || exit 3
+make -C target/binary-addons -j20 PREFIX="${BUILD}/steamlink/apps/kodi/home/apps/kodi" ADDONS="peripheral.joystick" || exit 3
 
 # All done!
 
