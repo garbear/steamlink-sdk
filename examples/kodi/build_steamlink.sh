@@ -95,7 +95,7 @@ fi
 # Build native dependencies
 #
 pushd "${SRC}/tools/depends"
-make -C native || exit 2
+#make -C native || exit 2
 popd
 
 #
@@ -111,22 +111,22 @@ function satisfy_dependency
 	make -C "${path}" $2
 	touch "${path}/.installed-${SOC_BUILD}-${BUILD_MODE}"
 }
-satisfy_dependency alsa-lib "${SOC_BUILD}-${BUILD_MODE}/src/.libs/libasound.so"
+#satisfy_dependency alsa-lib "${SOC_BUILD}-${BUILD_MODE}/src/.libs/libasound.so"
 
 # Fix libgpg-error
 pushd target/libgpg-error
-make ${SOC_BUILD}-${BUILD_MODE}
+#make ${SOC_BUILD}-${BUILD_MODE}
 if ! grep "host_triplet = arm-unknown-linux-gnueabi" "${SOC_BUILD}-${BUILD_MODE}/src/Makefile" >/dev/null; then
 	sed -i "s,host_triplet = .*,host_triplet = arm-unknown-linux-gnueabi," "${SOC_BUILD}-${BUILD_MODE}/src/Makefile"
 fi
 popd
 
 # make everything
-make -C target || exit 3
-make -C target/samba || exit 3
+#make -C target || exit 3
+#make -C target/samba || exit 3
 
 # Build binary add-ons
-make -C target/binary-addons PREFIX="${BUILD}/steamlink/apps/kodi/home/apps/kodi" -j20 || exit 3
+#make -C target/binary-addons PREFIX="${BUILD}/steamlink/apps/kodi/home/apps/kodi" -j20 || exit 3
 
 # All done!
 
