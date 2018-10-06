@@ -47,11 +47,11 @@ if [ "${TOP}/kodi.patch" -nt "${BUILD}/.patch-applied" ]; then
 	touch "${BUILD}/.patch-applied"
 fi
 
-if [ ! -f "${SRC}/tools/depends/configure" ]; then
+#if [ ! -f "${SRC}/tools/depends/configure" ]; then
 	pushd "${SRC}/tools/depends"
 	./bootstrap || exit 1
 	popd
-fi
+#fi
 
 #
 # Configure build dependencies
@@ -68,7 +68,7 @@ fi
 
 DEPS_INSTALL_PATH="${MARVELL_SDK_PATH}/kodi-deps/${SOC_BUILD}-${BUILD_MODE}"
 
-if [ ! -f "${SRC}/tools/depends/Makefile.include" ]; then
+#if [ ! -f "${SRC}/tools/depends/Makefile.include" ]; then
 	pushd "${SRC}/tools/depends"
 	./configure \
 	    `[ ${BUILD_MODE} == debug ] && echo "--enable-debug" || echo "--disable-debug"` \
@@ -76,7 +76,7 @@ if [ ! -f "${SRC}/tools/depends/Makefile.include" ]; then
 	    --with-platform=steamlink \
 	    --with-toolchain="${MARVELL_SDK_PATH}/toolchain" \
 	    --host=${SOC_BUILD} || exit 2
-fi
+#fi
 
 # GMP from the Steam Link SDK conflicts with Kodi
 if [ -f "${MARVELL_ROOTFS}/usr/include/gmp.h" ]; then
@@ -126,7 +126,7 @@ popd
 #make -C target/samba || exit 3
 
 # Build binary add-ons
-#make -C target/binary-addons PREFIX="${BUILD}/steamlink/apps/kodi/home/apps/kodi" -j20 || exit 3
+make -C target/binary-addons PREFIX="${BUILD}/steamlink/apps/kodi/home/apps/kodi" -j20 ADDONS="peripheral.joystick" || exit 3
 
 # All done!
 
@@ -350,7 +350,7 @@ file ${DESTDIR}/lib/kodi/kodi-steamlink
 # Uncomment the following line with your connection info
 #target extended-remote 10.0.0.103:8080
 
-b CLinuxInputDevices::IsUdevJoystick(char const*)
+#b CLinuxInputDevices::IsUdevJoystick(char const*)
 __EOF__
 
 # Restore stripped files
