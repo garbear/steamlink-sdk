@@ -21,7 +21,7 @@ esac
 # Download the source to Kodi
 #
 if [ ! -d "${SRC}" ]; then
-	git clone -b "steamlink-18beta3" git@github.com:garbear/kodi-steamlink.git "${SRC}" || exit 1
+	git clone -b "steamlink-18beta4" git@github.com:garbear/kodi-steamlink.git "${SRC}" || exit 1
 	rm -f "${BUILD}/.patch-applied"
 fi
 
