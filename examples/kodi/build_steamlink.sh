@@ -351,6 +351,10 @@ file ${DESTDIR}/lib/kodi/kodi-steamlink
 #target extended-remote 10.0.0.103:8080
 
 #b CLinuxInputDevices::IsUdevJoystick(char const*)
+#b 'CVideoPlayerVideo::OpenStream(CDVDStreamInfo&, CDVDVideoCodec*)'
+#b CVideoPlayerVideo::OpenStream(CDVDStreamInfo)
+#b 'CDVDFactoryCodec::CreateVideoCodec(CDVDStreamInfo&, CProcessInfo&)'
+#b 'CDVDFactoryCodec::CreateVideoCodecHW(std::string, CProcessInfo&)'
 __EOF__
 
 # Restore stripped files
