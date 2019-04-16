@@ -1,0 +1,4146 @@
+diff --git a/README.md b/README.md
+index 7fdcb5509d..8d097da60b 100644
+--- a/README.md
++++ b/README.md
+@@ -1,80 +1,111 @@
+-![Kodi Logo](docs/resources/banner.png)
+-
+-<p align="center">
+-  <strong>
+-    <a href="https://kodi.tv/">website</a>
+-    •
+-    <a href="https://kodi.wiki/view/Main_Page">docs</a>
+-    •
+-    <a href="https://forum.kodi.tv/">community</a>
+-    •
+-    <a href="https://kodi.tv/addons">add-ons</a>
+-  </strong>
+-</p>
+-
+-<p align="center">
+-  <a href="LICENSE.md"><img alt="License" src="https://img.shields.io/badge/license-GPLv2-blue.svg?style=flat-square"></a>
+-  <a href="http://hits.dwyl.io/xbmc/xbmc"><img alt="HitCount" src="http://hits.dwyl.io/xbmc/xbmc.svg"></a>
+-  <a href="https://codedocs.xyz/xbmc/xbmc/"><img alt="Documentation" src="https://img.shields.io/badge/code-documented-brightgreen.svg?style=flat-square"></a>
+-  <a href="https://github.com/xbmc/xbmc/pulls"><img alt="PRs Welcome" src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square"></a>
+-  <a href="#how-to-contribute"><img alt="Contributions Welcome" src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat-square"></a>
+-  <a href="http://jenkins.kodi.tv/"><img alt="Build" src="https://img.shields.io/badge/CI-jenkins-brightgreen.svg?style=flat-square"></a>
+-  <a href="https://github.com/xbmc/xbmc/commits/master"><img alt="Commits" src="https://img.shields.io/github/commits-since/xbmc/xbmc/latest.svg?style=flat-square"></a>
+-</p>
+-
+-<h1 align="center">
+-  Welcome to Kodi Home Theater Software!
+-</h1>
+-
+-Kodi is an award-winning **free and open source** software media player and entertainment hub for digital media. Available as a native application for **Android, Linux, BSD, macOS, iOS, and Windows operating systems**, Kodi runs on most common processor architectures.
+-
+-Created in 2003 by a group of like minded programmers, Kodi is a non-profit project run by the XBMC Foundation and developed by volunteers located around the world. More than 500 software developers have contributed to Kodi to date, and 100-plus translators have worked to expand its reach, making it available in more than 70 languages.
+-
+-While Kodi functions very well as a standard media player application for your computer, it has been designed to be the perfect companion for your HTPC. With its **beautiful interface and powerful skinning engine**, Kodi feels very natural to use from the couch with a remote control and is the ideal solution for your home theater.
+-
+-## Give your media the love it deserves
+-Kodi can be used to play almost all popular audio and video formats around. It was designed for network playback, so you can stream your multimedia from anywhere in the house or directly from the internet using practically any protocol available.
+-
+-Point Kodi to your media and watch it **scan and automagically create a personalized library** complete with box covers, descriptions, and fanart. There are playlist and slideshow functions, a weather forecast feature and many audio visualizations. Once installed, your computer or HTPC will become a fully functional multimedia jukebox.
+-
+-<p align="center">
+-  <img src="docs/resources/kodi.gif" alt="Kodi">
+-</p>
+-
+-## Getting Started
+-Kodi's developers work hard to make it support a large range of devices and operating systems. We provide final as well as development builds. To get started, head over to the **[downloads section](https://kodi.tv/download)** and simply select the platform that you want to install it on. A **[quick start guide](https://kodi.wiki/view/quick_start_guide)** to help you get acquainted with Kodi is available in our wiki.
+-
+-## How to Contribute
+-Kodi is created by users for users and **we welcome every contribution**. There are no highly paid developers or poorly paid support personnel on the phones ready to take your call. There are only users who have seen a problem and done their best to fix it. This means Kodi will always need the contributions of users like you. How can you get involved?
+-
+-* **Coding:** Developers can help Kodi by **[fixing a bug](https://github.com/xbmc/xbmc/issues)**, adding new features, making our technology smaller and faster and making development easier for others. Kodi's codebase consists mainly of C++ with small parts written in a variety of coding languages. Our add-ons mainly consist of python and XML. For more information, please have a look at our **[contributing guide](docs/CONTRIBUTING.md)**.
+-* **Helping users:** Our support process relies on enthusiastic contributors like you to help others get the most out of Kodi. The #1 priority is always answering questions in our **[support forums](https://forum.kodi.tv/)**. Everyday new people discover Kodi, and everyday they are virtually guaranteed to have questions.
+-* **Localization:** Translate **[Kodi](https://www.transifex.com/teamxbmc/kodi-main/)**, **[add-ons](https://www.transifex.com/teamxbmc/xbmc-addons/)** and **[skins](https://www.transifex.com/teamxbmc/xbmc-skins/)** into your native language.
+-* **Add-ons:** **[Add-ons](https://kodi.tv/addons)** are what make Kodi the most extensible and customizable entertainment hub available. **[Get started building an add-on](https://kodi.tv/create-an-addon)**.
+-* **Documentation:** Kodi's **[wiki pages](https://kodi.wiki/)** are the hub for information about Kodi and surrounding ecosystem. Help make our documentation better by writing new content or correcting existing material.
+-
+-**Not enough free time?** No problem! There are other ways to help Kodi.
+-
+-* **Spread the word:** Share Kodi with the world! Tell your friends and family about how Kodi creates an amazing entertainment experience. Stay up to date on the latest stories about Kodi reading our **[news](https://kodi.tv/blog)** section, follow us on **[Twitter](https://twitter.com/koditv)** and **[Facebook](https://www.facebook.com/XBMC/)**, or **star Kodi's repo** if you want to follow development.
+-* **Donate:** We are always happy to receive a **[donation](https://kodi.tv/contribute/donate)**. Donations are typically used for travel to attend conferences, any necessary paperwork and legal fees, and the yearly XBMC Foundation Developers Conference, where a great deal of coding and planning for the following year occurs. Donations may also be used to purchase necessary hardware and licenses for developers, along with t-shirts, stickers, and other accessories for conferences.
+-* **Buy Kodi merchandise:** Purchasing Kodi gear helps just as much as a donation, and you get something in return! Checkout our **[store](https://kodi.tv/store)** for Kodi branded gear. We regularly add new products so check back often.
+-
+-## Building
+-Kodi uses CMake as its building system but instructions are highly dependent on your operating system and target platform. Fortunately **[we've got you covered](docs/README.md)**.
+-
+-## Acknowledgements
+-Kodi couldn't exist without
+-
+-* All the **[contributors](https://github.com/xbmc/xbmc/graphs/contributors)**. Big or small a change, it does make a difference.
+-* All the developers that write the fantastic **software and libraries** that Kodi uses. We stand on the shoulders of giants.
+-* Our **[fantastic community](https://forum.kodi.tv/)** for the never ending support, inspiration, feedback, and for keeping us on our toes when we screw up!
+-* **[Our sponsors](https://kodi.tv/sponsors)**. Without them, keeping a huge project like this alive would be next to impossible.
+-
+-## License
+-Kodi is **[GPLv2 licensed](LICENSE.md)**. You may use, distribute and copy it under the license terms.
+-
+-<a href="https://github.com/xbmc/xbmc/graphs/contributors"><img src="https://forthebadge.com/images/badges/built-by-developers.svg" height="25"></a>
+-<a href="https://github.com/xbmc/xbmc"><img src="https://forthebadge.com/images/badges/certified-cousin-terio.svg" height="25"></a>
+-<a href="https://github.com/xbmc/xbmc"><img src="https://forthebadge.com/images/badges/approved-by-george-costanza.svg" height="25"></a>
+-<a href="https://kodi.tv/download"><img src="https://forthebadge.com/images/badges/check-it-out.svg" height="25"></a>
+-<a href="https://github.com/xbmc/xbmc"><img src="https://forthebadge.com/images/badges/winter-is-coming.svg" height="25"></a>
++# Kodi on the Steam Link
++
++This repo contains the Steam Link port of Kodi.
++
++## Installation
++
++1. Download the latest release from https://github.com/garbear/kodi-steamlink/releases.
++2. Copy archive to the folder `steamlink/apps/` on a USB drive (FAT32 or EXT4).
++3. Insert the drive into the Steam Link and power-cycle. It will take approximately 2 minutes to install the 80MB archive.
++4. When the Steam Link boots, Kodi should appear on the home screen.
++
++## Building Kodi
++
++To build Kodi, follow the steps at: https://github.com/ValveSoftware/steamlink-sdk/tree/master/examples/kodi
++
++## Debugging
++
++Kodi may crash when launched from the Steam Link homescreen due to a PulseAudio conflict. Until this is fixed, Kodi must be run from the command line.
++
++#### Enable SSH
++
++1. Create a non-empty file on the USB drive at `steamlink/config/system/enable_ssh.txt`
++2. Insert the drive and power on the Steam Link
++3. SSH into the Steam Link as root using an SSH client, e.g. `ssh root@10.0.0.103`
++4. The password is `steamlink123`
++
++#### Changing Steam Link builds
++
++If you need to test Kodi on a build different from the latest public beta, follow these steps:
++
++1. Place the build number (e.g. `600`) in a text file on a USB drive at `steamlink/config/system/update_branch.txt`
++2. Insert the drive and power on the Steam Link
++
++To revert back to the latest public beta build:
++
++1. Place the word `beta` in a text file on a USB drive at `steamlink/config/system/update_branch.txt`
++2. Insert the drive and power on the Steam Link
++
++#### Kill the Steam Link launcher and launch Kodi
++
++If you are on the **public build (566)**, enter the commands:
++
++```bash
++killall powermanager.sh powermanager app_run.sh shell
++
++cd /home/apps/kodi && ./kodi.sh
++```
++
++If you are on the **beta build (597 or later)**, enter the commands:
++
++```bash
++killall powermanager.sh powermanager shell.sh shell
++
++cd /home/apps/kodi && ./kodi.sh
++```
++
++#### Viewing the log
++
++If you launched Kodi from the **Steam Link launcher**, use the command:
++
++```bash
++tail -F /home/apps/kodi/.home/.kodi/temp/kodi.log
++```
++
++If you launched Kodi from the **command line**, use the command:
++
++```bash
++tail -F /home/steam/.kodi/temp/kodi.log
++```
++
++#### Remote debugging via GDB
++
++To get a stack trace, run `gdbserver` on the Steam Link and connect via local `gdb`. This is explained here: https://github.com/ValveSoftware/steamlink-sdk
++
++`build_steamlink.sh` can be modified to make this easier. See [this commit](https://github.com/garbear/steamlink-sdk/commit/kodi-debug%5E) and [this commit](https://github.com/garbear/steamlink-sdk/commit/kodi-debug).
++
++Before building Kodi, modify the startup script to run `gdbserver`. Find the line with the Kodi command and prefix it with `gdbserver :8080 ` like [this](https://github.com/garbear/kodi-steamlink/commit/steamlink-gdb).
++
++#### Debugging locally using Valgrind
++
++To track down a memory corruption bug, perform a "depends" build of Kodi. This will use the same libraries as the Steam Link instead of relying on system libraries.
++
++First, create a writable folder `/opt/kodi-deps`. Then clone this repo and run:
++
++```bash
++cd tools/depends
++./bootstrap
++./configure --with-toolchain=/usr --prefix=/opt/kodi-deps --host=x86_64-linux-gnu
++make
++cd ../..
++```
++
++Before compiling Kodi, modify the startup script to launch Kodi under Valgrind. You should prefix the Kodi command with `valgrind --leak-check=yes ` like [this](https://github.com/garbear/kodi-steamlink/commit/steamlink-valgrind).
++
++Next, compile Kodi via CMake:
++
++```bash
++mkdir build
++cd build
++/opt/kodi-deps/x86_64-linux-gnu-native/bin/cmake \
++    -DCMAKE_BUILD_TYPE=Debug \
++    -DCMAKE_TOOLCHAIN_FILE=/opt/kodi-deps/x86_64-linux-gnu/share/Toolchain.cmake \
++    -DCMAKE_INSTALL_PREFIX=$HOME/kodi-steamlink \
++    ../project/cmake
++make
++make install
++```
++
++You can substitute the installation folder (`$HOME/kodi-steamlink`) for a prefix of your choice.
++
++Finally, run the resulting startup script at `$HOME/kodi-steamlink/bin/kodi`.
+diff --git a/cmake/modules/FindSdl2.cmake b/cmake/modules/FindSdl2.cmake
+new file mode 100644
+index 0000000000..5390e94298
+--- /dev/null
++++ b/cmake/modules/FindSdl2.cmake
+@@ -0,0 +1,25 @@
++#.rst:
++# FindSdl2
++# -------
++# Finds the SDL2 library
++#
++# This will will define the following variables::
++#
++# SDL2_FOUND - system has SDL2
++# SDL2_INCLUDE_DIRS - the SDL2 include directory
++# SDL2_LIBRARIES - the SDL2 libraries
++# SDL2_DEFINITIONS - the SDL2 compile definitions
++
++find_path(SDL2_INCLUDE_DIR NAMES SDL2/SDL.h)
++find_library(SDL2_LIBRARY NAMES SDL2)
++
++include(FindPackageHandleStandardArgs)
++find_package_handle_standard_args(Sdl2 REQUIRED_VARS SDL2_LIBRARY SDL2_INCLUDE_DIR)
++
++if(SDL2_FOUND)
++  set(SDL2_LIBRARIES ${SDL2_LIBRARY})
++  set(SDL2_INCLUDE_DIRS ${SDL2_INCLUDE_DIR})
++  set(SDL2_DEFINITIONS -DHAVE_SDL=1 -DHAVE_SDL_VERSION=2)
++endif()
++
++mark_as_advanced(SDL2_LIBRARY SDL2_INCLUDE_DIR)
+diff --git a/cmake/modules/FindSteamLink.cmake b/cmake/modules/FindSteamLink.cmake
+new file mode 100644
+index 0000000000..2dd50cf1fa
+--- /dev/null
++++ b/cmake/modules/FindSteamLink.cmake
+@@ -0,0 +1,40 @@
++# FindSteamLink
++# ----------
++# Finds the FindSteamLink headers and libraries
++#
++# This will will define the following variables::
++#
++# STEAMLINK_FOUND - system has Steam Link
++# STEAMLINK_INCLUDE_DIRS - the Steam Link include directory
++# STEAMLINK_LIBRARIES - the Steam Link libraries
++# STEAMLINK_DEFINITIONS  - the Steam Link definitions
++#
++# and the following imported targets::
++#
++#   STEAMLINK::STEAMLINK   - The Steam Link library
++
++find_path(STEAMLINK_INCLUDE_DIR NAMES SLVideo.h)
++
++find_library(STEAMLINK_VIDEO_LIBRARY NAMES SLVideo)
++find_library(STEAMLINK_AUDIO_LIBRARY NAMES SLAudio)
++
++include(FindPackageHandleStandardArgs)
++find_package_handle_standard_args(SteamLink
++                                  REQUIRED_VARS STEAMLINK_INCLUDE_DIR
++                                                STEAMLINK_VIDEO_LIBRARY
++                                                STEAMLINK_AUDIO_LIBRARY)
++
++if(STEAMLINK_FOUND)
++  set(STEAMLINK_LIBRARIES ${STEAMLINK_VIDEO_LIBRARY}
++                          ${STEAMLINK_AUDIO_LIBRARY})
++  set(STEAMLINK_INCLUDE_DIRS ${STEAMLINK_INCLUDE_DIR})
++  set(STEAMLINK_DEFINITIONS -DHAS_STEAMLINK)
++    if(NOT TARGET STEAMLINK::STEAMLINK)
++    add_library(STEAMLINK::STEAMLINK UNKNOWN IMPORTED)
++    set_target_properties(STEAMLINK::STEAMLINK PROPERTIES
++                                               IMPORTED_LOCATION "${STEAMLINK_VIDEO_LIBRARY}" # TODO
++                                               INTERFACE_INCLUDE_DIRECTORIES "${STEAMLINK_INCLUDE_DIR}")
++  endif()
++endif()
++
++mark_as_advanced(STEAMLINK_INCLUDE_DIR STEAMLINK_VIDEO_LIBRARY STEAMLINK_AUDIO_LIBRARY)
+diff --git a/cmake/platform/linux/steamlink.cmake b/cmake/platform/linux/steamlink.cmake
+new file mode 100644
+index 0000000000..9359ee5abe
+--- /dev/null
++++ b/cmake/platform/linux/steamlink.cmake
+@@ -0,0 +1,2 @@
++set(PLATFORM_REQUIRED_DEPS OpenGLES EGL Sdl2 SteamLink)
++set(APP_RENDER_SYSTEM gles)
+diff --git a/cmake/scripts/linux/ArchSetup.cmake b/cmake/scripts/linux/ArchSetup.cmake
+index 624edf626d..85edc2d021 100644
+--- a/cmake/scripts/linux/ArchSetup.cmake
++++ b/cmake/scripts/linux/ArchSetup.cmake
+@@ -112,6 +112,11 @@ if(ENABLE_GBM)
+   set(ENABLE_VDPAU OFF CACHE BOOL "Disabling VDPAU" FORCE)
+ endif()
+ 
++# TODO: Is this needed?
++if(ENABLE_STEAMLINK)
++  set(ENABLE_VDPAU OFF CACHE BOOL "Disabling VDPAU on the Steam Link" FORCE)
++endif()
++
+ if(ENABLE_VDPAU)
+   set(ENABLE_GLX ON CACHE BOOL "Enabling GLX" FORCE)
+ endif()
+diff --git a/cmake/treedata/optional/common/steamlink.txt b/cmake/treedata/optional/common/steamlink.txt
+new file mode 100644
+index 0000000000..e9e587fbbb
+--- /dev/null
++++ b/cmake/treedata/optional/common/steamlink.txt
+@@ -0,0 +1,5 @@
++xbmc/cores/AudioEngine/Sinks/steamlink cores/AudioEngine/Sinks/steamlink # STEAMLINK
++xbmc/cores/RetroPlayer/process/steamlink cores/RetroPlayer/process/steamlink # STEAMLINK
++xbmc/cores/VideoPlayer/DVDCodecs/Video/steamlink cores/VideoPlayer/DVDCodecs/Video/steamlink # STEAMLINK
++xbmc/cores/VideoPlayer/VideoRenderers/HwDecRender/steamlink cores/VideoPlayer/VideoRenderers/HwDecRender/steamlink # STEAMLINK
++xbmc/windowing/steamlink windowing/steamlink # STEAMLINK
+diff --git a/system/addon-manifest.xml b/system/addon-manifest.xml
+index aeb0cc6820..2496e29bfa 100644
+--- a/system/addon-manifest.xml
++++ b/system/addon-manifest.xml
+@@ -40,7 +40,6 @@
+   <addon>screensaver.xbmc.builtin.dim</addon>
+   <addon>script.module.pil</addon>
+   <addon>script.module.pycryptodome</addon>
+-  <addon optional="true">service.xbmc.versioncheck</addon>
+   <addon>skin.estuary</addon>
+   <addon>skin.estouchy</addon>
+   <addon>webinterface.default</addon>
+diff --git a/tools/depends/configure.ac b/tools/depends/configure.ac
+index 979819d752..104f3418c8 100644
+--- a/tools/depends/configure.ac
++++ b/tools/depends/configure.ac
+@@ -384,7 +384,7 @@ case $host in
+ esac
+ 
+ case $use_platform in
+-  aml|gbm|wayland)
++  aml|gbm|wayland|steamlink)
+     if test "$platform_os" != "linux"; then
+       AC_MSG_ERROR([$use_platform is only supported on the Linux platform])
+     fi
+@@ -393,6 +393,16 @@ case $use_platform in
+         AC_MSG_ERROR([$use_platform is only supported for arm and aarch64 architecture])
+       fi
+     fi
++    if test "$use_platform" = "steamlink"; then
++      platform_cflags="--sysroot=$use_toolchain/../rootfs -marm -mfpu=neon -mfloat-abi=hard"
++      platform_cxxflags="--sysroot=$use_toolchain/../rootfs -marm -mfpu=neon -mfloat-abi=hard"
++      platform_ldflags="-static-libgcc -static-libstdc++"
++
++      # TODO: Needed for Kodi, not depends
++      platform_cflags+=" -DEGL_API_FB"
++      platform_cxxflags+=" -DEGL_API_FB"
++      platform_ldflags+=" -lstdc++"
++    fi
+     target_platform=$use_platform
+     ;;
+   raspberry-pi)
+diff --git a/tools/depends/native/Makefile b/tools/depends/native/Makefile
+index ba5b8eba8d..94da1ffb6a 100644
+--- a/tools/depends/native/Makefile
++++ b/tools/depends/native/Makefile
+@@ -22,7 +22,7 @@ ifeq ($(OS),osx)
+ endif
+ 
+ ifeq ($(OS),linux)
+-  ifeq ($(TARGET_PLATFORM),$(filter $(TARGET_PLATFORM),raspberry-pi aml gbm))
++  ifeq ($(TARGET_PLATFORM),$(filter $(TARGET_PLATFORM),raspberry-pi aml gbm steamlink))
+     NATIVE += meson-native ninja-native python3-native
+   endif
+ endif
+diff --git a/tools/depends/target/Makefile b/tools/depends/target/Makefile
+index 493213d27c..ea0b1be929 100644
+--- a/tools/depends/target/Makefile
++++ b/tools/depends/target/Makefile
+@@ -72,7 +72,7 @@ ifeq ($(OS),linux)
+   DEPENDS += alsa-lib
+   ALSA_LIB = alsa-lib
+   CROSSGUID_DEPS = libuuid
+-  ifeq ($(TARGET_PLATFORM),$(filter $(TARGET_PLATFORM),raspberry-pi aml gbm))
++  ifeq ($(TARGET_PLATFORM),$(filter $(TARGET_PLATFORM),raspberry-pi aml gbm steamlink))
+     DEPENDS += libxkbcommon libinput libudev libevdev mtdev
+   endif
+ endif
+@@ -145,43 +145,43 @@ distclean::
+ 	for d in $(DEPENDS); do $(MAKE) -C $$d distclean; done
+ 
+ linux-system-libs-egl:
+-	[ -f $(PREFIX)/lib/pkgconfig/egl.pc ] || ln -sf /usr/lib/$(HOST)/pkgconfig/egl.pc $(PREFIX)/lib/pkgconfig/egl.pc
+-	[ -f $(PREFIX)/lib/pkgconfig/wayland-egl.pc ] || ln -sf /usr/lib/$(HOST)/pkgconfig/wayland-egl.pc $(PREFIX)/lib/pkgconfig/wayland-egl.pc
+-	[ -f $(PREFIX)/lib/pkgconfig/damageproto.pc ] || ln -sf  /usr/share/pkgconfig/damageproto.pc $(PREFIX)/lib/pkgconfig/damageproto.pc
+-	[ -f $(PREFIX)/lib/pkgconfig/fixesproto.pc ] || ln -sf  /usr/share/pkgconfig/fixesproto.pc $(PREFIX)/lib/pkgconfig/fixesproto.pc
+-	[ -f $(PREFIX)/lib/pkgconfig/x11-xcb.pc ] || ln -sf  /usr/lib/$(HOST)/pkgconfig/x11-xcb.pc $(PREFIX)/lib/pkgconfig/x11-xcb.pc
+-	[ -f $(PREFIX)/lib/pkgconfig/xcb-dri2.pc ] || ln -sf  /usr/lib/$(HOST)/pkgconfig/xcb-dri2.pc $(PREFIX)/lib/pkgconfig/xcb-dri2.pc
+-	[ -f $(PREFIX)/lib/pkgconfig/xcb-dri3.pc ] || ln -sf  /usr/lib/$(HOST)/pkgconfig/xcb-dri3.pc $(PREFIX)/lib/pkgconfig/xcb-dri3.pc
+-	[ -f $(PREFIX)/lib/pkgconfig/xcb-glx.pc ] || ln -sf  /usr/lib/$(HOST)/pkgconfig/xcb-glx.pc $(PREFIX)/lib/pkgconfig/xcb-glx.pc
+-	[ -f $(PREFIX)/lib/pkgconfig/xcb-xfixes.pc ] || ln -sf  /usr/lib/$(HOST)/pkgconfig/xcb-xfixes.pc $(PREFIX)/lib/pkgconfig/xcb-xfixes.pc
+-	[ -f $(PREFIX)/lib/pkgconfig/xcb-present.pc ] || ln -sf  /usr/lib/$(HOST)/pkgconfig/xcb-present.pc $(PREFIX)/lib/pkgconfig/xcb-present.pc
+-	[ -f $(PREFIX)/lib/pkgconfig/xcb-randr.pc ] || ln -sf /usr/lib/$(HOST)/pkgconfig/xcb-randr.pc $(PREFIX)/lib/pkgconfig/xcb-randr.pc
+-	[ -f $(PREFIX)/lib/pkgconfig/xcb-render.pc ] || ln -sf /usr/lib/$(HOST)/pkgconfig/xcb-render.pc $(PREFIX)/lib/pkgconfig/xcb-render.pc
+-	[ -f $(PREFIX)/lib/pkgconfig/xcb-shape.pc ] || ln -sf  /usr/lib/$(HOST)/pkgconfig/xcb-shape.pc $(PREFIX)/lib/pkgconfig/xcb-shape.pc
+-	[ -f $(PREFIX)/lib/pkgconfig/xcb-sync.pc ] || ln -sf  /usr/lib/$(HOST)/pkgconfig/xcb-sync.pc $(PREFIX)/lib/pkgconfig/xcb-sync.pc
+-	[ -f $(PREFIX)/lib/pkgconfig/xdamage.pc ] || ln -sf /usr/lib/$(HOST)/pkgconfig/xdamage.pc $(PREFIX)/lib/pkgconfig/xdamage.pc
+-	[ -f $(PREFIX)/lib/pkgconfig/xf86vidmodeproto.pc ] || ln -sf /usr/share/pkgconfig/xf86vidmodeproto.pc $(PREFIX)/lib/pkgconfig/xf86vidmodeproto.pc
+-	[ -f $(PREFIX)/lib/pkgconfig/xfixes.pc ] || ln -sf  /usr/lib/$(HOST)/pkgconfig/xfixes.pc $(PREFIX)/lib/pkgconfig/xfixes.pc
+-	[ -f $(PREFIX)/lib/pkgconfig/xshmfence.pc ] || ln -sf  /usr/lib/$(HOST)/pkgconfig/xshmfence.pc $(PREFIX)/lib/pkgconfig/xshmfence.pc
+-	[ -f $(PREFIX)/lib/pkgconfig/xxf86vm.pc ] || ln -sf /usr/lib/$(HOST)/pkgconfig/xxf86vm.pc $(PREFIX)/lib/pkgconfig/xxf86vm.pc
++	[ -L $(PREFIX)/lib/pkgconfig/egl.pc ] || ln -sf /usr/lib/$(HOST)/pkgconfig/egl.pc $(PREFIX)/lib/pkgconfig/egl.pc
++	[ -L $(PREFIX)/lib/pkgconfig/wayland-egl.pc ] || ln -sf /usr/lib/$(HOST)/pkgconfig/wayland-egl.pc $(PREFIX)/lib/pkgconfig/wayland-egl.pc
++	[ -L $(PREFIX)/lib/pkgconfig/damageproto.pc ] || ln -sf  /usr/share/pkgconfig/damageproto.pc $(PREFIX)/lib/pkgconfig/damageproto.pc
++	[ -L $(PREFIX)/lib/pkgconfig/fixesproto.pc ] || ln -sf  /usr/share/pkgconfig/fixesproto.pc $(PREFIX)/lib/pkgconfig/fixesproto.pc
++	[ -L $(PREFIX)/lib/pkgconfig/x11-xcb.pc ] || ln -sf  /usr/lib/$(HOST)/pkgconfig/x11-xcb.pc $(PREFIX)/lib/pkgconfig/x11-xcb.pc
++	[ -L $(PREFIX)/lib/pkgconfig/xcb-dri2.pc ] || ln -sf  /usr/lib/$(HOST)/pkgconfig/xcb-dri2.pc $(PREFIX)/lib/pkgconfig/xcb-dri2.pc
++	[ -L $(PREFIX)/lib/pkgconfig/xcb-dri3.pc ] || ln -sf  /usr/lib/$(HOST)/pkgconfig/xcb-dri3.pc $(PREFIX)/lib/pkgconfig/xcb-dri3.pc
++	[ -L $(PREFIX)/lib/pkgconfig/xcb-glx.pc ] || ln -sf  /usr/lib/$(HOST)/pkgconfig/xcb-glx.pc $(PREFIX)/lib/pkgconfig/xcb-glx.pc
++	[ -L $(PREFIX)/lib/pkgconfig/xcb-xfixes.pc ] || ln -sf  /usr/lib/$(HOST)/pkgconfig/xcb-xfixes.pc $(PREFIX)/lib/pkgconfig/xcb-xfixes.pc
++	[ -L $(PREFIX)/lib/pkgconfig/xcb-present.pc ] || ln -sf  /usr/lib/$(HOST)/pkgconfig/xcb-present.pc $(PREFIX)/lib/pkgconfig/xcb-present.pc
++	[ -L $(PREFIX)/lib/pkgconfig/xcb-randr.pc ] || ln -sf /usr/lib/$(HOST)/pkgconfig/xcb-randr.pc $(PREFIX)/lib/pkgconfig/xcb-randr.pc
++	[ -L $(PREFIX)/lib/pkgconfig/xcb-render.pc ] || ln -sf /usr/lib/$(HOST)/pkgconfig/xcb-render.pc $(PREFIX)/lib/pkgconfig/xcb-render.pc
++	[ -L $(PREFIX)/lib/pkgconfig/xcb-shape.pc ] || ln -sf  /usr/lib/$(HOST)/pkgconfig/xcb-shape.pc $(PREFIX)/lib/pkgconfig/xcb-shape.pc
++	[ -L $(PREFIX)/lib/pkgconfig/xcb-sync.pc ] || ln -sf  /usr/lib/$(HOST)/pkgconfig/xcb-sync.pc $(PREFIX)/lib/pkgconfig/xcb-sync.pc
++	[ -L $(PREFIX)/lib/pkgconfig/xdamage.pc ] || ln -sf /usr/lib/$(HOST)/pkgconfig/xdamage.pc $(PREFIX)/lib/pkgconfig/xdamage.pc
++	[ -L $(PREFIX)/lib/pkgconfig/xf86vidmodeproto.pc ] || ln -sf /usr/share/pkgconfig/xf86vidmodeproto.pc $(PREFIX)/lib/pkgconfig/xf86vidmodeproto.pc
++	[ -L $(PREFIX)/lib/pkgconfig/xfixes.pc ] || ln -sf  /usr/lib/$(HOST)/pkgconfig/xfixes.pc $(PREFIX)/lib/pkgconfig/xfixes.pc
++	[ -L $(PREFIX)/lib/pkgconfig/xshmfence.pc ] || ln -sf  /usr/lib/$(HOST)/pkgconfig/xshmfence.pc $(PREFIX)/lib/pkgconfig/xshmfence.pc
++	[ -L $(PREFIX)/lib/pkgconfig/xxf86vm.pc ] || ln -sf /usr/lib/$(HOST)/pkgconfig/xxf86vm.pc $(PREFIX)/lib/pkgconfig/xxf86vm.pc
+ 
+ linux-system-libs: linux-system-libs-egl
+-	[ -f $(PREFIX)/lib/pkgconfig/x11.pc ] || ln -sf /usr/lib/$(HOST)/pkgconfig/x11.pc $(PREFIX)/lib/pkgconfig/x11.pc
+-	[ -f $(PREFIX)/lib/pkgconfig/xproto.pc ] || ln -sf /usr/share/pkgconfig/xproto.pc $(PREFIX)/lib/pkgconfig/xproto.pc
+-	[ -f $(PREFIX)/lib/pkgconfig/kbproto.pc ] || ln -sf /usr/share/pkgconfig/kbproto.pc $(PREFIX)/lib/pkgconfig/kbproto.pc
+-	[ -f $(PREFIX)/lib/pkgconfig/xcb.pc ] || ln -sf /usr/lib/$(HOST)/pkgconfig/xcb.pc $(PREFIX)/lib/pkgconfig/xcb.pc
+-	[ -f $(PREFIX)/lib/pkgconfig/pthread-stubs.pc ] || ln -sf /usr/lib/$(HOST)/pkgconfig/pthread-stubs.pc $(PREFIX)/lib/pkgconfig/pthread-stubs.pc
+-	[ -f $(PREFIX)/lib/pkgconfig/xau.pc ] || ln -sf /usr/lib/$(HOST)/pkgconfig/xau.pc $(PREFIX)/lib/pkgconfig/xau.pc
+-	[ -f $(PREFIX)/lib/pkgconfig/xdmcp.pc ] || ln -sf /usr/lib/$(HOST)/pkgconfig/xdmcp.pc $(PREFIX)/lib/pkgconfig/xdmcp.pc
+-	[ -f $(PREFIX)/lib/pkgconfig/xext.pc ] || ln -sf /usr/lib/$(HOST)/pkgconfig/xext.pc $(PREFIX)/lib/pkgconfig/xext.pc
+-	[ -f $(PREFIX)/lib/pkgconfig/xextproto.pc ] || ln -sf /usr/share/pkgconfig/xextproto.pc $(PREFIX)/lib/pkgconfig/xextproto.pc
+-	[ -f $(PREFIX)/lib/pkgconfig/xrandr.pc ] || ln -sf /usr/lib/$(HOST)/pkgconfig/xrandr.pc $(PREFIX)/lib/pkgconfig/xrandr.pc
+-	[ -f $(PREFIX)/lib/pkgconfig/xrender.pc ] || ln -sf /usr/lib/$(HOST)/pkgconfig/xrender.pc $(PREFIX)/lib/pkgconfig/xrender.pc
+-	[ -f $(PREFIX)/lib/pkgconfig/randrproto.pc ] || ln -sf /usr/share/pkgconfig/randrproto.pc $(PREFIX)/lib/pkgconfig/randrproto.pc
+-	[ -f $(PREFIX)/lib/pkgconfig/renderproto.pc ] || ln -sf /usr/share/pkgconfig/renderproto.pc $(PREFIX)/lib/pkgconfig/renderproto.pc
+-	[ -f $(PREFIX)/lib/pkgconfig/xt.pc ] || ln -sf /usr/lib/$(HOST)/pkgconfig/xt.pc $(PREFIX)/lib/pkgconfig/xt.pc
+-	[ -f $(PREFIX)/lib/pkgconfig/ice.pc ] || ln -sf /usr/lib/$(HOST)/pkgconfig/ice.pc $(PREFIX)/lib/pkgconfig/ice.pc
+-	[ -f $(PREFIX)/lib/pkgconfig/sm.pc ] || ln -sf /usr/lib/$(HOST)/pkgconfig/sm.pc $(PREFIX)/lib/pkgconfig/sm.pc
+-	[ -f $(PREFIX)/lib/pkgconfig/xmu.pc ] || ln -sf /usr/lib/$(HOST)/pkgconfig/xmu.pc $(PREFIX)/lib/pkgconfig/xmu.pc
+-	[ -f $(PREFIX)/lib/pkgconfig/libdrm.pc ] || ln -sf /usr/lib/$(HOST)/pkgconfig/libdrm.pc $(PREFIX)/lib/pkgconfig/libdrm.pc
+-	[ -f $(PREFIX)/lib/pkgconfig/xkbcommon.pc ] || ln -sf /usr/lib/$(HOST)/pkgconfig/xkbcommon.pc $(PREFIX)/lib/pkgconfig/xkbcommon.pc
++	[ -L $(PREFIX)/lib/pkgconfig/x11.pc ] || ln -sf /usr/lib/$(HOST)/pkgconfig/x11.pc $(PREFIX)/lib/pkgconfig/x11.pc
++	[ -L $(PREFIX)/lib/pkgconfig/xproto.pc ] || ln -sf /usr/share/pkgconfig/xproto.pc $(PREFIX)/lib/pkgconfig/xproto.pc
++	[ -L $(PREFIX)/lib/pkgconfig/kbproto.pc ] || ln -sf /usr/share/pkgconfig/kbproto.pc $(PREFIX)/lib/pkgconfig/kbproto.pc
++	[ -L $(PREFIX)/lib/pkgconfig/xcb.pc ] || ln -sf /usr/lib/$(HOST)/pkgconfig/xcb.pc $(PREFIX)/lib/pkgconfig/xcb.pc
++	[ -L $(PREFIX)/lib/pkgconfig/pthread-stubs.pc ] || ln -sf /usr/lib/$(HOST)/pkgconfig/pthread-stubs.pc $(PREFIX)/lib/pkgconfig/pthread-stubs.pc
++	[ -L $(PREFIX)/lib/pkgconfig/xau.pc ] || ln -sf /usr/lib/$(HOST)/pkgconfig/xau.pc $(PREFIX)/lib/pkgconfig/xau.pc
++	[ -L $(PREFIX)/lib/pkgconfig/xdmcp.pc ] || ln -sf /usr/lib/$(HOST)/pkgconfig/xdmcp.pc $(PREFIX)/lib/pkgconfig/xdmcp.pc
++	[ -L $(PREFIX)/lib/pkgconfig/xext.pc ] || ln -sf /usr/lib/$(HOST)/pkgconfig/xext.pc $(PREFIX)/lib/pkgconfig/xext.pc
++	[ -L $(PREFIX)/lib/pkgconfig/xextproto.pc ] || ln -sf /usr/share/pkgconfig/xextproto.pc $(PREFIX)/lib/pkgconfig/xextproto.pc
++	[ -L $(PREFIX)/lib/pkgconfig/xrandr.pc ] || ln -sf /usr/lib/$(HOST)/pkgconfig/xrandr.pc $(PREFIX)/lib/pkgconfig/xrandr.pc
++	[ -L $(PREFIX)/lib/pkgconfig/xrender.pc ] || ln -sf /usr/lib/$(HOST)/pkgconfig/xrender.pc $(PREFIX)/lib/pkgconfig/xrender.pc
++	[ -L $(PREFIX)/lib/pkgconfig/randrproto.pc ] || ln -sf /usr/share/pkgconfig/randrproto.pc $(PREFIX)/lib/pkgconfig/randrproto.pc
++	[ -L $(PREFIX)/lib/pkgconfig/renderproto.pc ] || ln -sf /usr/share/pkgconfig/renderproto.pc $(PREFIX)/lib/pkgconfig/renderproto.pc
++	[ -L $(PREFIX)/lib/pkgconfig/xt.pc ] || ln -sf /usr/lib/$(HOST)/pkgconfig/xt.pc $(PREFIX)/lib/pkgconfig/xt.pc
++	[ -L $(PREFIX)/lib/pkgconfig/ice.pc ] || ln -sf /usr/lib/$(HOST)/pkgconfig/ice.pc $(PREFIX)/lib/pkgconfig/ice.pc
++	[ -L $(PREFIX)/lib/pkgconfig/sm.pc ] || ln -sf /usr/lib/$(HOST)/pkgconfig/sm.pc $(PREFIX)/lib/pkgconfig/sm.pc
++	[ -L $(PREFIX)/lib/pkgconfig/xmu.pc ] || ln -sf /usr/lib/$(HOST)/pkgconfig/xmu.pc $(PREFIX)/lib/pkgconfig/xmu.pc
++	[ -L $(PREFIX)/lib/pkgconfig/libdrm.pc ] || ln -sf /usr/lib/$(HOST)/pkgconfig/libdrm.pc $(PREFIX)/lib/pkgconfig/libdrm.pc
++	[ -L $(PREFIX)/lib/pkgconfig/xkbcommon.pc ] || ln -sf /usr/lib/$(HOST)/pkgconfig/xkbcommon.pc $(PREFIX)/lib/pkgconfig/xkbcommon.pc
+diff --git a/tools/depends/target/Toolchain.cmake.in b/tools/depends/target/Toolchain.cmake.in
+index 23e5c882bb..a81c02069a 100644
+--- a/tools/depends/target/Toolchain.cmake.in
++++ b/tools/depends/target/Toolchain.cmake.in
+@@ -95,6 +95,13 @@ if(CORE_SYSTEM_NAME STREQUAL android)
+   string(REPLACE ":" ";" SDK_BUILDTOOLS_PATH "@build_tools_path@")
+ endif()
+ 
++# add Steam Link's sdk directory
++if(CORE_PLATFORM_NAME STREQUAL steamlink)
++  list(APPEND CMAKE_FIND_ROOT_PATH @use_toolchain@/../rootfs)
++  list(APPEND CMAKE_LIBRARY_PATH @use_toolchain@/../rootfs/lib)
++  list(APPEND CMAKE_INCLUDE_PATH @use_toolchain@/../rootfs/include)
++endif()
++
+ set(CMAKE_C_FLAGS "@platform_cflags@ @platform_includes@ -isystem @prefix@/@deps_dir@/include")
+ set(CMAKE_CXX_FLAGS "@platform_cxxflags@ @platform_includes@ -isystem @prefix@/@deps_dir@/include")
+ set(CMAKE_C_FLAGS_RELEASE "@platform_cflags_release@ @platform_includes@ -isystem @prefix@/@deps_dir@/include")
+diff --git a/tools/depends/target/Toolchain_binaddons.cmake.in b/tools/depends/target/Toolchain_binaddons.cmake.in
+index a889085ecf..00f708b6bf 100644
+--- a/tools/depends/target/Toolchain_binaddons.cmake.in
++++ b/tools/depends/target/Toolchain_binaddons.cmake.in
+@@ -82,6 +82,14 @@ if(CORE_SYSTEM_NAME STREQUAL android)
+   string(REPLACE ":" ";" SDK_BUILDTOOLS_PATH "@build_tools_path@")
+ endif()
+ 
++# add Steam Link's sdk directory
++if(CORE_PLATFORM_NAME STREQUAL steamlink)
++  list(APPEND CMAKE_FIND_ROOT_PATH @use_toolchain@/../rootfs)
++  list(APPEND CMAKE_LIBRARY_PATH @use_toolchain@/../rootfs/lib)
++  list(APPEND CMAKE_INCLUDE_PATH @use_toolchain@/../rootfs/include)
++  set(CMAKE_POSITION_INDEPENDENT_CODE ON)
++endif()
++
+ set(CMAKE_C_FLAGS "@platform_cflags@ @platform_includes@")
+ set(CMAKE_CXX_FLAGS "@platform_cxxflags@ @platform_includes@")
+ set(CMAKE_C_FLAGS_RELEASE "@platform_cflags_release@ @platform_includes@")
+diff --git a/tools/depends/target/curl/Makefile b/tools/depends/target/curl/Makefile
+index 0cc2a931c6..d456ec5a4b 100644
+--- a/tools/depends/target/curl/Makefile
++++ b/tools/depends/target/curl/Makefile
+@@ -10,7 +10,7 @@ ARCHIVE=$(SOURCE).tar.bz2
+ CONFIGURE=cp -f $(CONFIG_SUB) $(CONFIG_GUESS) .; \
+           ./configure --prefix=$(PREFIX) --disable-shared --disable-ldap \
+           --without-libssh2 --disable-ntlm-wb --enable-ipv6 --without-librtmp \
+-          --with-ca-fallback --with-ssl=$(PREFIX)
++          --with-ca-fallback --with-ssl=$(PREFIX) --disable-werror
+ 
+ LIBDYLIB=$(PLATFORM)/lib/.libs/lib$(LIBNAME).a
+ 
+diff --git a/tools/depends/target/libsdl/Makefile b/tools/depends/target/libsdl/Makefile
+index e539915650..0cd4a0c367 100644
+--- a/tools/depends/target/libsdl/Makefile
++++ b/tools/depends/target/libsdl/Makefile
+@@ -9,9 +9,7 @@ ARCHIVE=$(SOURCE).tar.gz
+ 
+ # configuration settings
+ CONFIGURE=./configure --prefix=$(PREFIX) --disable-video-directfb
+-ifneq ($(OS),linux)
+ CONFIGURE += --without-x --disable-video-x11
+-endif
+ 
+ LIBDYLIB=$(PLATFORM)/build/.libs/lib$(LIBNAME).a
+ 
+diff --git a/tools/depends/target/libudev/Makefile b/tools/depends/target/libudev/Makefile
+index 3868cc0e6c..51ff3ec6a1 100644
+--- a/tools/depends/target/libudev/Makefile
++++ b/tools/depends/target/libudev/Makefile
+@@ -8,7 +8,7 @@ SOURCE=$(LIBNAME)-$(VERSION)
+ ARCHIVE=$(SOURCE).tar.gz
+ 
+ # configuration settings
+-CONFIGURE=./configure --prefix=$(PREFIX) --disable-shared --enable-static --enable-introspection=no --disable-programs --disable-blkid --disable-selinux --disable-manpages --disable-kmod --disable-mtd_probe
++CONFIGURE=./configure --prefix=$(PREFIX) --disable-shared --enable-static --enable-introspection=no --disable-programs --disable-blkid --disable-selinux --disable-manpages --disable-kmod --disable-mtd_probe --with-pic
+ 
+ LIBDYLIB=$(PLATFORM)/src/libudev/.libs/libudev.la
+ 
+diff --git a/tools/depends/target/zlib/Makefile b/tools/depends/target/zlib/Makefile
+index 7034bab733..2d75c7d08b 100644
+--- a/tools/depends/target/zlib/Makefile
++++ b/tools/depends/target/zlib/Makefile
+@@ -7,7 +7,7 @@ VERSION=1.2.11
+ SOURCE=$(LIBNAME)-$(VERSION)
+ ARCHIVE=$(SOURCE).tar.gz
+ # configuration settings
+-CONFIGURE= RANLIB="$(RANLIB)" LD="$(LD)" AR="$(AR)" CC="$(CC)" CFLAGS="$(CFLAGS)" ./configure --prefix=$(PREFIX) --static
++CONFIGURE= RANLIB="$(RANLIB)" LD="$(LD)" AR="$(AR)" CC="$(CC)" CFLAGS="$(CFLAGS) -fPIC" ./configure --prefix=$(PREFIX) --static
+ 
+ LIBDYLIB=$(PLATFORM)/$(LIBNAME).a
+ 
+diff --git a/xbmc/Application.cpp b/xbmc/Application.cpp
+index 2dc0989ded..c24ac5db3c 100644
+--- a/xbmc/Application.cpp
++++ b/xbmc/Application.cpp
+@@ -1834,7 +1834,7 @@ bool CApplication::OnAction(const CAction &action)
+         m_appPlayer.SetPlaySpeed(1);
+       return true;
+     }
+-    if (!m_appPlayer.IsPaused())
++    if (!m_appPlayer.IsPaused() && m_appPlayer.CanFFRW())
+     {
+       if (action.GetID() == ACTION_PLAYER_FORWARD || action.GetID() == ACTION_PLAYER_REWIND)
+       {
+diff --git a/xbmc/ApplicationPlayer.cpp b/xbmc/ApplicationPlayer.cpp
+index f3965c9af1..fed7e58cb3 100644
+--- a/xbmc/ApplicationPlayer.cpp
++++ b/xbmc/ApplicationPlayer.cpp
+@@ -476,6 +476,12 @@ bool CApplicationPlayer::CanPause()
+   return (player && player->CanPause());
+ }
+ 
++bool CApplicationPlayer::CanFFRW()
++{
++  std::shared_ptr<IPlayer> player = GetInternal();
++  return (player && player->CanFFRW());
++}
++
+ std::shared_ptr<TextCacheStruct_t> CApplicationPlayer::GetTeletextCache()
+ {
+   std::shared_ptr<IPlayer> player = GetInternal();
+diff --git a/xbmc/ApplicationPlayer.h b/xbmc/ApplicationPlayer.h
+index c4d602c2bb..197c86e4e4 100644
+--- a/xbmc/ApplicationPlayer.h
++++ b/xbmc/ApplicationPlayer.h
+@@ -71,6 +71,7 @@ public:
+   // proxy calls
+   void AddSubtitle(const std::string& strSubPath);
+   bool CanPause();
++  bool CanFFRW();
+   bool CanSeek();
+   void DoAudioWork();
+   void GetAudioCapabilities(std::vector<int> &audioCaps);
+diff --git a/xbmc/cores/AudioEngine/Sinks/steamlink/AESinkSteamLink.cpp b/xbmc/cores/AudioEngine/Sinks/steamlink/AESinkSteamLink.cpp
+new file mode 100644
+index 0000000000..986898ad20
+--- /dev/null
++++ b/xbmc/cores/AudioEngine/Sinks/steamlink/AESinkSteamLink.cpp
+@@ -0,0 +1,253 @@
++/*
++ *  Copyright (C) 2016-2018 Team Kodi
++ *  Copyright (C) 2016-2018 Valve Corporation
++ *  This file is part of Kodi - https://kodi.tv
++ *
++ *  SPDX-License-Identifier: GPL-2.0-or-later
++ *  See LICENSES/README.md for more information.
++ */
++
++#include "AESinkSteamLink.h"
++#include "AESinkSteamLinkStream.h"
++#include "AESinkSteamLinkTranslator.h"
++#include "cores/AudioEngine/Utils/AEUtil.h"
++#include "cores/AudioEngine/AESinkFactory.h"
++#include "utils/log.h"
++#include "utils/TimeUtils.h"
++
++// Steam Link audio API
++#include "SLAudio.h"
++
++#include <cstring>
++#include <unistd.h>
++
++#define STEAM_LINK_SINK_NAME  "SteamLinkAudio"
++
++#define SL_SAMPLE_RATE                 48000
++#define SINK_FEED_MS                   50 // Steam Link game streaming uses 10ms
++#define CACHE_TOTAL_MS                 200
++#define INITIAL_ATTENUATION_TIME_SECS  6.0
++
++using namespace KODI;
++using namespace STEAMLINK;
++
++namespace
++{
++  void LogFunction(void *pContext, ESLAudioLog eLogLevel, const char *pszMessage)
++  {
++    int level = CAESinkSteamLinkTranslator::TranslateLogLevel(eLogLevel);
++    CLog::Log(level, "%s", pszMessage);
++  }
++}
++
++CAESinkSteamLink::CAESinkSteamLink() :
++  m_context(nullptr),
++  m_startTimeSecs(0.0),
++  m_framesSinceStart(0)
++{
++  SLAudio_SetLogLevel(k_ESLAudioLogDebug);
++  SLAudio_SetLogFunction(LogFunction, nullptr);
++}
++
++CAESinkSteamLink::~CAESinkSteamLink()
++{
++  Deinitialize();
++  SLAudio_SetLogFunction(nullptr, nullptr);
++}
++
++void CAESinkSteamLink::Register()
++{
++  AE::AESinkRegEntry reg;
++  reg.sinkName = STEAM_LINK_SINK_NAME;
++  reg.createFunc = Create;
++  reg.enumerateFunc = EnumerateDevicesEx;
++  AE::CAESinkFactory::RegisterSink(reg);
++}
++
++IAESink* CAESinkSteamLink::Create(std::string &device, AEAudioFormat &desiredFormat)
++{
++  std::unique_ptr<IAESink> sink(new CAESinkSteamLink);
++  if (sink->Initialize(desiredFormat, device))
++    return sink.release();
++
++  return nullptr;
++}
++
++const char* CAESinkSteamLink::GetName()
++{
++  return STEAM_LINK_SINK_NAME;
++}
++
++bool CAESinkSteamLink::Initialize(AEAudioFormat &format, std::string &device)
++{
++  bool bSuccess = false;
++
++  Deinitialize();
++
++  m_startTimeSecs = 0.0; // Set in first call to AddPackets()
++  m_framesSinceStart = 0;
++
++  format.m_dataFormat    = AE_FMT_S16NE;
++  format.m_sampleRate    = SL_SAMPLE_RATE;
++  format.m_frames        = format.m_sampleRate * SINK_FEED_MS / 1000;
++  format.m_frameSize     = format.m_channelLayout.Count() * (CAEUtil::DataFormatToBits(format.m_dataFormat) >> 3);
++
++  if (format.m_channelLayout.Count() == 0 || format.m_frameSize == 0)
++    return false;
++
++  CSLAudioContext* context = SLAudio_CreateContext();
++  if (!context)
++  {
++    CLog::Log(LOGERROR, "SteamLinkAudio: Failed to create context");
++  }
++  else
++  {
++    std::unique_ptr<CAESinkSteamLinkStream> stream(new CAESinkSteamLinkStream(context, format.m_sampleRate, format.m_channelLayout.Count(), format.m_frames * format.m_frameSize));
++    if (stream->Open())
++    {
++      m_format = format;
++      m_context = context;
++      m_stream = std::move(stream);
++      bSuccess = true;
++    }
++    else
++    {
++      SLAudio_FreeContext(context);
++    }
++  }
++
++  return bSuccess;
++}
++
++void CAESinkSteamLink::Deinitialize()
++{
++  m_stream.reset();
++
++  if (m_context)
++  {
++    SLAudio_FreeContext(m_context);
++    m_context = nullptr;
++  }
++}
++
++double CAESinkSteamLink::GetCacheTotal()
++{
++  return CACHE_TOTAL_MS / 1000.0;
++}
++
++unsigned int CAESinkSteamLink::AddPackets(uint8_t **data, unsigned int frames, unsigned int offset)
++{
++  if (offset >= frames)
++    return 0;
++
++  if (!m_stream)
++    return 0;
++
++  // Calculate frame count from given parameters
++  const unsigned int frameCount = frames - offset;
++
++  // Calculate start time and present time
++  const double nowSecs = static_cast<double>(CurrentHostCounter()) / CurrentHostFrequency();
++
++  if (m_startTimeSecs == 0.0)
++    m_startTimeSecs = nowSecs;
++
++  double presentTimeSecs = m_startTimeSecs + static_cast<double>(m_framesSinceStart) / m_format.m_sampleRate;
++
++  // Detect underrun
++  if (presentTimeSecs < nowSecs)
++  {
++    CLog::Log(LOGDEBUG, "SteamLinkAudio: Buffer underrun detected");
++    presentTimeSecs = m_startTimeSecs = nowSecs;
++    m_framesSinceStart = 0;
++  }
++
++  // Ensure space in the buffer
++  const double delaySecs = presentTimeSecs - nowSecs;
++
++  const double availableSecs = GetCacheTotal() - delaySecs;
++
++  const int sleepTimeUs = static_cast<int>((SINK_FEED_MS - availableSecs * 1000.0) * 1000);
++
++  if (sleepTimeUs > 0)
++    usleep(sleepTimeUs);
++
++  // Create buffer and copy data
++  const size_t packetSize = frameCount * m_format.m_frameSize;
++  std::unique_ptr<uint8_t[]> buffer(new uint8_t[packetSize]);
++
++  std::memcpy(buffer.get(), *data + offset * m_format.m_frameSize, packetSize);
++
++  // Attenuate if necessary
++  const double elapsedSinceStartSecs = (presentTimeSecs - m_startTimeSecs);
++  const bool bAttenuate = (elapsedSinceStartSecs < INITIAL_ATTENUATION_TIME_SECS);
++  if (bAttenuate)
++  {
++    double flVolume = elapsedSinceStartSecs / INITIAL_ATTENUATION_TIME_SECS;
++    AttenuateChunk(buffer.get(), packetSize, flVolume * flVolume);
++  }
++
++  // Add packet
++  if (!m_stream->AddPacket(std::move(buffer), packetSize, presentTimeSecs))
++    return 0;
++
++  m_framesSinceStart += frameCount;
++
++  return frameCount;
++}
++
++void CAESinkSteamLink::GetDelay(AEDelayStatus &status)
++{
++  double delaySecs = 0.0;
++
++  if (m_startTimeSecs != 0.0)
++  {
++    const double nowSecs = static_cast<double>(CurrentHostCounter()) / CurrentHostFrequency();
++
++    double nextPresentTimeSecs = m_startTimeSecs + static_cast<double>(m_framesSinceStart) / m_format.m_sampleRate;
++
++    if (nextPresentTimeSecs > nowSecs)
++      delaySecs = nextPresentTimeSecs - nowSecs;
++  }
++
++  status.SetDelay(delaySecs);
++}
++
++void CAESinkSteamLink::Drain()
++{
++  if (m_stream)
++  {
++    if (!m_stream->Flush())
++      m_stream.reset();
++  }
++
++  m_startTimeSecs = 0.0;
++  m_framesSinceStart = 0;
++}
++
++void CAESinkSteamLink::AttenuateChunk(uint8_t *pChunk, unsigned int size, double flVolume)
++{
++  int16_t *pData = reinterpret_cast<int16_t*>(pChunk);
++  int nCount = size / sizeof(*pData);
++  while (nCount--)
++  {
++    *pData = static_cast<int16_t>(*pData * flVolume);
++    ++pData;
++  }
++}
++
++void CAESinkSteamLink::EnumerateDevicesEx(AEDeviceInfoList &deviceInfoList, bool force /* = false */)
++{
++  CAEDeviceInfo info;
++
++  info.m_deviceType = AE_DEVTYPE_PCM;
++  info.m_deviceName = "SteamLink";
++  info.m_displayName = "Steam Link Low Latency Audio";
++  info.m_displayNameExtra = "";
++  info.m_channels += AE_CH_FL;
++  info.m_channels += AE_CH_FR;
++  info.m_sampleRates.push_back(SL_SAMPLE_RATE);
++  info.m_dataFormats.push_back(AE_FMT_S16NE);
++
++  deviceInfoList.push_back(info);
++}
+diff --git a/xbmc/cores/AudioEngine/Sinks/steamlink/AESinkSteamLink.h b/xbmc/cores/AudioEngine/Sinks/steamlink/AESinkSteamLink.h
+new file mode 100644
+index 0000000000..f653edf164
+--- /dev/null
++++ b/xbmc/cores/AudioEngine/Sinks/steamlink/AESinkSteamLink.h
+@@ -0,0 +1,62 @@
++/*
++ *  Copyright (C) 2016-2018 Team Kodi
++ *  Copyright (C) 2016-2018 Valve Corporation
++ *  This file is part of Kodi - https://kodi.tv
++ *
++ *  SPDX-License-Identifier: GPL-2.0-or-later
++ *  See LICENSES/README.md for more information.
++ */
++
++#pragma once
++
++#include "cores/AudioEngine/Interfaces/AESink.h"
++#include "cores/AudioEngine/Utils/AEAudioFormat.h"
++#include "cores/AudioEngine/Utils/AEDeviceInfo.h"
++
++#include <memory>
++#include <stdint.h>
++
++struct CSLAudioContext;
++
++namespace KODI
++{
++namespace STEAMLINK
++{
++class CAESinkSteamLinkStream;
++
++class CAESinkSteamLink : public IAESink
++{
++public:
++
++  CAESinkSteamLink();
++  ~CAESinkSteamLink() override;
++
++  static void Register();
++  static IAESink* Create(std::string &device, AEAudioFormat &desiredFormat);
++
++  // implementation of IAESink
++  virtual const char* GetName() override;
++  virtual bool Initialize(AEAudioFormat &format, std::string &device) override;
++  virtual void Deinitialize() override;
++  virtual double GetCacheTotal() override;
++  virtual unsigned int AddPackets(uint8_t **data, unsigned int frames, unsigned int offset) override;
++  virtual void GetDelay(AEDelayStatus &status) override;
++  virtual void Drain() override;
++
++  static void EnumerateDevicesEx(AEDeviceInfoList &deviceInfoList, bool force = false);
++
++private:
++  void AttenuateChunk(uint8_t *pChunk, unsigned int size, double flVolume);
++
++  // Steam Link stuff
++  CSLAudioContext *m_context;
++  std::unique_ptr<CAESinkSteamLinkStream> m_stream;
++
++  // AE stuff
++  AEAudioFormat m_format;
++  double m_startTimeSecs;
++  uint64_t m_framesSinceStart;
++};
++
++}
++}
+diff --git a/xbmc/cores/AudioEngine/Sinks/steamlink/AESinkSteamLinkStream.cpp b/xbmc/cores/AudioEngine/Sinks/steamlink/AESinkSteamLinkStream.cpp
+new file mode 100644
+index 0000000000..7454ae64a9
+--- /dev/null
++++ b/xbmc/cores/AudioEngine/Sinks/steamlink/AESinkSteamLinkStream.cpp
+@@ -0,0 +1,303 @@
++/*
++ *  Copyright (C) 2016-2018 Team Kodi
++ *  Copyright (C) 2016-2018 Valve Corporation
++ *  This file is part of Kodi - https://kodi.tv
++ *
++ *  SPDX-License-Identifier: GPL-2.0-or-later
++ *  See LICENSES/README.md for more information.
++ */
++
++#include "AESinkSteamLinkStream.h"
++#include "AESinkSteamLink.h"
++//#include "cores/VideoPlayer/DVDCodecs/Video/SteamLinkVideo.h"
++#include "interfaces/AnnouncementManager.h"
++#include "threads/SingleLock.h"
++//#include "threads/SystemClock.h"
++#include "utils/log.h"
++#include "utils/TimeUtils.h"
++#include "ServiceBroker.h"
++
++// Steam Link audio API
++#include "SLAudio.h"
++
++#include <algorithm>
++#include <cmath>
++#include <cstring>
++
++using namespace KODI;
++using namespace STEAMLINK;
++
++#define MAX_AUDIO_DELAY_MS  100 // Skip packets if audio delay exceeds this value
++#define SL_INTRINSIC_DELAY_MS  250 // Observed audio delay while playing video
++
++CAESinkSteamLinkStream::CAESinkSteamLinkStream(CSLAudioContext* context, unsigned int sampleRateHz, unsigned int channels, unsigned int packetSize) :
++  CThread("SteamLinkAudio"),
++  m_context(context),
++  m_sampleRateHz(sampleRateHz),
++  m_channels(channels),
++  m_packetSize(packetSize),
++  m_stream(nullptr),
++  m_steamLinkBuffer(nullptr),
++  m_remainingBytes(0)
++{
++  CServiceBroker::GetAnnouncementManager()->AddAnnouncer(this);
++}
++
++CAESinkSteamLinkStream::~CAESinkSteamLinkStream()
++{
++  CServiceBroker::GetAnnouncementManager()->RemoveAnnouncer(this);
++
++  Close();
++}
++
++bool CAESinkSteamLinkStream::Open()
++{
++  Close();
++
++  CSingleLock lock(m_streamMutex);
++
++  bool bSuccess = false;
++
++  m_stream = SLAudio_CreateStream(m_context, m_sampleRateHz, m_channels, m_packetSize, true);
++
++  if (m_stream)
++  {
++    bSuccess = true;
++    lock.Leave();
++    Create(false);
++  }
++  else
++  {
++    CLog::Log(LOGERROR, "SteamLinkAudio: Failed to create stream");
++  }
++
++  return bSuccess;
++}
++
++void CAESinkSteamLinkStream::Close()
++{
++  StopThread();
++
++  CSingleLock lock(m_streamMutex);
++
++  if (m_stream)
++  {
++    SLAudio_FreeStream(m_stream);
++    m_stream = nullptr;
++  }
++}
++
++bool CAESinkSteamLinkStream::Flush()
++{
++  bool bOpen = false;
++
++  // Causes AddPacket() to return immediately
++  {
++    CSingleLock lock(m_streamMutex);
++    if (m_stream)
++    {
++      bOpen = true;
++      SLAudio_FreeStream(m_stream);
++      m_stream = nullptr;
++    }
++  }
++
++  // Clear queue
++  {
++    CSingleLock lock(m_queueMutex);
++    m_queue.clear();
++  }
++
++  // Reopen stream
++  bool bSuccess = true;
++  if (bOpen)
++  {
++    CSingleLock lock(m_streamMutex);
++    m_stream = SLAudio_CreateStream(m_context, m_sampleRateHz, m_channels, m_packetSize, true);
++    bSuccess = (m_stream != nullptr);
++  }
++
++  return bSuccess;
++}
++
++bool CAESinkSteamLinkStream::AddPacket(std::unique_ptr<uint8_t[]> data, unsigned int size, double presentTimeSecs)
++{
++  {
++    CSingleLock lock(m_streamMutex);
++    if (m_stream == nullptr)
++      return true; // This might have been called during a Flush()
++  }
++
++  /*! @todo
++  int delayMs = CSteamLinkVideo::GetDelayMs();
++
++  delayMs -= SL_INTRINSIC_DELAY_MS;
++
++  if (delayMs > 0)
++    presentTimeSecs += delayMs / 1000.0;
++  */
++
++  {
++    CSingleLock lock(m_queueMutex);
++    m_queue.emplace_back(std::move(data), size, presentTimeSecs);
++  }
++
++  // Notify thread that a packet is ready
++  m_queueEvent.Set();
++
++  return true;
++}
++
++void CAESinkSteamLinkStream::Process()
++{
++  AudioPacket packet;
++
++  while (!m_bStop)
++  {
++    if (packet.buffer || GetNextPacket(packet))
++    {
++      // Sleep until we're ready to show the frame
++      WaitUntilReady(packet.presentTimeSecs);
++
++      if (m_bStop)
++        break;
++
++      SendPacket(std::move(packet));
++
++      if (GetNextPacket(packet))
++        continue;
++    }
++
++    AbortableWait(m_queueEvent);
++  }
++
++  // Make sure we haven't left a Steam Link packet open
++  if (m_steamLinkBuffer != nullptr)
++    EndPacket();
++}
++
++void CAESinkSteamLinkStream::Announce(ANNOUNCEMENT::AnnouncementFlag flag, const char *sender, const char *message, const CVariant &data)
++{
++  if ((flag & ANNOUNCEMENT::Player) && strcmp(sender, "xbmc") == 0)
++  {
++    if (strcmp(message, "OnPlay") == 0 ||
++        strcmp(message, "OnPause") == 0 ||
++        strcmp(message, "OnStop") == 0 ||
++        strcmp(message, "OnSpeedChanged") == 0 ||
++        strcmp(message, "OnSeek") == 0 ||
++        strcmp(message, "OnAVStart") == 0 ||
++        strcmp(message, "OnAVChange") == 0)
++    {
++      Flush();
++    }
++    else
++    {
++      CLog::Log(LOGDEBUG, "CAESinkSteamLinkStream: Unknown player announcement \"%s\"", message);
++    }
++  }
++}
++
++bool CAESinkSteamLinkStream::GetNextPacket(AudioPacket& packet)
++{
++  CSingleLock lock(m_queueMutex);
++
++  if (!m_queue.empty())
++  {
++    packet = std::move(m_queue.front());
++    m_queue.pop_front();
++    return true;
++  }
++
++  return false;
++}
++
++void CAESinkSteamLinkStream::WaitUntilReady(double targetTimeSecs)
++{
++  const double nowSecs = static_cast<double>(CurrentHostCounter()) / CurrentHostFrequency();
++
++  const int sleepTimeMs = static_cast<int>((targetTimeSecs - nowSecs) * 1000.0);
++
++  if (sleepTimeMs > 0)
++    Sleep(sleepTimeMs);
++}
++
++bool CAESinkSteamLinkStream::HasLatePacket(double nextPresentTimeSecs) const
++{
++  return std::find_if(m_queue.begin(), m_queue.end(),
++    [nextPresentTimeSecs](const AudioPacket& packet)
++    {
++      return packet.presentTimeSecs >= nextPresentTimeSecs;
++    }) != m_queue.end();
++}
++
++void CAESinkSteamLinkStream::ClearLatePackets(double nextPresentTimeSecs)
++{
++  while (HasLatePacket(nextPresentTimeSecs))
++    m_queue.pop_front();
++}
++
++void CAESinkSteamLinkStream::BeginPacket()
++{
++  m_steamLinkBuffer = static_cast<uint8_t*>(SLAudio_BeginFrame(m_stream));
++  m_remainingBytes = m_packetSize;
++}
++
++void CAESinkSteamLinkStream::EndPacket()
++{
++  SLAudio_SubmitFrame(m_stream);
++  m_steamLinkBuffer = nullptr;
++  m_remainingBytes = 0;
++}
++
++void CAESinkSteamLinkStream::SendPacket(AudioPacket packet)
++{
++  CSingleLock lock(m_streamMutex);
++
++  if (m_stream == nullptr)
++    return;
++
++  if (GetSLDelaySecs() > MAX_AUDIO_DELAY_MS)
++  {
++    // Flush() grabs the queue mutex, so don't hold the stream mutex
++    CSingleExit exit(m_streamMutex);
++    if (!Flush())
++      return;
++  }
++
++  if (m_stream == nullptr)
++    return;
++
++  unsigned int bytesWritten = 0;
++
++  // Loop until all bytes have been written
++  while (bytesWritten < packet.size)
++  {
++    if (m_steamLinkBuffer == nullptr)
++      BeginPacket();
++
++    const unsigned int bytesToWrite = std::min(m_remainingBytes, packet.size - bytesWritten);
++
++    // Sanity check (shouldn't happen)
++    if (bytesToWrite == 0 || m_remainingBytes == 0)
++      break;
++
++    const unsigned int bufferOffset = m_packetSize - m_remainingBytes;
++    std::memcpy(m_steamLinkBuffer + bufferOffset, packet.buffer.get() + bytesWritten, bytesToWrite);
++
++    m_remainingBytes -= bytesToWrite;
++    bytesWritten += bytesToWrite;
++
++    if (m_remainingBytes == 0)
++      EndPacket();
++  }
++}
++
++double CAESinkSteamLinkStream::GetSLDelaySecs()
++{
++  uint32_t queuedFrames = 0;
++
++  if (m_stream)
++    queuedFrames = SLAudio_GetQueuedAudioSamples(m_stream) / m_channels;
++
++  return static_cast<double>(queuedFrames) / m_sampleRateHz;
++}
+diff --git a/xbmc/cores/AudioEngine/Sinks/steamlink/AESinkSteamLinkStream.h b/xbmc/cores/AudioEngine/Sinks/steamlink/AESinkSteamLinkStream.h
+new file mode 100644
+index 0000000000..ed4c8d0df9
+--- /dev/null
++++ b/xbmc/cores/AudioEngine/Sinks/steamlink/AESinkSteamLinkStream.h
+@@ -0,0 +1,102 @@
++/*
++ *  Copyright (C) 2016-2018 Team Kodi
++ *  Copyright (C) 2016-2018 Valve Corporation
++ *  This file is part of Kodi - https://kodi.tv
++ *
++ *  SPDX-License-Identifier: GPL-2.0-or-later
++ *  See LICENSES/README.md for more information.
++ */
++
++#pragma once
++
++#include "interfaces/IAnnouncer.h"
++#include "threads/CriticalSection.h"
++#include "threads/SystemClock.h"
++#include "threads/Thread.h"
++
++#include <memory>
++#include <deque>
++#include <stdint.h>
++
++struct CSLAudioContext;
++struct CSLAudioStream;
++
++namespace KODI
++{
++namespace STEAMLINK
++{
++
++class CAESinkSteamLinkStream : public CThread,
++                               public ANNOUNCEMENT::IAnnouncer
++{
++public:
++  CAESinkSteamLinkStream(CSLAudioContext* context, unsigned int sampleRateHz, unsigned int channels, unsigned int packetSize);
++  virtual ~CAESinkSteamLinkStream();
++
++  bool Open();
++  void Close();
++  bool Flush();
++  bool AddPacket(std::unique_ptr<uint8_t[]> data, unsigned int size, double presentTimeSecs);
++
++  // implementation of IAnnouncer
++  virtual void Announce(ANNOUNCEMENT::AnnouncementFlag flag, const char *sender, const char *message, const CVariant &data) override;
++
++protected:
++  // implementation of CThread
++  virtual void Process() override;
++
++private:
++  struct AudioPacket
++  {
++    AudioPacket() :
++      size(0),
++      presentTimeSecs(0.0)
++    {
++    }
++
++    AudioPacket(std::unique_ptr<uint8_t[]> buffer, unsigned int size, double presentTimeSecs) :
++      buffer(std::move(buffer)),
++      size(size),
++      presentTimeSecs(presentTimeSecs)
++    {
++    }
++
++    std::unique_ptr<uint8_t[]> buffer;
++    unsigned int size;
++    double presentTimeSecs;
++  };
++
++  bool GetNextPacket(AudioPacket& packet);
++
++  void WaitUntilReady(double targetTimeSecs);
++
++  bool HasLatePacket(double nextPresentTimeSecs) const;
++
++  void ClearLatePackets(double nextPresentTimeSecs);
++
++  void BeginPacket();
++  void EndPacket();
++
++  void SendPacket(AudioPacket packet);
++
++  double GetSLDelaySecs();
++
++  // Construction parameters
++  CSLAudioContext* const m_context;
++  const unsigned int m_sampleRateHz;
++  const unsigned int m_channels;
++  const unsigned int m_packetSize;
++
++  // Stream parameters
++  CSLAudioStream* m_stream;
++  CCriticalSection m_streamMutex;
++  std::deque<AudioPacket> m_queue;
++  CCriticalSection m_queueMutex;
++  CEvent m_queueEvent;
++  uint8_t* m_steamLinkBuffer;
++  unsigned int m_remainingBytes; // Bytes remaining in the Steam Link audio buffer
++  XbmcThreads::EndTime m_videoDelay;
++};
++
++}
++}
+diff --git a/xbmc/cores/AudioEngine/Sinks/steamlink/AESinkSteamLinkTranslator.cpp b/xbmc/cores/AudioEngine/Sinks/steamlink/AESinkSteamLinkTranslator.cpp
+new file mode 100644
+index 0000000000..66420b0f13
+--- /dev/null
++++ b/xbmc/cores/AudioEngine/Sinks/steamlink/AESinkSteamLinkTranslator.cpp
+@@ -0,0 +1,30 @@
++/*
++ *  Copyright (C) 2016-2018 Team Kodi
++ *  Copyright (C) 2016-2018 Valve Corporation
++ *  This file is part of Kodi - https://kodi.tv
++ *
++ *  SPDX-License-Identifier: GPL-2.0-or-later
++ *  See LICENSES/README.md for more information.
++ */
++
++#include "AESinkSteamLinkTranslator.h"
++#include "commons/ilog.h"
++
++using namespace KODI;
++using namespace STEAMLINK;
++
++int CAESinkSteamLinkTranslator::TranslateLogLevel(ESLAudioLog logLevel)
++{
++  switch (logLevel)
++  {
++  case k_ESLAudioLogDebug:   return LOGDEBUG;
++  case k_ESLAudioLogInfo:    return LOGINFO;
++  case k_ESLAudioLogWarning: return LOGWARNING;
++  case k_ESLAudioLogError:   return LOGERROR;
++    break;
++  default:
++    break;
++  }
++
++  return LOGDEBUG;
++}
+diff --git a/xbmc/cores/AudioEngine/Sinks/steamlink/AESinkSteamLinkTranslator.h b/xbmc/cores/AudioEngine/Sinks/steamlink/AESinkSteamLinkTranslator.h
+new file mode 100644
+index 0000000000..4b21785522
+--- /dev/null
++++ b/xbmc/cores/AudioEngine/Sinks/steamlink/AESinkSteamLinkTranslator.h
+@@ -0,0 +1,26 @@
++/*
++ *  Copyright (C) 2016-2018 Team Kodi
++ *  Copyright (C) 2016-2018 Valve Corporation
++ *  This file is part of Kodi - https://kodi.tv
++ *
++ *  SPDX-License-Identifier: GPL-2.0-or-later
++ *  See LICENSES/README.md for more information.
++ */
++
++#pragma once
++
++#include "SLAudio.h"
++
++namespace KODI
++{
++namespace STEAMLINK
++{
++
++class CAESinkSteamLinkTranslator
++{
++public:
++  static int TranslateLogLevel(ESLAudioLog logLevel);
++};
++
++}
++}
+diff --git a/xbmc/cores/AudioEngine/Sinks/steamlink/CMakeLists.txt b/xbmc/cores/AudioEngine/Sinks/steamlink/CMakeLists.txt
+new file mode 100644
+index 0000000000..2bab613c38
+--- /dev/null
++++ b/xbmc/cores/AudioEngine/Sinks/steamlink/CMakeLists.txt
+@@ -0,0 +1,11 @@
++set(SOURCES AESinkSteamLink.cpp
++            AESinkSteamLinkStream.cpp
++            AESinkSteamLinkTranslator.cpp
++)
++
++set(HEADERS AESinkSteamLink.h
++            AESinkSteamLinkStream.h
++            AESinkSteamLinkTranslator.h
++)
++
++core_add_library(ae_steamlink)
+diff --git a/xbmc/cores/IPlayer.h b/xbmc/cores/IPlayer.h
+index a82b772dbd..69be3cbeba 100644
+--- a/xbmc/cores/IPlayer.h
++++ b/xbmc/cores/IPlayer.h
+@@ -102,6 +102,7 @@ public:
+   virtual bool HasRDS() const { return false; }
+   virtual bool IsPassthrough() const { return false;}
+   virtual bool CanSeek() {return true;}
++  virtual bool CanFFRW() { return true; }
+   virtual void Seek(bool bPlus = true, bool bLargeStep = false, bool bChapterOverride = false) = 0;
+   virtual bool SeekScene(bool bPlus = true) {return false;}
+   virtual void SeekPercentage(float fPercent = 0){}
+diff --git a/xbmc/cores/RetroPlayer/process/steamlink/CMakeLists.txt b/xbmc/cores/RetroPlayer/process/steamlink/CMakeLists.txt
+new file mode 100644
+index 0000000000..d4d548948e
+--- /dev/null
++++ b/xbmc/cores/RetroPlayer/process/steamlink/CMakeLists.txt
+@@ -0,0 +1,5 @@
++set(SOURCES RPProcessInfoSteamLink.cpp)
++
++set(HEADERS RPProcessInfoSteamLink.h)
++
++core_add_library(rp_process_steamlink)
+diff --git a/xbmc/cores/RetroPlayer/process/steamlink/RPProcessInfoSteamLink.cpp b/xbmc/cores/RetroPlayer/process/steamlink/RPProcessInfoSteamLink.cpp
+new file mode 100644
+index 0000000000..c31a675659
+--- /dev/null
++++ b/xbmc/cores/RetroPlayer/process/steamlink/RPProcessInfoSteamLink.cpp
+@@ -0,0 +1,28 @@
++/*
++ *  Copyright (C) 2018 Team Kodi
++ *  Copyright (C) 2018 Valve Corporation
++ *  This file is part of Kodi - https://kodi.tv
++ *
++ *  SPDX-License-Identifier: GPL-2.0-or-later
++ *  See LICENSES/README.md for more information.
++ */
++
++#include "RPProcessInfoSteamLink.h"
++
++using namespace KODI;
++using namespace STEAMLINK;
++
++CRPProcessInfoSteamLink::CRPProcessInfoSteamLink() :
++  CRPProcessInfo("SteamLink")
++{
++}
++
++RETRO::CRPProcessInfo* CRPProcessInfoSteamLink::Create()
++{
++  return new CRPProcessInfoSteamLink();
++}
++
++void CRPProcessInfoSteamLink::Register()
++{
++  CRPProcessInfo::RegisterProcessControl(CRPProcessInfoSteamLink::Create);
++}
+diff --git a/xbmc/cores/RetroPlayer/process/steamlink/RPProcessInfoSteamLink.h b/xbmc/cores/RetroPlayer/process/steamlink/RPProcessInfoSteamLink.h
+new file mode 100644
+index 0000000000..eb525ad6b4
+--- /dev/null
++++ b/xbmc/cores/RetroPlayer/process/steamlink/RPProcessInfoSteamLink.h
+@@ -0,0 +1,27 @@
++/*
++ *  Copyright (C) 2018 Team Kodi
++ *  Copyright (C) 2018 Valve Corporation
++ *  This file is part of Kodi - https://kodi.tv
++ *
++ *  SPDX-License-Identifier: GPL-2.0-or-later
++ *  See LICENSES/README.md for more information.
++ */
++
++#pragma once
++
++#include "cores/RetroPlayer/process/RPProcessInfo.h"
++
++namespace KODI
++{
++namespace STEAMLINK
++{
++  class CRPProcessInfoSteamLink : public RETRO::CRPProcessInfo
++  {
++  public:
++    CRPProcessInfoSteamLink();
++
++    static CRPProcessInfo* Create();
++    static void Register();
++  };
++}
++}
+diff --git a/xbmc/cores/VideoPlayer/DVDCodecs/Video/steamlink/CMakeLists.txt b/xbmc/cores/VideoPlayer/DVDCodecs/Video/steamlink/CMakeLists.txt
+new file mode 100644
+index 0000000000..0319ef7d95
+--- /dev/null
++++ b/xbmc/cores/VideoPlayer/DVDCodecs/Video/steamlink/CMakeLists.txt
+@@ -0,0 +1,17 @@
++set(SOURCES SteamLinkTranslator.cpp
++            SteamLinkUniqueBuffer.cpp
++            SteamLinkVideo.cpp
++            SteamLinkVideoBuffer.cpp
++            SteamLinkVideoBufferPool.cpp
++            SteamLinkVideoStream.cpp
++)
++
++set(HEADERS SteamLinkTranslator.h
++            SteamLinkUniqueBuffer.h
++            SteamLinkVideo.h
++            SteamLinkVideoBuffer.h
++            SteamLinkVideoBufferPool.h
++            SteamLinkVideoStream.h
++)
++
++core_add_library(steamlink_videocodec)
+diff --git a/xbmc/cores/VideoPlayer/DVDCodecs/Video/steamlink/SteamLinkTranslator.cpp b/xbmc/cores/VideoPlayer/DVDCodecs/Video/steamlink/SteamLinkTranslator.cpp
+new file mode 100644
+index 0000000000..757cc5b765
+--- /dev/null
++++ b/xbmc/cores/VideoPlayer/DVDCodecs/Video/steamlink/SteamLinkTranslator.cpp
+@@ -0,0 +1,56 @@
++/*
++ *  Copyright (C) 2016-2018 Team Kodi
++ *  Copyright (C) 2016-2018 Valve Corporation
++ *  This file is part of Kodi - https://kodi.tv
++ *
++ *  SPDX-License-Identifier: GPL-2.0-or-later
++ *  See LICENSES/README.md for more information.
++ */
++
++#include "SteamLinkTranslator.h"
++#include "commons/ilog.h"
++
++using namespace KODI;
++using namespace STEAMLINK;
++
++bool CSteamLinkTranslator::TranslateFormat(AVCodecID format, ESLVideoFormat& slFormat)
++{
++  switch (format)
++  {
++  case AV_CODEC_ID_H264:
++    slFormat = k_ESLVideoFormatH264;
++    break;
++  default:
++    return false;
++  }
++
++  return true;
++}
++
++const char* CSteamLinkTranslator::TranslateFormatToString(ESLVideoFormat format)
++{
++  switch (format)
++  {
++  case k_ESLVideoFormatH264: return "h264";
++  default:
++    break;
++  }
++
++  return "";
++}
++
++int CSteamLinkTranslator::TranslateLogLevel(ESLVideoLog logLevel)
++{
++  switch (logLevel)
++  {
++  case k_ESLVideoLogDebug:   return LOGDEBUG;
++  case k_ESLVideoLogInfo:    return LOGINFO;
++  case k_ESLVideoLogWarning: return LOGWARNING;
++  case k_ESLVideoLogError:   return LOGERROR;
++    break;
++  default:
++    break;
++  }
++
++  return LOGDEBUG;
++}
+diff --git a/xbmc/cores/VideoPlayer/DVDCodecs/Video/steamlink/SteamLinkTranslator.h b/xbmc/cores/VideoPlayer/DVDCodecs/Video/steamlink/SteamLinkTranslator.h
+new file mode 100644
+index 0000000000..363a9f12e5
+--- /dev/null
++++ b/xbmc/cores/VideoPlayer/DVDCodecs/Video/steamlink/SteamLinkTranslator.h
+@@ -0,0 +1,31 @@
++/*
++ *  Copyright (C) 2016-2018 Team Kodi
++ *  Copyright (C) 2016-2018 Valve Corporation
++ *  This file is part of Kodi - https://kodi.tv
++ *
++ *  SPDX-License-Identifier: GPL-2.0-or-later
++ *  See LICENSES/README.md for more information.
++ */
++
++#pragma once
++
++#include "SLVideo.h"
++#include "libavcodec/avcodec.h"
++
++namespace KODI
++{
++namespace STEAMLINK
++{
++
++class CSteamLinkTranslator
++{
++public:
++  static bool TranslateFormat(AVCodecID format, ESLVideoFormat& slFormat);
++
++  static const char* TranslateFormatToString(ESLVideoFormat format);
++
++  static int TranslateLogLevel(ESLVideoLog logLevel);
++};
++
++}
++}
+diff --git a/xbmc/cores/VideoPlayer/DVDCodecs/Video/steamlink/SteamLinkUniqueBuffer.cpp b/xbmc/cores/VideoPlayer/DVDCodecs/Video/steamlink/SteamLinkUniqueBuffer.cpp
+new file mode 100644
+index 0000000000..07da85543e
+--- /dev/null
++++ b/xbmc/cores/VideoPlayer/DVDCodecs/Video/steamlink/SteamLinkUniqueBuffer.cpp
+@@ -0,0 +1,20 @@
++/*
++ *  Copyright (C) 2016-2018 Team Kodi
++ *  Copyright (C) 2016-2018 Valve Corporation
++ *  This file is part of Kodi - https://kodi.tv
++ *
++ *  SPDX-License-Identifier: GPL-2.0-or-later
++ *  See LICENSES/README.md for more information.
++ */
++
++#include "SteamLinkUniqueBuffer.h"
++
++#include <stdlib.h>
++
++using namespace KODI;
++using namespace STEAMLINK;
++
++void SteamLinkBufferFree::operator()(void* x)
++{
++  free(x);
++}
+diff --git a/xbmc/cores/VideoPlayer/DVDCodecs/Video/steamlink/SteamLinkUniqueBuffer.h b/xbmc/cores/VideoPlayer/DVDCodecs/Video/steamlink/SteamLinkUniqueBuffer.h
+new file mode 100644
+index 0000000000..ab88b86184
+--- /dev/null
++++ b/xbmc/cores/VideoPlayer/DVDCodecs/Video/steamlink/SteamLinkUniqueBuffer.h
+@@ -0,0 +1,28 @@
++/*
++ *  Copyright (C) 2016-2018 Team Kodi
++ *  Copyright (C) 2016-2018 Valve Corporation
++ *  This file is part of Kodi - https://kodi.tv
++ *
++ *  SPDX-License-Identifier: GPL-2.0-or-later
++ *  See LICENSES/README.md for more information.
++ */
++
++#pragma once
++
++#include <memory>
++#include <stdint.h>
++
++namespace KODI
++{
++namespace STEAMLINK
++{
++
++struct SteamLinkBufferFree
++{
++  void operator()(void* x);
++};
++
++using SteamLinkUniqueBuffer = std::unique_ptr<uint8_t[], SteamLinkBufferFree>;
++
++}
++}
+diff --git a/xbmc/cores/VideoPlayer/DVDCodecs/Video/steamlink/SteamLinkVideo.cpp b/xbmc/cores/VideoPlayer/DVDCodecs/Video/steamlink/SteamLinkVideo.cpp
+new file mode 100644
+index 0000000000..5a9f9585b6
+--- /dev/null
++++ b/xbmc/cores/VideoPlayer/DVDCodecs/Video/steamlink/SteamLinkVideo.cpp
+@@ -0,0 +1,509 @@
++/*
++ *  Copyright (C) 2016-2018 Team Kodi
++ *  Copyright (C) 2016-2018 Valve Corporation
++ *  This file is part of Kodi - https://kodi.tv
++ *
++ *  SPDX-License-Identifier: GPL-2.0-or-later
++ *  See LICENSES/README.md for more information.
++ */
++
++#include "SteamLinkVideo.h"
++#include "SteamLinkTranslator.h"
++#include "SteamLinkVideoBuffer.h"
++#include "SteamLinkVideoBufferPool.h"
++#include "SteamLinkVideoStream.h"
++#include "cores/VideoPlayer/DVDCodecs/DVDFactoryCodec.h"
++#include "cores/VideoPlayer/DVDStreamInfo.h"
++#include "settings/AdvancedSettings.h"
++#include "settings/SettingsComponent.h"
++#include "threads/SingleLock.h"
++#include "utils/log.h"
++#include "ServiceBroker.h"
++
++// Steam Link video API
++#include "SLVideo.h"
++
++#include <string.h>
++#include <utility>
++
++static constexpr const char *STEAMLINK_VIDEO_CODEC_NAME = "SteamLinkVideo";
++
++using namespace KODI;
++using namespace STEAMLINK;
++
++namespace
++{
++  void LogFunction(void *pContext, ESLVideoLog eLogLevel, const char *pszMessage)
++  {
++    int level = CSteamLinkTranslator::TranslateLogLevel(eLogLevel);
++    CLog::Log(level, "%s", pszMessage);
++  }
++}
++
++CSteamLinkVideo* CSteamLinkVideo::m_globalVideo = nullptr;
++unsigned int CSteamLinkVideo::m_globalInstances = 0;
++CCriticalSection CSteamLinkVideo::m_globalLock;
++
++CSteamLinkVideo::CSteamLinkVideo(CProcessInfo& processInfo) :
++  CDVDVideoCodec(processInfo),
++  m_videoBufferPool(std::make_shared<CSteamLinkVideoBufferPool>())
++{
++  CLog::Log(LOGDEBUG, "%s: Creating video codec", GetName());
++
++  // Set global parameters
++  {
++    CSingleLock lock(m_globalLock);
++
++    if (m_globalVideo == nullptr)
++      m_globalVideo = this;
++    else
++      CLog::Log(LOGERROR, "%s: Already a global video instance!!!", GetName());
++
++    if (m_globalInstances++ == 0)
++    {
++      SLVideo_SetLogLevel(CServiceBroker::GetSettingsComponent()->GetAdvancedSettings()->CanLogComponent(LOGVIDEO) ? k_ESLVideoLogDebug : k_ESLVideoLogError);
++      SLVideo_SetLogFunction(LogFunction, nullptr);
++    }
++  }
++}
++
++CSteamLinkVideo::~CSteamLinkVideo()
++{
++  CLog::Log(LOGDEBUG, "%s: Destroying video codec", GetName());
++
++  // Unset global parameters
++  {
++    CSingleLock lock(m_globalLock);
++
++    if (m_globalVideo == this)
++      m_globalVideo = nullptr;
++
++    if (m_globalInstances > 0 && --m_globalInstances == 0)
++      SLVideo_SetLogFunction(nullptr, nullptr);
++  }
++
++  Dispose();
++}
++
++CDVDVideoCodec* CSteamLinkVideo::Create(CProcessInfo& processInfo)
++{
++  return new CSteamLinkVideo(processInfo);
++}
++
++void CSteamLinkVideo::Register()
++{
++  CLog::Log(LOGDEBUG, "STEAMLINK: Registering video codec 'steamlink_video'");
++  CDVDFactoryCodec::RegisterHWVideoCodec("steamlink_video", CSteamLinkVideo::Create);
++}
++
++bool CSteamLinkVideo::Open(CDVDStreamInfo &hints, CDVDCodecOptions &options)
++{
++  CLog::Log(LOGDEBUG, "%s: Opening video codec", GetName());
++
++  bool bSuccess = false;
++
++  Dispose();
++
++  CSLVideoContext* context = SLVideo_CreateContext();
++  if (!context)
++  {
++    CLog::Log(LOGERROR, "%s: Failed to create context", GetName());
++  }
++  else
++  {
++    std::unique_ptr<CSteamLinkVideoStream> stream;
++
++    ESLVideoFormat slFormat;
++    if (!CSteamLinkTranslator::TranslateFormat(hints.codec, slFormat))
++    {
++      if (CServiceBroker::GetSettingsComponent()->GetAdvancedSettings()->CanLogComponent(LOGVIDEO))
++        CLog::Log(LOGDEBUG, "%s: Codec not supported", GetName());
++    }
++    else
++    {
++      if (hints.extrasize < 7 || hints.extradata == nullptr)
++      {
++        if (CServiceBroker::GetSettingsComponent()->GetAdvancedSettings()->CanLogComponent(LOGVIDEO))
++          CLog::Log(LOGNOTICE, "%s: avcC data too small or missing", GetName());
++      }
++      else
++      {
++        // valid avcC data (bitstream) always starts with the value 1 (version)
++        if (*static_cast<char*>(hints.extradata) == 1)
++          m_convert_bitstream = bitstream_convert_init(hints.extradata, hints.extrasize);
++
++        if (hints.fpsrate > 0 && hints.fpsscale > 0)
++          stream.reset(new CSteamLinkVideoStream(context, k_ESLVideoFormatH264, hints.fpsrate, hints.fpsscale));
++        else
++          stream.reset(new CSteamLinkVideoStream(context, k_ESLVideoFormatH264));
++
++        if (!stream->Open())
++          stream.reset();
++      }
++    }
++
++    if (!stream)
++    {
++      if (CServiceBroker::GetSettingsComponent()->GetAdvancedSettings()->CanLogComponent(LOGVIDEO))
++        CLog::Log(LOGNOTICE, "%s: Failed to create stream", GetName());
++      SLVideo_FreeContext(context);
++    }
++    else
++    {
++      // Success
++      m_context = context;
++      {
++        CSingleLock lock(m_streamLock);
++        m_stream = std::move(stream);
++      }
++      bSuccess = true;
++
++      // Initialize buffer for VideoPicture
++      m_videoPictureBuffer.Reset();
++      m_videoPictureBuffer.dts = DVD_NOPTS_VALUE;
++      m_videoPictureBuffer.pts = DVD_NOPTS_VALUE;
++      m_videoPictureBuffer.iWidth  = hints.width;
++      m_videoPictureBuffer.iHeight = hints.height;
++
++      m_videoPictureBuffer.iDisplayWidth  = m_videoPictureBuffer.iWidth;
++      m_videoPictureBuffer.iDisplayHeight = m_videoPictureBuffer.iHeight;
++
++      m_processInfo.SetVideoDecoderName(GetName(), true);
++      m_processInfo.SetVideoPixelFormat(CSteamLinkTranslator::TranslateFormatToString(slFormat));
++      m_processInfo.SetVideoDimensions(hints.width, hints.height);
++      m_processInfo.SetVideoFps(static_cast<float>(hints.fpsrate) / static_cast<float>(hints.fpsscale));
++      m_processInfo.SetVideoDAR(hints.aspect);
++      m_processInfo.SetVideoDeintMethod("none");
++
++      if (CServiceBroker::GetSettingsComponent()->GetAdvancedSettings()->CanLogComponent(LOGVIDEO))
++      {
++        CLog::Log(LOGINFO, "%s: Opened codec %s", GetName(), CSteamLinkTranslator::TranslateFormatToString(slFormat));
++
++        int width = 0;
++        int height = 0;
++        SLVideo_GetDisplayResolution(m_context, &width, &height);
++
++        CLog::Log(LOGDEBUG, "%s: Display resolution = %d x %d", GetName(), width, height);
++      }
++    }
++  }
++
++  return bSuccess;
++}
++
++void CSteamLinkVideo::Dispose()
++{
++  if (m_stream)
++  {
++    m_stream->Close();
++    {
++      CSingleLock lock(m_streamLock);
++      m_stream.reset();
++    }
++  }
++
++  if (m_context)
++  {
++    SLVideo_FreeContext(m_context);
++    m_context = nullptr;
++  }
++
++  if (m_convert_bitstream)
++  {
++    if (m_sps_pps_context.sps_pps_data)
++    {
++      free(m_sps_pps_context.sps_pps_data);
++      m_sps_pps_context.sps_pps_data = NULL;
++    }
++    m_convert_bitstream = false;
++  }
++}
++
++bool CSteamLinkVideo::AddData(const DemuxPacket& packet)
++{
++  if (packet.pData == nullptr || packet.iSize <= 0)
++    return false;
++
++  if (!m_stream)
++    return false;
++
++  m_buffer.reset();
++  m_bufferSize = 0;
++  m_dts = packet.dts;
++
++  if (m_convert_bitstream)
++  {
++    // convert demuxer packet from bitstream to bytestream (AnnexB)
++    uint8_t *bytestream_buff = nullptr;
++    int bytestream_size = 0;
++
++    bitstream_convert(packet.pData, packet.iSize, &bytestream_buff, &bytestream_size);
++    if (bytestream_buff != nullptr && (bytestream_size > 0))
++    {
++      m_buffer.reset(bytestream_buff);
++      m_bufferSize = bytestream_size;
++    }
++  }
++  else
++  {
++    uint8_t *bytestream_buff = static_cast<uint8_t*>(malloc(packet.iSize));
++    if (bytestream_buff)
++    {
++      memcpy(bytestream_buff, packet.pData, packet.iSize);
++      m_buffer.reset(bytestream_buff);
++      m_bufferSize = packet.iSize;
++    }
++  }
++
++  return true;
++}
++
++void CSteamLinkVideo::Reset(void)
++{
++  if (!m_stream)
++    return;
++
++  if (!m_stream->Flush())
++  {
++    CSingleLock lock(m_streamLock);
++    m_stream.reset();
++    if (CServiceBroker::GetSettingsComponent()->GetAdvancedSettings()->CanLogComponent(LOGVIDEO))
++      CLog::Log(LOGERROR, "%s: Failed to flush stream", GetName());
++  }
++}
++
++CDVDVideoCodec::VCReturn CSteamLinkVideo::GetPicture(VideoPicture* pVideoPicture)
++{
++  if (!m_stream)
++    return VC_ERROR;
++
++  pVideoPicture->Reset();
++  pVideoPicture->dts = m_videoPictureBuffer.dts;
++  pVideoPicture->iWidth  = m_videoPictureBuffer.iWidth;
++  pVideoPicture->iHeight = m_videoPictureBuffer.iHeight;
++  pVideoPicture->iDisplayWidth  = m_videoPictureBuffer.iDisplayWidth;
++  pVideoPicture->iDisplayHeight = m_videoPictureBuffer.iDisplayHeight;
++
++  // Steam link video accepts decode packet, so use dts for timing
++  pVideoPicture->pts = m_dts;
++
++  CSteamLinkVideoBuffer* buffer = static_cast<CSteamLinkVideoBuffer*>(m_videoBufferPool->Get());
++  buffer->SetBuffer(std::move(m_buffer), m_bufferSize, m_stream);
++  pVideoPicture->videoBuffer = buffer;
++
++  return VC_PICTURE;
++}
++
++const char* CSteamLinkVideo::GetName()
++{
++  return STEAMLINK_VIDEO_CODEC_NAME;
++}
++
++std::shared_ptr<CSteamLinkVideoStream> CSteamLinkVideo::GetStream()
++{
++  std::shared_ptr<CSteamLinkVideoStream> stream;
++
++  {
++    CSingleLock lock(m_streamLock);
++    stream = m_stream;
++  }
++
++  return stream;
++}
++
++bool CSteamLinkVideo::IsPlayingVideo()
++{
++  std::shared_ptr<CSteamLinkVideoStream> stream;
++
++  {
++    CSingleLock lock(m_globalLock);
++
++    if (m_globalVideo != nullptr)
++      stream = m_globalVideo->GetStream();
++  }
++
++  return stream.get() != nullptr;
++}
++
++unsigned int CSteamLinkVideo::GetDelayMs()
++{
++  std::shared_ptr<CSteamLinkVideoStream> stream;
++
++  {
++    CSingleLock lock(m_globalLock);
++
++    if (m_globalVideo != nullptr)
++      stream = m_globalVideo->GetStream();
++  }
++
++  return stream ? stream->GetDelayMs() : 0;
++}
++
++////////////////////////////////////////////////////////////////////////////////////////////
++bool CSteamLinkVideo::bitstream_convert_init(void *in_extradata, int in_extrasize)
++{
++  // based on h264_mp4toannexb_bsf.c (ffmpeg)
++  // which is Copyright (c) 2007 Benoit Fouet <benoit.fouet@free.fr>
++  // and Licensed GPL 2.1 or greater
++
++  m_sps_pps_size = 0;
++  m_sps_pps_context.sps_pps_data = NULL;
++  
++  // nothing to filter
++  if (!in_extradata || in_extrasize < 6)
++    return false;
++
++  uint16_t unit_size;
++  uint32_t total_size = 0;
++  uint8_t *out = NULL, unit_nb, sps_done = 0;
++  const uint8_t *extradata = (uint8_t*)in_extradata + 4;
++  static const uint8_t nalu_header[4] = {0, 0, 0, 1};
++
++  // retrieve length coded size
++  m_sps_pps_context.length_size = (*extradata++ & 0x3) + 1;
++  if (m_sps_pps_context.length_size == 3)
++    return false;
++
++  // retrieve sps and pps unit(s)
++  unit_nb = *extradata++ & 0x1f;  // number of sps unit(s)
++  if (!unit_nb)
++  {
++    unit_nb = *extradata++;       // number of pps unit(s)
++    sps_done++;
++  }
++  while (unit_nb--)
++  {
++    unit_size = extradata[0] << 8 | extradata[1];
++    total_size += unit_size + 4;
++    if ( (extradata + 2 + unit_size) > ((uint8_t*)in_extradata + in_extrasize) )
++    {
++      free(out);
++      return false;
++    }
++    uint8_t* new_out = (uint8_t*)realloc(out, total_size);
++    if (new_out)
++    {
++      out = new_out;
++    }
++    else
++    {
++      CLog::Log(LOGERROR, "bitstream_convert_init failed - %s : could not realloc the buffer out",  __FUNCTION__);
++      free(out);
++      return false;
++    }
++
++    memcpy(out + total_size - unit_size - 4, nalu_header, 4);
++    memcpy(out + total_size - unit_size, extradata + 2, unit_size);
++    extradata += 2 + unit_size;
++
++    if (!unit_nb && !sps_done++)
++      unit_nb = *extradata++;     // number of pps unit(s)
++  }
++
++  m_sps_pps_context.sps_pps_data = out;
++  m_sps_pps_context.size = total_size;
++  m_sps_pps_context.first_idr = 1;
++
++  return true;
++}
++
++bool CSteamLinkVideo::bitstream_convert(uint8_t* pData, int iSize, uint8_t **poutbuf, int *poutbuf_size)
++{
++  // based on h264_mp4toannexb_bsf.c (ffmpeg)
++  // which is Copyright (c) 2007 Benoit Fouet <benoit.fouet@free.fr>
++  // and Licensed GPL 2.1 or greater
++
++  uint8_t *buf = pData;
++  uint32_t buf_size = iSize;
++  uint8_t  unit_type;
++  int32_t  nal_size;
++  uint32_t cumul_size = 0;
++  const uint8_t *buf_end = buf + buf_size;
++
++  do
++  {
++    if (buf + m_sps_pps_context.length_size > buf_end)
++      goto fail;
++
++    if (m_sps_pps_context.length_size == 1)
++      nal_size = buf[0];
++    else if (m_sps_pps_context.length_size == 2)
++      nal_size = buf[0] << 8 | buf[1];
++    else
++      nal_size = buf[0] << 24 | buf[1] << 16 | buf[2] << 8 | buf[3];
++
++    buf += m_sps_pps_context.length_size;
++    unit_type = *buf & 0x1f;
++
++    if (buf + nal_size > buf_end || nal_size < 0)
++      goto fail;
++
++    // prepend only to the first type 5 NAL unit of an IDR picture
++    if (m_sps_pps_context.first_idr && unit_type == 5)
++    {
++      bitstream_alloc_and_copy(poutbuf, poutbuf_size,
++        m_sps_pps_context.sps_pps_data, m_sps_pps_context.size, buf, nal_size);
++      m_sps_pps_context.first_idr = 0;
++    }
++    else
++    {
++      bitstream_alloc_and_copy(poutbuf, poutbuf_size, NULL, 0, buf, nal_size);
++      if (!m_sps_pps_context.first_idr && unit_type == 1)
++          m_sps_pps_context.first_idr = 1;
++    }
++
++    if (!*poutbuf)
++      goto fail;
++
++    buf += nal_size;
++    cumul_size += nal_size + m_sps_pps_context.length_size;
++  } while (cumul_size < buf_size);
++
++  return true;
++
++fail:
++  free(*poutbuf);
++  *poutbuf = NULL;
++  *poutbuf_size = 0;
++  return false;
++}
++
++void CSteamLinkVideo::bitstream_alloc_and_copy(
++  uint8_t **poutbuf,      int *poutbuf_size,
++  const uint8_t *sps_pps, uint32_t sps_pps_size,
++  const uint8_t *in,      uint32_t in_size)
++{
++  // based on h264_mp4toannexb_bsf.c (ffmpeg)
++  // which is Copyright (c) 2007 Benoit Fouet <benoit.fouet@free.fr>
++  // and Licensed GPL 2.1 or greater
++
++  #define CHD_WB32(p, d) { \
++    ((uint8_t*)(p))[3] = (d); \
++    ((uint8_t*)(p))[2] = (d) >> 8; \
++    ((uint8_t*)(p))[1] = (d) >> 16; \
++    ((uint8_t*)(p))[0] = (d) >> 24; }
++
++  uint32_t offset = *poutbuf_size;
++  uint8_t nal_header_size = 4;//offset ? 3 : 4;
++
++  *poutbuf_size += sps_pps_size + nal_header_size + in_size;
++  *poutbuf = static_cast<uint8_t*>(realloc(*poutbuf, *poutbuf_size));
++
++  if (!*poutbuf)
++    return;
++
++  if (sps_pps)
++    memcpy(*poutbuf + offset, sps_pps, sps_pps_size);
++
++  memcpy(*poutbuf + offset + sps_pps_size + nal_header_size, in, in_size);
++  if (true || !offset)
++  {
++    CHD_WB32(*poutbuf + offset + sps_pps_size, 1);
++  }
++  else
++  {
++    (*poutbuf + offset + sps_pps_size)[0] = 0;
++    (*poutbuf + offset + sps_pps_size)[1] = 0;
++    (*poutbuf + offset + sps_pps_size)[2] = 1;
++  }
++}
+diff --git a/xbmc/cores/VideoPlayer/DVDCodecs/Video/steamlink/SteamLinkVideo.h b/xbmc/cores/VideoPlayer/DVDCodecs/Video/steamlink/SteamLinkVideo.h
+new file mode 100644
+index 0000000000..7a8e51ea24
+--- /dev/null
++++ b/xbmc/cores/VideoPlayer/DVDCodecs/Video/steamlink/SteamLinkVideo.h
+@@ -0,0 +1,94 @@
++/*
++ *  Copyright (C) 2016-2018 Team Kodi
++ *  Copyright (C) 2016-2018 Valve Corporation
++ *  This file is part of Kodi - https://kodi.tv
++ *
++ *  SPDX-License-Identifier: GPL-2.0-or-later
++ *  See LICENSES/README.md for more information.
++ */
++
++#pragma once
++
++#include "SteamLinkUniqueBuffer.h"
++#include "cores/VideoPlayer/DVDCodecs/Video/DVDVideoCodec.h"
++#include "threads/CriticalSection.h"
++
++#include <memory>
++#include <stdint.h>
++#include <string>
++
++struct CSLVideoContext;
++struct CSLVideoStream;
++
++namespace KODI
++{
++namespace STEAMLINK
++{
++
++class CSteamLinkVideoBufferPool;
++class CSteamLinkVideoStream;
++
++class CSteamLinkVideo : public CDVDVideoCodec
++{
++public:
++  CSteamLinkVideo(CProcessInfo& processInfo);
++  virtual ~CSteamLinkVideo();
++
++  // Registration
++  static CDVDVideoCodec* Create(CProcessInfo& processInfo);
++  static void Register();
++
++  // Implementation of CDVDVideoCodec
++  bool Open(CDVDStreamInfo &hints, CDVDCodecOptions &options) override;
++  bool AddData(const DemuxPacket& packet) override;
++  void Reset() override;
++  CDVDVideoCodec::VCReturn GetPicture(VideoPicture* pVideoPicture) override;
++  const char* GetName() override;
++
++  // Access global stream instance
++  static bool IsPlayingVideo();
++  static unsigned int GetDelayMs();
++
++private:
++  void Dispose();
++
++  std::shared_ptr<CSteamLinkVideoStream> GetStream();
++
++  // Steam Link data
++  CSLVideoContext* m_context = nullptr;
++  std::shared_ptr<CSteamLinkVideoStream> m_stream;
++  CCriticalSection m_streamLock;
++
++  // VideoPlayer data
++  std::shared_ptr<CSteamLinkVideoBufferPool> m_videoBufferPool;
++  VideoPicture m_videoPictureBuffer;
++  SteamLinkUniqueBuffer m_buffer;
++  size_t m_bufferSize = 0;
++  double m_dts = 0.0;
++
++  // Bitstream to bytestream (Annex B) conversion support
++  bool bitstream_convert_init(void *in_extradata, int in_extrasize);
++  bool bitstream_convert(uint8_t* pData, int iSize, uint8_t **poutbuf, int *poutbuf_size);
++  static void bitstream_alloc_and_copy(uint8_t **poutbuf, int *poutbuf_size,
++    const uint8_t *sps_pps, uint32_t sps_pps_size, const uint8_t *in, uint32_t in_size);
++
++  struct bitstream_ctx
++  {
++    uint8_t length_size = 0;
++    uint8_t first_idr = 0;
++    uint8_t *sps_pps_data = nullptr;
++    uint32_t size = 0;
++  };
++
++  bitstream_ctx m_sps_pps_context{};
++  uint32_t m_sps_pps_size = 0;
++  bool m_convert_bitstream = false;
++
++  // Global instance
++  static CSteamLinkVideo* m_globalVideo;
++  static unsigned int m_globalInstances;
++  static CCriticalSection m_globalLock;
++};
++
++}
++}
+diff --git a/xbmc/cores/VideoPlayer/DVDCodecs/Video/steamlink/SteamLinkVideoBuffer.cpp b/xbmc/cores/VideoPlayer/DVDCodecs/Video/steamlink/SteamLinkVideoBuffer.cpp
+new file mode 100644
+index 0000000000..49188259c0
+--- /dev/null
++++ b/xbmc/cores/VideoPlayer/DVDCodecs/Video/steamlink/SteamLinkVideoBuffer.cpp
+@@ -0,0 +1,34 @@
++/*
++ *  Copyright (C) 2016-2018 Team Kodi
++ *  Copyright (C) 2016-2018 Valve Corporation
++ *  This file is part of Kodi - https://kodi.tv
++ *
++ *  SPDX-License-Identifier: GPL-2.0-or-later
++ *  See LICENSES/README.md for more information.
++ */
++
++#include "SteamLinkVideoBuffer.h"
++
++#include <stdlib.h>
++
++using namespace KODI;
++using namespace STEAMLINK;
++
++CSteamLinkVideoBuffer::CSteamLinkVideoBuffer(IVideoBufferPool& pool, int id) :
++  CVideoBuffer(id)
++{
++}
++
++void CSteamLinkVideoBuffer::SetBuffer(SteamLinkUniqueBuffer buffer, size_t size, std::shared_ptr<CSteamLinkVideoStream> stream)
++{
++  this->buffer = std::move(buffer);
++  this->size = size;
++  this->stream = std::move(stream);
++}
++
++void CSteamLinkVideoBuffer::ClearBuffer()
++{
++  buffer.reset();
++  size = 0;
++  stream.reset();
++}
+diff --git a/xbmc/cores/VideoPlayer/DVDCodecs/Video/steamlink/SteamLinkVideoBuffer.h b/xbmc/cores/VideoPlayer/DVDCodecs/Video/steamlink/SteamLinkVideoBuffer.h
+new file mode 100644
+index 0000000000..b67fd002cb
+--- /dev/null
++++ b/xbmc/cores/VideoPlayer/DVDCodecs/Video/steamlink/SteamLinkVideoBuffer.h
+@@ -0,0 +1,40 @@
++/*
++ *  Copyright (C) 2016-2018 Team Kodi
++ *  Copyright (C) 2016-2018 Valve Corporation
++ *  This file is part of Kodi - https://kodi.tv
++ *
++ *  SPDX-License-Identifier: GPL-2.0-or-later
++ *  See LICENSES/README.md for more information.
++ */
++
++#pragma once
++
++#include "SteamLinkUniqueBuffer.h"
++#include "cores/VideoPlayer/Process/VideoBuffer.h"
++
++#include <memory>
++#include <stddef.h>
++
++namespace KODI
++{
++namespace STEAMLINK
++{
++
++class CSteamLinkVideoStream;
++
++class CSteamLinkVideoBuffer : public CVideoBuffer
++{
++public:
++  CSteamLinkVideoBuffer(IVideoBufferPool& pool, int id);
++  ~CSteamLinkVideoBuffer() override = default;
++
++  void SetBuffer(SteamLinkUniqueBuffer buffer, size_t size, std::shared_ptr<CSteamLinkVideoStream> stream);
++  void ClearBuffer();
++
++  SteamLinkUniqueBuffer buffer;
++  size_t size = 0;
++  std::shared_ptr<CSteamLinkVideoStream> stream;
++};
++
++}
++}
+diff --git a/xbmc/cores/VideoPlayer/DVDCodecs/Video/steamlink/SteamLinkVideoBufferPool.cpp b/xbmc/cores/VideoPlayer/DVDCodecs/Video/steamlink/SteamLinkVideoBufferPool.cpp
+new file mode 100644
+index 0000000000..0caf7a6b05
+--- /dev/null
++++ b/xbmc/cores/VideoPlayer/DVDCodecs/Video/steamlink/SteamLinkVideoBufferPool.cpp
+@@ -0,0 +1,64 @@
++/*
++ *  Copyright (C) 2016-2018 Team Kodi
++ *  Copyright (C) 2016-2018 Valve Corporation
++ *  This file is part of Kodi - https://kodi.tv
++ *
++ *  SPDX-License-Identifier: GPL-2.0-or-later
++ *  See LICENSES/README.md for more information.
++ */
++
++#include "SteamLinkVideoBufferPool.h"
++#include "SteamLinkVideoBuffer.h"
++#include "threads/SingleLock.h"
++
++using namespace KODI;
++using namespace STEAMLINK;
++
++CSteamLinkVideoBufferPool::~CSteamLinkVideoBufferPool()
++{
++  for (auto buf : m_all)
++    delete buf;
++}
++
++CVideoBuffer* CSteamLinkVideoBufferPool::Get()
++{
++  CSingleLock lock(m_critSection);
++
++  CSteamLinkVideoBuffer* buf = nullptr;
++  if (!m_free.empty())
++  {
++    int idx = m_free.front();
++    m_free.pop_front();
++    m_used.push_back(idx);
++    buf = m_all[idx];
++  }
++  else
++  {
++    int id = m_all.size();
++    buf = new CSteamLinkVideoBuffer(*this, id);
++    m_all.push_back(buf);
++    m_used.push_back(id);
++  }
++
++  buf->Acquire(GetPtr());
++  return buf;
++}
++
++void CSteamLinkVideoBufferPool::Return(int id)
++{
++  CSingleLock lock(m_critSection);
++
++  m_all[id]->ClearBuffer();
++  auto it = m_used.begin();
++  while (it != m_used.end())
++  {
++    if (*it == id)
++    {
++      m_used.erase(it);
++      break;
++    }
++    else
++      ++it;
++  }
++  m_free.push_back(id);
++}
+diff --git a/xbmc/cores/VideoPlayer/DVDCodecs/Video/steamlink/SteamLinkVideoBufferPool.h b/xbmc/cores/VideoPlayer/DVDCodecs/Video/steamlink/SteamLinkVideoBufferPool.h
+new file mode 100644
+index 0000000000..1e4203a516
+--- /dev/null
++++ b/xbmc/cores/VideoPlayer/DVDCodecs/Video/steamlink/SteamLinkVideoBufferPool.h
+@@ -0,0 +1,42 @@
++/*
++ *  Copyright (C) 2016-2018 Team Kodi
++ *  Copyright (C) 2016-2018 Valve Corporation
++ *  This file is part of Kodi - https://kodi.tv
++ *
++ *  SPDX-License-Identifier: GPL-2.0-or-later
++ *  See LICENSES/README.md for more information.
++ */
++
++#pragma once
++
++#include "cores/VideoPlayer/Process/VideoBuffer.h"
++#include "threads/CriticalSection.h"
++
++#include <deque>
++#include <vector>
++
++namespace KODI
++{
++namespace STEAMLINK
++{
++
++class CSteamLinkVideoBuffer;
++
++class CSteamLinkVideoBufferPool : public IVideoBufferPool
++{
++public:
++  ~CSteamLinkVideoBufferPool();
++
++  // Implementation of IVideoBufferPool
++  void Return(int id) override;
++  CVideoBuffer* Get() override;
++
++protected:
++  CCriticalSection m_critSection;
++  std::vector<CSteamLinkVideoBuffer*> m_all;
++  std::deque<int> m_used;
++  std::deque<int> m_free;
++};
++
++}
++}
+diff --git a/xbmc/cores/VideoPlayer/DVDCodecs/Video/steamlink/SteamLinkVideoStream.cpp b/xbmc/cores/VideoPlayer/DVDCodecs/Video/steamlink/SteamLinkVideoStream.cpp
+new file mode 100644
+index 0000000000..281b8311e8
+--- /dev/null
++++ b/xbmc/cores/VideoPlayer/DVDCodecs/Video/steamlink/SteamLinkVideoStream.cpp
+@@ -0,0 +1,127 @@
++/*
++ *  Copyright (C) 2016-2018 Team Kodi
++ *  Copyright (C) 2016-2018 Valve Corporation
++ *  This file is part of Kodi - https://kodi.tv
++ *
++ *  SPDX-License-Identifier: GPL-2.0-or-later
++ *  See LICENSES/README.md for more information.
++ */
++
++#include "SteamLinkVideoStream.h"
++#include "threads/SingleLock.h"
++#include "utils/log.h"
++
++using namespace KODI;
++using namespace STEAMLINK;
++
++CSteamLinkVideoStream::CSteamLinkVideoStream(CSLVideoContext *pContext,
++                                             ESLVideoFormat eFormat,
++                                             unsigned int fpsRate /* = 0 */,
++                                             unsigned int fpsScale /* = 0 */) :
++  m_pContext(pContext),
++  m_eFormat(eFormat),
++  m_fpsRate(fpsRate),
++  m_fpsScale(fpsScale),
++  m_stream(nullptr)
++{
++}
++
++bool CSteamLinkVideoStream::Open()
++{
++  CSingleLock lock(m_streamMutex);
++
++  m_stream = SLVideo_CreateStream(m_pContext, m_eFormat, false);
++
++  if (m_stream != nullptr)
++  {
++    if (m_fpsRate > 0 && m_fpsScale > 0)
++      SLVideo_SetStreamTargetFramerate(m_stream, m_fpsRate, m_fpsScale);
++
++    return true;
++  }
++
++  return false;
++}
++
++void CSteamLinkVideoStream::Close()
++{
++  CSingleLock lock(m_streamMutex);
++
++  if (m_stream)
++  {
++    SLVideo_FreeStream(m_stream);
++    m_stream = nullptr;
++  }
++
++  m_delay.SetExpired();
++}
++
++bool CSteamLinkVideoStream::Flush()
++{
++  CSingleLock lock(m_streamMutex);
++
++  Close();
++
++  return Open();
++}
++
++bool CSteamLinkVideoStream::WriteData(const uint8_t* data, size_t size)
++{
++  uint32_t delayMs = 0;
++
++  {
++    CSingleLock lock(m_streamMutex);
++
++    if (m_stream)
++    {
++      if (SLVideo_BeginFrame(m_stream, size) != 0)
++      {
++        CLog::Log(LOGERROR, "SteamLinkVideo: Failed to begin frame of size %u", size);
++        return false;
++      }
++
++      if (SLVideo_WriteFrameData(m_stream, const_cast<uint8_t*>(data), size) != 0)
++      {
++        CLog::Log(LOGERROR, "SteamLinkVideo: Error writing data of size %u", size);
++        return false;
++      }
++
++      if (SLVideo_SubmitFrame(m_stream) != 0)
++      {
++        CLog::Log(LOGERROR, "SteamLinkVideo: Error submitting frame of size %u", size);
++        return false;
++      }
++
++      delayMs = SLVideo_GetQueuedVideoMS(m_stream);
++    }
++  }
++
++  {
++    CSingleLock lock(m_delayMutex);
++
++    if (delayMs > 0)
++    {
++      //CLog::Log(LOGERROR, "CSteamLinkVideoStream - Delay = %u ms", delayMs);
++      m_delay.Set(delayMs);
++    }
++    else
++      ;//CLog::Log(LOGERROR, "CSteamLinkVideoStream - No delay!!!"); //! @todo
++  }
++
++  return true;
++}
++
++void CSteamLinkVideoStream::SetSpeed(float fps)
++{
++  CSingleLock lock(m_streamMutex);
++
++  //! @todo
++  CLog::Log(LOGERROR, "CSteamLinkVideoStream - SetSpeed() not implemented!");
++}
++
++unsigned int CSteamLinkVideoStream::GetDelayMs()
++{
++  CSingleLock lock(m_delayMutex);
++
++  return m_delay.MillisLeft();
++}
+diff --git a/xbmc/cores/VideoPlayer/DVDCodecs/Video/steamlink/SteamLinkVideoStream.h b/xbmc/cores/VideoPlayer/DVDCodecs/Video/steamlink/SteamLinkVideoStream.h
+new file mode 100644
+index 0000000000..584330873f
+--- /dev/null
++++ b/xbmc/cores/VideoPlayer/DVDCodecs/Video/steamlink/SteamLinkVideoStream.h
+@@ -0,0 +1,61 @@
++/*
++ *  Copyright (C) 2016-2018 Team Kodi
++ *  Copyright (C) 2016-2018 Valve Corporation
++ *  This file is part of Kodi - https://kodi.tv
++ *
++ *  SPDX-License-Identifier: GPL-2.0-or-later
++ *  See LICENSES/README.md for more information.
++ */
++
++#pragma once
++
++#include "threads/CriticalSection.h"
++#include "threads/SystemClock.h"
++
++// Steam Link video API
++#include "SLVideo.h"
++
++#include <stdint.h>
++
++namespace KODI
++{
++namespace STEAMLINK
++{
++
++class CSteamLinkVideoStream
++{
++public:
++  CSteamLinkVideoStream(CSLVideoContext *pContext,
++                        ESLVideoFormat format,
++                        unsigned int fpsRate = 0,
++                        unsigned int fpsScale = 0);
++
++  ~CSteamLinkVideoStream() { Close(); }
++
++  bool Open();
++  void Close();
++
++  bool Flush();
++
++  bool WriteData(const uint8_t* data, size_t size);
++
++  void SetSpeed(float speed);
++
++  unsigned int GetDelayMs();
++
++private:
++  // Construction parameters
++  CSLVideoContext * const m_pContext;
++  const ESLVideoFormat m_eFormat;
++  const unsigned int m_fpsRate;
++  const unsigned int m_fpsScale;
++
++  // Stream parameters
++  CSLVideoStream *m_stream;
++  CCriticalSection m_streamMutex;
++  XbmcThreads::EndTime m_delay;;
++  CCriticalSection m_delayMutex;
++};
++
++}
++}
+diff --git a/xbmc/cores/VideoPlayer/IVideoPlayer.h b/xbmc/cores/VideoPlayer/IVideoPlayer.h
+index 5eaea7b074..8c9bee788f 100644
+--- a/xbmc/cores/VideoPlayer/IVideoPlayer.h
++++ b/xbmc/cores/VideoPlayer/IVideoPlayer.h
+@@ -95,6 +95,7 @@ public:
+   virtual int GetVideoBitrate() = 0;
+   virtual void SetSpeed(int iSpeed) = 0;
+   virtual bool IsEOS() { return false; };
++  virtual bool CanFFRW() { return true; }
+ };
+ 
+ class CDVDAudioCodec;
+diff --git a/xbmc/cores/VideoPlayer/VideoPlayer.cpp b/xbmc/cores/VideoPlayer/VideoPlayer.cpp
+index eb84f45af8..e80baab7ea 100644
+--- a/xbmc/cores/VideoPlayer/VideoPlayer.cpp
++++ b/xbmc/cores/VideoPlayer/VideoPlayer.cpp
+@@ -3154,6 +3154,12 @@ bool CVideoPlayer::CanSeek()
+   return m_State.canseek;
+ }
+ 
++bool CVideoPlayer::CanFFRW()
++{
++  CSingleLock lock(m_StateSection);
++  return m_State.canffrw;
++}
++
+ void CVideoPlayer::Seek(bool bPlus, bool bLargeStep, bool bChapterOverride)
+ {
+   if (!m_State.canseek)
+@@ -4789,6 +4795,8 @@ void CVideoPlayer::UpdatePlayState(double timeout)
+     m_processInfo->SetStateRealtime(realtime);
+   }
+ 
++  state.canffrw = m_VideoPlayerVideo->CanFFRW();
++
+   if (m_Edl.HasCut())
+   {
+     state.time = (double) m_Edl.RemoveCutTime(llrint(state.time));
+diff --git a/xbmc/cores/VideoPlayer/VideoPlayer.h b/xbmc/cores/VideoPlayer/VideoPlayer.h
+index 237c48c51d..faf302e09e 100644
+--- a/xbmc/cores/VideoPlayer/VideoPlayer.h
++++ b/xbmc/cores/VideoPlayer/VideoPlayer.h
+@@ -122,6 +122,7 @@ struct SPlayerState
+   bool canpause;            // pvr: can pause the current playing item
+   bool canseek;             // pvr: can seek in the current playing item
+   bool cantempo;
++  bool canffrw;
+   bool caching;
+ 
+   int64_t cache_bytes;   // number of bytes current's cached
+@@ -290,6 +291,7 @@ public:
+   bool HasRDS() const override;
+   bool IsPassthrough() const override;
+   bool CanSeek() override;
++  bool CanFFRW() override;
+   void Seek(bool bPlus, bool bLargeStep, bool bChapterOverride) override;
+   bool SeekScene(bool bPlus = true) override;
+   void SeekPercentage(float iPercent) override;
+diff --git a/xbmc/cores/VideoPlayer/VideoPlayerVideo.cpp b/xbmc/cores/VideoPlayer/VideoPlayerVideo.cpp
+index 5ad2bcbf33..215308bb17 100644
+--- a/xbmc/cores/VideoPlayer/VideoPlayerVideo.cpp
++++ b/xbmc/cores/VideoPlayer/VideoPlayerVideo.cpp
+@@ -771,6 +771,11 @@ void CVideoPlayerVideo::SetSpeed(int speed)
+     m_speed = speed;
+ }
+ 
++bool CVideoPlayerVideo::CanFFRW()
++{
++  return m_renderManager.CanFFRW();
++}
++
+ void CVideoPlayerVideo::Flush(bool sync)
+ {
+   /* flush using message as this get's called from VideoPlayer thread */
+diff --git a/xbmc/cores/VideoPlayer/VideoPlayerVideo.h b/xbmc/cores/VideoPlayer/VideoPlayerVideo.h
+index 689948c4a0..da4f8d0f9a 100644
+--- a/xbmc/cores/VideoPlayer/VideoPlayerVideo.h
++++ b/xbmc/cores/VideoPlayer/VideoPlayerVideo.h
+@@ -71,6 +71,7 @@ public:
+   std::string GetPlayerInfo() override;
+   int GetVideoBitrate() override;
+   void SetSpeed(int iSpeed) override;
++  bool CanFFRW() override;
+ 
+   // classes
+   CDVDOverlayContainer* m_pOverlayContainer;
+diff --git a/xbmc/cores/VideoPlayer/VideoRenderers/BaseRenderer.h b/xbmc/cores/VideoPlayer/VideoRenderers/BaseRenderer.h
+index 7282fddf1a..eecabab15f 100644
+--- a/xbmc/cores/VideoPlayer/VideoRenderers/BaseRenderer.h
++++ b/xbmc/cores/VideoPlayer/VideoRenderers/BaseRenderer.h
+@@ -60,6 +60,7 @@ public:
+   virtual void ReleaseBuffer(int idx) { }
+   virtual bool NeedBuffer(int idx) { return false; }
+   virtual bool IsGuiLayer() { return true; }
++  virtual bool CanFFRW() { return true; }
+   // Render info, can be called before configure
+   virtual CRenderInfo GetRenderInfo() { return CRenderInfo(); }
+   virtual void Update() = 0;
+diff --git a/xbmc/cores/VideoPlayer/VideoRenderers/CMakeLists.txt b/xbmc/cores/VideoPlayer/VideoRenderers/CMakeLists.txt
+index 2b9e17b511..351da7f48e 100644
+--- a/xbmc/cores/VideoPlayer/VideoRenderers/CMakeLists.txt
++++ b/xbmc/cores/VideoPlayer/VideoRenderers/CMakeLists.txt
+@@ -46,7 +46,8 @@ if(OPENGLES_FOUND AND (CORE_PLATFORM_NAME_LC STREQUAL android OR
+                        CORE_PLATFORM_NAME_LC STREQUAL ios OR
+                        CORE_PLATFORM_NAME_LC STREQUAL aml OR
+                        CORE_PLATFORM_NAME_LC STREQUAL gbm OR
+-                       CORE_PLATFORM_NAME_LC STREQUAL wayland))
++                       CORE_PLATFORM_NAME_LC STREQUAL wayland OR
++                       CORE_PLATFORM_NAME_LC STREQUAL steamlink))
+   list(APPEND SOURCES LinuxRendererGLES.cpp
+                       FrameBufferObject.cpp)
+   list(APPEND HEADERS LinuxRendererGLES.h
+diff --git a/xbmc/cores/VideoPlayer/VideoRenderers/HwDecRender/steamlink/CMakeLists.txt b/xbmc/cores/VideoPlayer/VideoRenderers/HwDecRender/steamlink/CMakeLists.txt
+new file mode 100644
+index 0000000000..98156798aa
+--- /dev/null
++++ b/xbmc/cores/VideoPlayer/VideoRenderers/HwDecRender/steamlink/CMakeLists.txt
+@@ -0,0 +1,7 @@
++set(SOURCES RendererSteamLink.cpp
++)
++
++set(HEADERS RendererSteamLink.h
++)
++
++core_add_library(steamlink_renderer)
+diff --git a/xbmc/cores/VideoPlayer/VideoRenderers/HwDecRender/steamlink/RendererSteamLink.cpp b/xbmc/cores/VideoPlayer/VideoRenderers/HwDecRender/steamlink/RendererSteamLink.cpp
+new file mode 100644
+index 0000000000..2d6e1e7438
+--- /dev/null
++++ b/xbmc/cores/VideoPlayer/VideoRenderers/HwDecRender/steamlink/RendererSteamLink.cpp
+@@ -0,0 +1,148 @@
++/*
++ *  Copyright (C) 2016-2018 Team Kodi
++ *  Copyright (C) 2016-2018 Valve Corporation
++ *  This file is part of Kodi - https://kodi.tv
++ *
++ *  SPDX-License-Identifier: GPL-2.0-or-later
++ *  See LICENSES/README.md for more information.
++ */
++
++#include "RendererSteamLink.h"
++#include "cores/VideoPlayer/DVDCodecs/Video/steamlink/SteamLinkVideoBuffer.h"
++#include "cores/VideoPlayer/DVDCodecs/Video/steamlink/SteamLinkVideoStream.h"
++#include "cores/VideoPlayer/DVDCodecs/Video/DVDVideoCodec.h"
++#include "cores/VideoPlayer/VideoRenderers/RenderFactory.h"
++#include "settings/DisplaySettings.h"
++#include "windowing/GraphicContext.h"
++#include "windowing/Resolution.h"
++#include "windowing/WinSystem.h"
++#include "utils/log.h"
++#include "ServiceBroker.h"
++
++// Steam Link video API
++#include "SLVideo.h"
++
++#include <utility>
++
++using namespace KODI;
++using namespace STEAMLINK;
++
++CRendererSteamLink::~CRendererSteamLink()
++{
++  Flush(false);
++}
++
++CBaseRenderer* CRendererSteamLink::Create(CVideoBuffer* buffer)
++{
++  if (dynamic_cast<CSteamLinkVideoBuffer*>(buffer) != nullptr)
++    return new CRendererSteamLink();
++
++  return nullptr;
++}
++
++void CRendererSteamLink::Register()
++{
++  VIDEOPLAYER::CRendererFactory::RegisterRenderer("steamlink", CRendererSteamLink::Create);
++}
++
++bool CRendererSteamLink::Configure(const VideoPicture& picture, float fps, unsigned int orientation)
++{
++  // Configure CBaseRenderer
++  m_sourceWidth = picture.iWidth;
++  m_sourceHeight = picture.iHeight;
++
++  // Calculate the input frame aspect ratio.
++  CalculateFrameAspectRatio(picture.iDisplayWidth, picture.iDisplayHeight);
++  SetViewMode(m_videoSettings.m_ViewMode);
++  ManageRenderArea();
++
++  Flush(false);
++
++  m_bConfigured = true;
++  return true;
++}
++
++void CRendererSteamLink::AddVideoPicture(const VideoPicture& picture, int index)
++{
++  BUFFER& buf = m_buffers[index];
++  if (buf.videoBuffer)
++  {
++    CLog::LogF(LOGERROR, "Unreleased video buffer");
++    buf.videoBuffer->Release();
++  }
++  buf.videoBuffer = picture.videoBuffer;
++  buf.videoBuffer->Acquire();
++}
++
++bool CRendererSteamLink::Flush(bool saveBuffers)
++{
++  if (!saveBuffers)
++  {
++    for (int i = 0; i < NUM_BUFFERS; i++)
++      ReleaseBuffer(i);
++  }
++
++  return saveBuffers;
++}
++
++void CRendererSteamLink::ReleaseBuffer(int idx)
++{
++  BUFFER& buf = m_buffers[idx];
++  if (buf.videoBuffer)
++  {
++    buf.videoBuffer->Release();
++    buf.videoBuffer = nullptr;
++  }
++}
++
++bool CRendererSteamLink::NeedBuffer(int index)
++{
++  BUFFER& buf = m_buffers[index];
++  CSteamLinkVideoBuffer* buffer = dynamic_cast<CSteamLinkVideoBuffer*>(buf.videoBuffer);
++  if (buffer && buffer->buffer)
++    return true;
++
++  return false;
++}
++
++CRenderInfo CRendererSteamLink::GetRenderInfo()
++{
++  CRenderInfo info;
++  info.max_buffer_size = NUM_BUFFERS;
++  return info;
++}
++
++void CRendererSteamLink::Update()
++{
++  if (!m_bConfigured)
++    return;
++
++  ManageRenderArea();
++}
++
++void CRendererSteamLink::RenderUpdate(int index, int index2, bool clear, unsigned int flags, unsigned int alpha)
++{
++  BUFFER& buf = m_buffers[index];
++  if (buf.videoBuffer)
++  {
++    CSteamLinkVideoBuffer* buffer = dynamic_cast<CSteamLinkVideoBuffer*>(buf.videoBuffer);
++    if (buffer != nullptr && buffer->buffer)
++      buffer->stream->WriteData(buffer->buffer.get(), buffer->size);
++
++    ReleaseBuffer(index);
++  }
++}
++
++void CRendererSteamLink::ManageRenderArea()
++{
++  CBaseRenderer::ManageRenderArea();
++
++  RESOLUTION_INFO info = CServiceBroker::GetWinSystem()->GetGfxContext().GetResInfo();
++  if (info.iScreenWidth != info.iWidth)
++  {
++    CalcNormalRenderRect(0, 0, info.iScreenWidth, info.iScreenHeight,
++                         GetAspectRatio() * CDisplaySettings::GetInstance().GetPixelRatio(),
++                         CDisplaySettings::GetInstance().GetZoomAmount(),
++                         CDisplaySettings::GetInstance().GetVerticalShift());
++  }
++}
+diff --git a/xbmc/cores/VideoPlayer/VideoRenderers/HwDecRender/steamlink/RendererSteamLink.h b/xbmc/cores/VideoPlayer/VideoRenderers/HwDecRender/steamlink/RendererSteamLink.h
+new file mode 100644
+index 0000000000..4cd6160816
+--- /dev/null
++++ b/xbmc/cores/VideoPlayer/VideoRenderers/HwDecRender/steamlink/RendererSteamLink.h
+@@ -0,0 +1,64 @@
++/*
++ *  Copyright (C) 2016-2018 Team Kodi
++ *  Copyright (C) 2016-2018 Valve Corporation
++ *  This file is part of Kodi - https://kodi.tv
++ *
++ *  SPDX-License-Identifier: GPL-2.0-or-later
++ *  See LICENSES/README.md for more information.
++ */
++
++#pragma once
++
++#include "cores/VideoPlayer/VideoRenderers/BaseRenderer.h"
++
++namespace KODI
++{
++namespace STEAMLINK
++{
++
++class CRendererSteamLink : public CBaseRenderer
++{
++public:
++  CRendererSteamLink() = default;
++  ~CRendererSteamLink() override;
++
++  // Registration
++  static CBaseRenderer* Create(CVideoBuffer* buffer);
++  static void Register();
++
++  // Implementation of CBaseRenderer
++  bool Configure(const VideoPicture& picture, float fps, unsigned int orientation) override;
++  bool IsConfigured() override { return m_bConfigured; };
++  void AddVideoPicture(const VideoPicture& picture, int index) override;
++  void UnInit() override { }
++  bool Flush(bool saveBuffers) override;
++  void ReleaseBuffer(int idx) override;
++  bool NeedBuffer(int idx) override;
++  bool IsGuiLayer() override { return false; }
++  bool CanFFRW() override { return false; }
++  CRenderInfo GetRenderInfo() override;
++  void Update() override;
++  void RenderUpdate(int index, int index2, bool clear, unsigned int flags, unsigned int alpha) override;
++  bool RenderCapture(CRenderCapture* capture) override { return false; }
++  bool ConfigChanged(const VideoPicture& picture) override { return false; }
++  bool SupportsMultiPassRendering() override { return false; }
++  bool Supports(ERENDERFEATURE feature) override { return false; }
++  bool Supports(ESCALINGMETHOD method) override { return false; }
++
++protected:
++  // Implementation of CBaseRenderer
++  void ManageRenderArea() override;
++
++private:
++  bool m_bConfigured = false;
++
++  struct BUFFER
++  {
++    CVideoBuffer* videoBuffer = nullptr;
++  };
++
++  BUFFER m_buffers[NUM_BUFFERS];
++};
++
++}
++}
+diff --git a/xbmc/cores/VideoPlayer/VideoRenderers/RenderManager.cpp b/xbmc/cores/VideoPlayer/VideoRenderers/RenderManager.cpp
+index 4d8e07b385..a7da5c7880 100644
+--- a/xbmc/cores/VideoPlayer/VideoRenderers/RenderManager.cpp
++++ b/xbmc/cores/VideoPlayer/VideoRenderers/RenderManager.cpp
+@@ -1197,6 +1197,14 @@ void CRenderManager::DiscardBuffer()
+   m_presentevent.notifyAll();
+ }
+ 
++bool CRenderManager::CanFFRW()
++{
++  if (m_pRenderer)
++    return m_pRenderer->CanFFRW();
++
++  return true;
++}
++
+ bool CRenderManager::GetStats(int &lateframes, double &pts, int &queued, int &discard)
+ {
+   CSingleLock lock(m_presentlock);
+diff --git a/xbmc/cores/VideoPlayer/VideoRenderers/RenderManager.h b/xbmc/cores/VideoPlayer/VideoRenderers/RenderManager.h
+index 9ce3411e52..7ff6b7053d 100644
+--- a/xbmc/cores/VideoPlayer/VideoRenderers/RenderManager.h
++++ b/xbmc/cores/VideoPlayer/VideoRenderers/RenderManager.h
+@@ -111,6 +111,8 @@ public:
+   void SetDelay(int delay) { m_videoDelay = delay; };
+   int GetDelay() { return m_videoDelay; };
+ 
++  bool CanFFRW();
++
+   void SetVideoSettings(CVideoSettings settings);
+ 
+ protected:
+diff --git a/xbmc/cores/VideoPlayer/VideoRenderers/VideoShaders/CMakeLists.txt b/xbmc/cores/VideoPlayer/VideoRenderers/VideoShaders/CMakeLists.txt
+index 4987883f8b..dababf2374 100644
+--- a/xbmc/cores/VideoPlayer/VideoRenderers/VideoShaders/CMakeLists.txt
++++ b/xbmc/cores/VideoPlayer/VideoRenderers/VideoShaders/CMakeLists.txt
+@@ -26,7 +26,8 @@ if(OPENGLES_FOUND AND (CORE_PLATFORM_NAME_LC STREQUAL android OR
+                        CORE_PLATFORM_NAME_LC STREQUAL ios OR
+                        CORE_PLATFORM_NAME_LC STREQUAL aml OR
+                        CORE_PLATFORM_NAME_LC STREQUAL gbm OR
+-                       CORE_PLATFORM_NAME_LC STREQUAL wayland))
++                       CORE_PLATFORM_NAME_LC STREQUAL wayland OR
++                       CORE_PLATFORM_NAME_LC STREQUAL steamlink))
+   list(APPEND SOURCES ConversionMatrix.cpp
+                       VideoFilterShaderGLES.cpp
+                       YUV2RGBShaderGLES.cpp)
+diff --git a/xbmc/platform/linux/input/CMakeLists.txt b/xbmc/platform/linux/input/CMakeLists.txt
+index b5a45d03b0..8bfc4f4c24 100644
+--- a/xbmc/platform/linux/input/CMakeLists.txt
++++ b/xbmc/platform/linux/input/CMakeLists.txt
+@@ -6,7 +6,9 @@ if(LIRCCLIENT_FOUND)
+   list(APPEND HEADERS LIRC.h)
+ endif()
+ 
+-if(CORE_PLATFORM_NAME_LC STREQUAL rbpi OR CORE_PLATFORM_NAME_LC STREQUAL gbm OR CORE_PLATFORM_NAME_LC STREQUAL aml)
++if(CORE_PLATFORM_NAME_LC STREQUAL rbpi OR
++   CORE_PLATFORM_NAME_LC STREQUAL gbm OR
++   CORE_PLATFORM_NAME_LC STREQUAL aml)
+   if(LIBINPUT_FOUND)
+     list(APPEND SOURCES LibInputHandler.cpp
+                         LibInputKeyboard.cpp
+diff --git a/xbmc/platform/linux/storage/UDevProvider.cpp b/xbmc/platform/linux/storage/UDevProvider.cpp
+index 554c52c418..a09046b599 100644
+--- a/xbmc/platform/linux/storage/UDevProvider.cpp
++++ b/xbmc/platform/linux/storage/UDevProvider.cpp
+@@ -19,6 +19,9 @@ extern "C" {
+ 
+ static const char *get_mountpoint(const char *devnode)
+ {
++  if (!devnode)
++    return NULL;
++
+   static char buf[4096];
+   const char *delim = " ";
+   const char *mountpoint = NULL;
+diff --git a/xbmc/platform/posix/filesystem/SMBFile.cpp b/xbmc/platform/posix/filesystem/SMBFile.cpp
+index 3f84a17f5e..16afafdb0c 100644
+--- a/xbmc/platform/posix/filesystem/SMBFile.cpp
++++ b/xbmc/platform/posix/filesystem/SMBFile.cpp
+@@ -578,7 +578,7 @@ ssize_t CSMBFile::Write(const void* lpBuf, size_t uiBufSize)
+   // lpBuf can be safely casted to void* since xbmc_write will only read from it.
+   CSingleLock lock(smb);
+ 
+-  return  smbc_write(m_fd, lpBuf, uiBufSize);
++  return  smbc_write(m_fd, const_cast<void*>(lpBuf), uiBufSize);
+ }
+ 
+ bool CSMBFile::Delete(const CURL& url)
+diff --git a/xbmc/utils/EGLUtils.cpp b/xbmc/utils/EGLUtils.cpp
+index 25d93985a6..8953316d2f 100644
+--- a/xbmc/utils/EGLUtils.cpp
++++ b/xbmc/utils/EGLUtils.cpp
+@@ -97,41 +97,11 @@ std::map<EGLenum, const char*> eglErrors =
+ 
+ std::map<EGLint, const char*> eglErrorType =
+ {
+-//! @todo remove when Raspberry Pi updates their EGL headers
+-#if !defined(TARGET_RASPBERRY_PI)
+-  X(EGL_DEBUG_MSG_CRITICAL_KHR),
+-  X(EGL_DEBUG_MSG_ERROR_KHR),
+-  X(EGL_DEBUG_MSG_WARN_KHR),
+-  X(EGL_DEBUG_MSG_INFO_KHR),
+-#endif
+ };
+ #undef X
+ 
+ } // namespace
+ 
+-//! @todo remove when Raspberry Pi updates their EGL headers
+-#if !defined(TARGET_RASPBERRY_PI)
+-void EglErrorCallback(EGLenum error, const char *command, EGLint messageType, EGLLabelKHR threadLabel, EGLLabelKHR objectLabel, const char* message)
+-{
+-  std::string errorStr;
+-  std::string typeStr;
+-
+-  auto eglError = eglErrors.find(error);
+-  if (eglError != eglErrors.end())
+-  {
+-    errorStr = eglError->second;
+-  }
+-
+-  auto eglType = eglErrorType.find(messageType);
+-  if (eglType != eglErrorType.end())
+-  {
+-    typeStr = eglType->second;
+-  }
+-
+-  CLog::Log(LOGDEBUG, "EGL Debugging:\nError: {}\nCommand: {}\nType: {}\nMessage: {}", errorStr, command, typeStr, message);
+-}
+-#endif
+-
+ std::set<std::string> CEGLUtils::GetClientExtensions()
+ {
+   const char* extensions = eglQueryString(EGL_NO_DISPLAY, EGL_EXTENSIONS);
+@@ -189,22 +159,6 @@ CEGLContextUtils::CEGLContextUtils()
+ CEGLContextUtils::CEGLContextUtils(EGLenum platform, std::string const& platformExtension)
+ : m_platform{platform}
+ {
+-//! @todo remove when Raspberry Pi updates their EGL headers
+-#if !defined(TARGET_RASPBERRY_PI)
+-  if (CEGLUtils::HasClientExtension("EGL_KHR_debug"))
+-  {
+-    auto eglDebugMessageControl = CEGLUtils::GetRequiredProcAddress<PFNEGLDEBUGMESSAGECONTROLKHRPROC>("eglDebugMessageControlKHR");
+-
+-    EGLAttrib eglDebugAttribs[] = {EGL_DEBUG_MSG_CRITICAL_KHR, EGL_TRUE,
+-                                   EGL_DEBUG_MSG_ERROR_KHR, EGL_TRUE,
+-                                   EGL_DEBUG_MSG_WARN_KHR, EGL_TRUE,
+-                                   EGL_DEBUG_MSG_INFO_KHR, EGL_TRUE,
+-                                   EGL_NONE};
+-
+-    eglDebugMessageControl(EglErrorCallback, eglDebugAttribs);
+-  }
+-#endif
+-
+   m_platformSupported = CEGLUtils::HasClientExtension("EGL_EXT_platform_base") && CEGLUtils::HasClientExtension(platformExtension);
+ }
+ 
+@@ -404,15 +358,6 @@ bool CEGLContextUtils::CreateContext(CEGLAttributesVec contextAttribs)
+   if (CEGLUtils::HasExtension(m_eglDisplay, "EGL_IMG_context_priority"))
+     contextAttribs.Add({{EGL_CONTEXT_PRIORITY_LEVEL_IMG, EGL_CONTEXT_PRIORITY_HIGH_IMG}});
+ 
+-//! @todo remove when Raspberry Pi updates their EGL headers
+-#if !defined(TARGET_RASPBERRY_PI)
+-  if (CEGLUtils::HasExtension(m_eglDisplay, "EGL_KHR_create_context") &&
+-      CServiceBroker::GetSettingsComponent()->GetAdvancedSettings()->m_openGlDebugging)
+-  {
+-    contextAttribs.Add({{EGL_CONTEXT_FLAGS_KHR, EGL_CONTEXT_OPENGL_DEBUG_BIT_KHR}});
+-  }
+-#endif
+-
+   m_eglContext = eglCreateContext(m_eglDisplay, eglConfig,
+                                   EGL_NO_CONTEXT, contextAttribs.Get());
+ 
+diff --git a/xbmc/windowing/GraphicContext.h b/xbmc/windowing/GraphicContext.h
+index f7c308e5db..05d48b3032 100644
+--- a/xbmc/windowing/GraphicContext.h
++++ b/xbmc/windowing/GraphicContext.h
+@@ -93,7 +93,7 @@ public:
+   bool IsCalibrating() const;
+   void SetCalibrating(bool bOnOff);
+   void ResetOverscan(RESOLUTION res, OVERSCAN &overscan);
+-  void ResetOverscan(RESOLUTION_INFO &resinfo);
++  static void ResetOverscan(RESOLUTION_INFO &resinfo);
+   void ResetScreenParameters(RESOLUTION res);
+   void CaptureStateBlock();
+   void ApplyStateBlock();
+diff --git a/xbmc/windowing/steamlink/CMakeLists.txt b/xbmc/windowing/steamlink/CMakeLists.txt
+new file mode 100644
+index 0000000000..e5409622b2
+--- /dev/null
++++ b/xbmc/windowing/steamlink/CMakeLists.txt
+@@ -0,0 +1,18 @@
++set(SOURCES GLContextEGL.cpp
++            SteamLinkPerformance.cpp
++            WinEventsSteamLink.cpp
++            WinSystemSteamLink.cpp
++)
++
++set(HEADERS GLContextEGL.h
++            SteamLinkPerformance.h
++            WinEventsSteamLink.h
++            WinSystemSteamLink.h
++)
++
++if(OPENGLES_FOUND)
++  list(APPEND SOURCES WinSystemSteamLinkGLESContext.cpp)
++  list(APPEND HEADERS WinSystemSteamLinkGLESContext.h)
++endif()
++
++core_add_library(windowing_steamlink)
+diff --git a/xbmc/windowing/steamlink/GLContextEGL.cpp b/xbmc/windowing/steamlink/GLContextEGL.cpp
+new file mode 100644
+index 0000000000..50cec925b9
+--- /dev/null
++++ b/xbmc/windowing/steamlink/GLContextEGL.cpp
+@@ -0,0 +1,221 @@
++/*
++ *  Copyright (C) 2018 Team Kodi
++ *  This file is part of Kodi - https://kodi.tv
++ *
++ *  SPDX-License-Identifier: GPL-2.0-or-later
++ *  See LICENSES/README.md for more information.
++ */
++
++#include "GLContextEGL.h"
++#include "guilib/IDirtyRegionSolver.h"
++#include "settings/AdvancedSettings.h"
++#include "settings/SettingsComponent.h"
++#include "utils/log.h"
++#include "ServiceBroker.h"
++
++using namespace KODI;
++using namespace STEAMLINK;
++
++CGLContextEGL::CGLContextEGL() :
++  m_eglDisplay(EGL_NO_DISPLAY),
++  m_eglSurface(EGL_NO_SURFACE),
++  m_eglContext(EGL_NO_CONTEXT),
++  m_eglConfig(nullptr)
++{
++}
++
++CGLContextEGL::~CGLContextEGL()
++{
++  Destroy();
++}
++
++bool CGLContextEGL::CreateDisplay(EGLDisplay display,
++                                  EGLint renderable_type,
++                                  EGLint rendering_api)
++{
++  EGLint neglconfigs = 0;
++  int major, minor;
++
++  EGLint surface_type = EGL_WINDOW_BIT;
++  // for the non-trivial dirty region modes, we need the EGL buffer to be preserved across updates
++  if (CServiceBroker::GetSettingsComponent()->GetAdvancedSettings()->m_guiAlgorithmDirtyRegions == DIRTYREGION_SOLVER_COST_REDUCTION ||
++      CServiceBroker::GetSettingsComponent()->GetAdvancedSettings()->m_guiAlgorithmDirtyRegions == DIRTYREGION_SOLVER_UNION)
++    surface_type |= EGL_SWAP_BEHAVIOR_PRESERVED_BIT;
++
++  EGLint attribs[] =
++  {
++    EGL_RED_SIZE,        8,
++    EGL_GREEN_SIZE,      8,
++    EGL_BLUE_SIZE,       8,
++    EGL_ALPHA_SIZE,      8,
++    EGL_DEPTH_SIZE,     16,
++    EGL_STENCIL_SIZE,    0,
++    EGL_SAMPLE_BUFFERS,  0,
++    EGL_SAMPLES,         0,
++    EGL_SURFACE_TYPE,    surface_type,
++    EGL_RENDERABLE_TYPE, renderable_type,
++    EGL_NONE
++  };
++
++  if (m_eglDisplay == EGL_NO_DISPLAY)
++  {
++    m_eglDisplay = eglGetDisplay((EGLNativeDisplayType)display);
++  }
++
++  if (m_eglDisplay == EGL_NO_DISPLAY)
++  {
++    CLog::Log(LOGERROR, "failed to get EGL display");
++    return false;
++  }
++
++  if (!eglInitialize(m_eglDisplay, &major, &minor))
++  {
++    CLog::Log(LOGERROR, "failed to initialize EGL display");
++    return false;
++  }
++
++  eglBindAPI(rendering_api);
++
++  if (!eglChooseConfig(m_eglDisplay, attribs,
++                       &m_eglConfig, 1, &neglconfigs))
++  {
++    CLog::Log(LOGERROR, "Failed to query number of EGL configs");
++    return false;
++  }
++
++  if (neglconfigs <= 0)
++  {
++    CLog::Log(LOGERROR, "No suitable EGL configs found");
++    return false;
++  }
++
++  return true;
++}
++
++bool CGLContextEGL::CreateContext()
++{
++  int client_version = 2;
++
++  const EGLint context_attribs[] = {
++    EGL_CONTEXT_CLIENT_VERSION, client_version, EGL_NONE
++  };
++
++  if (m_eglContext == EGL_NO_CONTEXT)
++  {
++    m_eglContext = eglCreateContext(m_eglDisplay, m_eglConfig,
++                                    EGL_NO_CONTEXT, context_attribs);
++  }
++
++  if (m_eglContext == EGL_NO_CONTEXT)
++  {
++    CLog::Log(LOGERROR, "failed to create EGL context");
++    return false;
++  }
++
++  return true;
++}
++
++bool CGLContextEGL::BindContext()
++{
++  if (!eglMakeCurrent(m_eglDisplay, m_eglSurface,
++                      m_eglSurface, m_eglContext))
++  {
++    CLog::Log(LOGERROR, "Failed to make context current %p %p %p",
++                         m_eglDisplay, m_eglSurface, m_eglContext);
++    return false;
++  }
++
++  return true;
++}
++
++bool CGLContextEGL::SurfaceAttrib()
++{
++  // for the non-trivial dirty region modes, we need the EGL buffer to be preserved across updates
++  if (CServiceBroker::GetSettingsComponent()->GetAdvancedSettings()->m_guiAlgorithmDirtyRegions == DIRTYREGION_SOLVER_COST_REDUCTION ||
++      CServiceBroker::GetSettingsComponent()->GetAdvancedSettings()->m_guiAlgorithmDirtyRegions == DIRTYREGION_SOLVER_UNION)
++  {
++    if ((m_eglDisplay == EGL_NO_DISPLAY) || (m_eglSurface == EGL_NO_SURFACE))
++    {
++      return false;
++    }
++
++    if (!eglSurfaceAttrib(m_eglDisplay, m_eglSurface, EGL_SWAP_BEHAVIOR, EGL_BUFFER_PRESERVED))
++    {
++      CLog::Log(LOGDEBUG, "%s: Could not set EGL_SWAP_BEHAVIOR",__FUNCTION__);
++    }
++  }
++
++  return true;
++}
++
++bool CGLContextEGL::CreateSurface(EGLNativeWindowType surface)
++{
++  m_eglSurface = eglCreateWindowSurface(m_eglDisplay,
++                                        m_eglConfig,
++                                        surface,
++                                        nullptr);
++
++  if (m_eglSurface == EGL_NO_SURFACE)
++  {
++    CLog::Log(LOGERROR, "failed to create EGL window surface %d", eglGetError());
++    return false;
++  }
++
++  return true;
++}
++
++void CGLContextEGL::Destroy()
++{
++  if (m_eglContext != EGL_NO_CONTEXT)
++  {
++    eglDestroyContext(m_eglDisplay, m_eglContext);
++    eglMakeCurrent(m_eglDisplay, EGL_NO_SURFACE, EGL_NO_SURFACE, EGL_NO_CONTEXT);
++    m_eglContext = EGL_NO_CONTEXT;
++  }
++
++  if (m_eglSurface != EGL_NO_SURFACE)
++  {
++    eglDestroySurface(m_eglDisplay, m_eglSurface);
++    m_eglSurface = EGL_NO_SURFACE;
++  }
++
++  if (m_eglDisplay != EGL_NO_DISPLAY)
++  {
++    eglTerminate(m_eglDisplay);
++    m_eglDisplay = EGL_NO_DISPLAY;
++  }
++}
++
++void CGLContextEGL::Detach()
++{
++  if (m_eglContext != EGL_NO_CONTEXT)
++  {
++    eglMakeCurrent(m_eglDisplay, EGL_NO_SURFACE, EGL_NO_SURFACE, EGL_NO_CONTEXT);
++  }
++
++  if (m_eglSurface != EGL_NO_SURFACE)
++  {
++    eglDestroySurface(m_eglDisplay, m_eglSurface);
++    m_eglSurface = EGL_NO_SURFACE;
++  }
++}
++
++bool CGLContextEGL::SetVSync(bool enable)
++{
++  if (!eglSwapInterval(m_eglDisplay, enable))
++  {
++    return false;
++  }
++
++  return true;
++}
++
++void CGLContextEGL::SwapBuffers()
++{
++  if (m_eglDisplay == EGL_NO_DISPLAY || m_eglSurface == EGL_NO_SURFACE)
++  {
++    return;
++  }
++
++  eglSwapBuffers(m_eglDisplay, m_eglSurface);
++}
+diff --git a/xbmc/windowing/steamlink/GLContextEGL.h b/xbmc/windowing/steamlink/GLContextEGL.h
+new file mode 100644
+index 0000000000..c8c2983a6b
+--- /dev/null
++++ b/xbmc/windowing/steamlink/GLContextEGL.h
+@@ -0,0 +1,44 @@
++/*
++ *  Copyright (C) 2018 Team Kodi
++ *  This file is part of Kodi - https://kodi.tv
++ *
++ *  SPDX-License-Identifier: GPL-2.0-or-later
++ *  See LICENSES/README.md for more information.
++ */
++
++#pragma once
++
++#include "EGL/egl.h"
++
++namespace KODI
++{
++namespace STEAMLINK
++{
++
++class CGLContextEGL
++{
++public:
++  CGLContextEGL();
++  virtual ~CGLContextEGL();
++
++  bool CreateDisplay(EGLDisplay display,
++                     EGLint renderable_type,
++                     EGLint rendering_api);
++
++  bool CreateSurface(EGLNativeWindowType surface);
++  bool CreateContext();
++  bool BindContext();
++  bool SurfaceAttrib();
++  void Destroy();
++  void Detach();
++  bool SetVSync(bool enable);
++  void SwapBuffers();
++
++  EGLDisplay m_eglDisplay;
++  EGLSurface m_eglSurface;
++  EGLContext m_eglContext;
++  EGLConfig m_eglConfig;
++};
++
++}
++}
+diff --git a/xbmc/windowing/steamlink/SteamLinkPerformance.cpp b/xbmc/windowing/steamlink/SteamLinkPerformance.cpp
+new file mode 100644
+index 0000000000..b3557e30bf
+--- /dev/null
++++ b/xbmc/windowing/steamlink/SteamLinkPerformance.cpp
+@@ -0,0 +1,75 @@
++/*
++ *  Copyright (C) 2018 Team Kodi
++ *  This file is part of Kodi - https://kodi.tv
++ *
++ *  SPDX-License-Identifier: GPL-2.0-or-later
++ *  See LICENSES/README.md for more information.
++ */
++
++#include "SteamLinkPerformance.h"
++#include "guilib/guiinfo/GUIInfoProviders.h"
++#include "guilib/guiinfo/SystemGUIInfo.h"
++#include "guilib/GUIComponent.h"
++#include "platform/linux/LinuxResourceCounter.h"
++#include "platform/linux/XMemUtils.h"
++#include "utils/CPUInfo.h"
++#include "utils/log.h"
++#include "utils/StringUtils.h"
++#include "CompileInfo.h"
++#include "GUIInfoManager.h"
++#include "ServiceBroker.h"
++
++using namespace KODI;
++using namespace STEAMLINK;
++
++CSteamLinkPerformance::CSteamLinkPerformance() :
++  CThread("SteamLinkPerformance"),
++  m_resourceCounter(new CLinuxResourceCounter)
++{
++  Create();
++}
++
++CSteamLinkPerformance::~CSteamLinkPerformance()
++{
++  StopThread(true);
++}
++
++void CSteamLinkPerformance::Process()
++{
++  while (!m_bStop)
++  {
++    g_cpuInfo.getUsedPercentage(); // must call it to recalculate pct values
++
++    MEMORYSTATUSEX stat;
++    stat.dwLength = sizeof(MEMORYSTATUSEX);
++    GlobalMemoryStatusEx(&stat);
++
++    CGUIComponent* gui = CServiceBroker::GetGUI();
++    if (gui != nullptr)
++    {
++      float fps = gui->GetInfoManager().GetInfoProviders().GetSystemInfoProvider().GetFPS();
++      CLog::Log(LOGDEBUG, "MEM: %" PRIu64"/%" PRIu64" KB - FPS: %2.1f fps",
++          stat.ullAvailPhys/1024,
++          stat.ullTotalPhys/1024,
++          fps);
++    }
++    else
++    {
++      CLog::Log(LOGDEBUG, "MEM: %" PRIu64"/%" PRIu64" KB",
++          stat.ullAvailPhys/1024,
++          stat.ullTotalPhys/1024);
++    }
++
++    std::string strCores = g_cpuInfo.GetCoresUsageString();
++    std::string ucAppName = CCompileInfo::GetAppName();
++    StringUtils::ToUpper(ucAppName);
++    double dCPU = m_resourceCounter->GetCPUUsage();
++
++    CLog::Log(LOGDEBUG, "CPU: %s (%s: %4.2f%%)",
++        strCores.c_str(),
++        ucAppName.c_str(),
++        dCPU);
++
++    Sleep(1000);
++  }
++}
+diff --git a/xbmc/windowing/steamlink/SteamLinkPerformance.h b/xbmc/windowing/steamlink/SteamLinkPerformance.h
+new file mode 100644
+index 0000000000..51da77e32c
+--- /dev/null
++++ b/xbmc/windowing/steamlink/SteamLinkPerformance.h
+@@ -0,0 +1,37 @@
++/*
++ *  Copyright (C) 2018 Team Kodi
++ *  This file is part of Kodi - https://kodi.tv
++ *
++ *  SPDX-License-Identifier: GPL-2.0-or-later
++ *  See LICENSES/README.md for more information.
++ */
++
++#pragma once
++
++#include "threads/Thread.h"
++
++#include <memory>
++
++class CLinuxResourceCounter;
++
++namespace KODI
++{
++namespace STEAMLINK
++{
++
++class CSteamLinkPerformance : protected CThread
++{
++public:
++  CSteamLinkPerformance();
++  ~CSteamLinkPerformance() override;
++
++protected:
++  // Implementation of CThread
++  void Process() override;
++
++private:
++  std::unique_ptr<CLinuxResourceCounter> m_resourceCounter;
++};
++
++}
++}
+diff --git a/xbmc/windowing/steamlink/WinEventsSteamLink.cpp b/xbmc/windowing/steamlink/WinEventsSteamLink.cpp
+new file mode 100644
+index 0000000000..ff15b57600
+--- /dev/null
++++ b/xbmc/windowing/steamlink/WinEventsSteamLink.cpp
+@@ -0,0 +1,25 @@
++/*
++ *  Copyright (C) 2018 Team Kodi
++ *  This file is part of Kodi - https://kodi.tv
++ *
++ *  SPDX-License-Identifier: GPL-2.0-or-later
++ *  See LICENSES/README.md for more information.
++ */
++
++#include "WinEventsSteamLink.h"
++
++#include <SDL2/SDL_events.h>
++
++using namespace KODI;
++using namespace STEAMLINK;
++
++bool CWinEventsSteamLink::MessagePump()
++{
++  bool bReturn = false;
++
++  SDL_Event event;
++  while (SDL_PollEvent(&event))
++    bReturn |= true;
++
++  return bReturn;
++}
+diff --git a/xbmc/windowing/steamlink/WinEventsSteamLink.h b/xbmc/windowing/steamlink/WinEventsSteamLink.h
+new file mode 100644
+index 0000000000..f678a482e6
+--- /dev/null
++++ b/xbmc/windowing/steamlink/WinEventsSteamLink.h
+@@ -0,0 +1,26 @@
++/*
++ *  Copyright (C) 2018 Team Kodi
++ *  This file is part of Kodi - https://kodi.tv
++ *
++ *  SPDX-License-Identifier: GPL-2.0-or-later
++ *  See LICENSES/README.md for more information.
++ */
++
++#pragma once
++
++#include "windowing/WinEvents.h"
++
++namespace KODI
++{
++namespace STEAMLINK
++{
++
++class CWinEventsSteamLink : public IWinEvents
++{
++public:
++  // Implementation of IWinEvents
++  bool MessagePump() override;
++};
++
++}
++}
+diff --git a/xbmc/windowing/steamlink/WinSystemSteamLink.cpp b/xbmc/windowing/steamlink/WinSystemSteamLink.cpp
+new file mode 100644
+index 0000000000..87b4ae4098
+--- /dev/null
++++ b/xbmc/windowing/steamlink/WinSystemSteamLink.cpp
+@@ -0,0 +1,148 @@
++/*
++ *  Copyright (C) 2018 Team Kodi
++ *  This file is part of Kodi - https://kodi.tv
++ *
++ *  SPDX-License-Identifier: GPL-2.0-or-later
++ *  See LICENSES/README.md for more information.
++ */
++
++#include "WinSystemSteamLink.h"
++#include "SteamLinkPerformance.h"
++#include "WinEventsSteamLink.h"
++#include "cores/AudioEngine/Sinks/steamlink/AESinkSteamLink.h"
++#include "platform/linux/powermanagement/LinuxPowerSyscall.h"
++#include "settings/DisplaySettings.h"
++#include "utils/log.h"
++#include "windowing/GraphicContext.h"
++
++#include <algorithm>
++
++using namespace KODI;
++using namespace STEAMLINK;
++
++CWinSystemSteamLink::CWinSystemSteamLink()
++{
++  // Initialize AudioEngine
++  CAESinkSteamLink::Register();
++
++  // Initialize power management
++  CLinuxPowerSyscall::Register();
++}
++
++CWinSystemSteamLink::~CWinSystemSteamLink() = default;
++
++bool CWinSystemSteamLink::InitWindowSystem()
++{
++  if (SDL_InitSubSystem(SDL_INIT_VIDEO) < 0)
++  {
++    CLog::Log(LOGERROR, "Unable to initialize SDL: %s", SDL_GetError());
++    return false;
++  }
++
++  SDL_DisplayMode mode;
++  SDL_GetDesktopDisplayMode(0, &mode);
++
++  m_window = SDL_CreateWindow("SDL",
++                              SDL_WINDOWPOS_CENTERED,
++                              SDL_WINDOWPOS_CENTERED,
++                              mode.w,
++                              mode.h,
++                              SDL_WINDOW_FULLSCREEN | SDL_WINDOW_HIDDEN);
++  if (m_window == nullptr)
++    return false;
++
++  SDL_VERSION(&m_windowInfo.version);
++
++  if (SDL_GetWindowWMInfo(m_window, &m_windowInfo) < 0 || m_windowInfo.subsystem != SDL_SYSWM_VIVANTE)
++  {
++    SDL_DestroyWindow(m_window);
++    m_window = nullptr;
++  }
++
++  m_nativeDisplay = m_windowInfo.info.vivante.display;
++
++  CLog::Log(LOGDEBUG, "STEAMLINK: Initialized SDL window");
++
++  m_winEvents.reset(new CWinEventsSteamLink());
++
++  // Initialize performance statistics
++  //m_performance.reset(new CSteamLinkPerformance); //! @todo
++
++  return CWinSystemBase::InitWindowSystem();
++}
++
++bool CWinSystemSteamLink::DestroyWindowSystem()
++{
++  // Deinitialize performance statistics
++  m_performance.reset();
++
++  m_winEvents.reset();
++
++  m_nativeWindow = nullptr;
++  m_nativeDisplay = nullptr;
++
++  if (m_window != nullptr)
++  {
++    SDL_DestroyWindow(m_window);
++    m_window = nullptr;
++  }
++
++  SDL_QuitSubSystem(SDL_INIT_VIDEO);
++
++  CLog::Log(LOGDEBUG, "STEAMLINK: Deinitialized SDL window");
++
++  return true;
++}
++
++bool CWinSystemSteamLink::CreateNewWindow(const std::string& name, bool fullScreen, RESOLUTION_INFO& res)
++{
++  SDL_ShowWindow(m_window);
++
++  m_nativeWindow = m_windowInfo.info.vivante.window;
++
++  CLog::Log(LOGDEBUG, "STEAMLINK: Created SDL window");
++
++  return true;
++}
++
++bool CWinSystemSteamLink::DestroyWindow()
++{
++  m_nativeWindow = nullptr;
++
++  SDL_HideWindow(m_window);
++
++  CLog::Log(LOGDEBUG, "STEAMLINK: Destroyed SDL window");
++
++  return true;
++}
++
++void CWinSystemSteamLink::UpdateResolutions()
++{
++  CWinSystemBase::UpdateResolutions();
++
++  int width = 0;
++  int height = 0;
++  SDL_GetWindowSize(m_window, &width, &height);
++
++  RESOLUTION_INFO& desktopRes = CDisplaySettings::GetInstance().GetResolutionInfo(RES_DESKTOP);
++  UpdateDesktopResolution(desktopRes, width, height, 59.94, D3DPRESENTFLAG_PROGRESSIVE);
++}
++
++void CWinSystemSteamLink::Register(IDispResource *resource)
++{
++  CSingleLock lock(m_resourceSection);
++
++  m_resources.push_back(resource);
++}
++
++void CWinSystemSteamLink::Unregister(IDispResource *resource)
++{
++  CSingleLock lock(m_resourceSection);
++
++  m_resources.erase(std::remove(m_resources.begin(), m_resources.end(), resource), m_resources.end());
++}
++
++bool CWinSystemSteamLink::MessagePump()
++{
++  return m_winEvents->MessagePump();
++}
+diff --git a/xbmc/windowing/steamlink/WinSystemSteamLink.h b/xbmc/windowing/steamlink/WinSystemSteamLink.h
+new file mode 100644
+index 0000000000..de6c55c96b
+--- /dev/null
++++ b/xbmc/windowing/steamlink/WinSystemSteamLink.h
+@@ -0,0 +1,68 @@
++/*
++ *  Copyright (C) 2018 Team Kodi
++ *  This file is part of Kodi - https://kodi.tv
++ *
++ *  SPDX-License-Identifier: GPL-2.0-or-later
++ *  See LICENSES/README.md for more information.
++ */
++
++#pragma once
++
++#include "GLContextEGL.h"
++#include "threads/CriticalSection.h"
++#include "windowing/WinSystem.h"
++
++#include <EGL/egl.h>
++#include <SDL2/SDL.h>
++#include <SDL2/SDL_syswm.h>
++
++#include <vector>
++
++class IDispResource;
++
++namespace KODI
++{
++namespace STEAMLINK
++{
++
++class CSteamLinkPerformance;
++
++class CWinSystemSteamLink : public CWinSystemBase
++{
++public:
++  CWinSystemSteamLink();
++  ~CWinSystemSteamLink() override;
++
++  // implementation of CWinSystemBase
++  bool InitWindowSystem() override;
++  bool DestroyWindowSystem() override;
++  bool CreateNewWindow(const std::string& name, bool fullScreen, RESOLUTION_INFO& res) override;
++  bool DestroyWindow() override;
++  bool ResizeWindow(int newWidth, int newHeight, int newLeft, int newTop) override { return true; }
++  bool SetFullScreen(bool fullScreen, RESOLUTION_INFO& res, bool blankOtherDisplays) override { return true; }
++  bool Hide() override { return true; }
++  bool Show(bool raise = true) override { return true; }
++  void UpdateResolutions() override;
++  void Register(IDispResource *resource) override;
++  void Unregister(IDispResource *resource) override;
++  bool MessagePump() override;
++
++protected:
++  // EGL properties
++  EGLDisplay m_nativeDisplay = nullptr;
++  EGLNativeWindowType m_nativeWindow = nullptr;
++
++  // SDL properties
++  SDL_Window *m_window = nullptr;
++  SDL_SysWMinfo m_windowInfo;
++
++  // Display resources
++  CCriticalSection m_resourceSection;
++  std::vector<IDispResource*>  m_resources;
++
++  // Performance statistics
++  std::unique_ptr<CSteamLinkPerformance> m_performance;
++};
++
++}
++}
+diff --git a/xbmc/windowing/steamlink/WinSystemSteamLinkGLESContext.cpp b/xbmc/windowing/steamlink/WinSystemSteamLinkGLESContext.cpp
+new file mode 100644
+index 0000000000..112f501d1b
+--- /dev/null
++++ b/xbmc/windowing/steamlink/WinSystemSteamLinkGLESContext.cpp
+@@ -0,0 +1,122 @@
++/*
++ *  Copyright (C) 2018 Team Kodi
++ *  This file is part of Kodi - https://kodi.tv
++ *
++ *  SPDX-License-Identifier: GPL-2.0-or-later
++ *  See LICENSES/README.md for more information.
++ */
++
++#include "WinSystemSteamLinkGLESContext.h"
++#include "cores/RetroPlayer/process/steamlink/RPProcessInfoSteamLink.h"
++#include "cores/RetroPlayer/rendering/VideoRenderers/RPRendererOpenGLES.h"
++#include "cores/VideoPlayer/DVDCodecs/Video/steamlink/SteamLinkVideo.h"
++#include "cores/VideoPlayer/VideoRenderers/HwDecRender/steamlink/RendererSteamLink.h"
++#include "cores/VideoPlayer/VideoRenderers/LinuxRendererGLES.h"
++#include "cores/VideoPlayer/VideoRenderers/RenderFactory.h"
++#include "utils/log.h"
++
++using namespace KODI;
++using namespace STEAMLINK;
++
++std::unique_ptr<CWinSystemBase> CWinSystemBase::CreateWinSystem()
++{
++  std::unique_ptr<CWinSystemBase> winSystem(new CWinSystemSteamLinkGLESContext);
++  return winSystem;
++}
++
++bool CWinSystemSteamLinkGLESContext::InitWindowSystem()
++{
++  if (!CWinSystemSteamLink::InitWindowSystem())
++    return false;
++
++  if (!m_pGLContext.CreateDisplay(m_nativeDisplay,
++                                  EGL_OPENGL_ES2_BIT,
++                                  EGL_OPENGL_ES_API))
++  {
++    return false;
++  }
++
++  // Register VideoPlayer
++  CLinuxRendererGLES::Register();
++  CSteamLinkVideo::Register();
++  CRendererSteamLink::Register();
++
++  // Register RetroPlayer
++  CRPProcessInfoSteamLink::Register();
++  CRPProcessInfoSteamLink::RegisterRendererFactory(new RETRO::CRendererFactoryOpenGLES);
++
++  return true;
++}
++
++bool CWinSystemSteamLinkGLESContext::DestroyWindowSystem()
++{
++  //! @todo Deinitialize RetroPlayer
++
++  // Deinitialize VideoPlayer
++  VIDEOPLAYER::CRendererFactory::ClearRenderer();
++
++  m_pGLContext.Destroy();
++
++  return CWinSystemSteamLink::DestroyWindowSystem();
++}
++
++bool CWinSystemSteamLinkGLESContext::CreateNewWindow(const std::string& name,
++                                                     bool fullScreen,
++                                                     RESOLUTION_INFO& res)
++{
++  m_pGLContext.Detach();
++
++  if (!CWinSystemSteamLink::DestroyWindow())
++    return false;
++
++  if (!CWinSystemSteamLink::CreateNewWindow(name, fullScreen, res))
++    return false;
++
++  if (!m_pGLContext.CreateSurface(m_nativeWindow))
++    return false;
++
++  if (!m_pGLContext.CreateContext())
++    return false;
++
++  if (!m_pGLContext.BindContext())
++    return false;
++
++  if (!m_pGLContext.SurfaceAttrib())
++    return false;
++
++  return true;
++}
++
++bool CWinSystemSteamLinkGLESContext::SetFullScreen(bool fullScreen, RESOLUTION_INFO& res, bool blankOtherDisplays)
++{
++  CWinSystemSteamLink::SetFullScreen(fullScreen, res, blankOtherDisplays);
++  CRenderSystemGLES::ResetRenderSystem(res.iWidth, res.iHeight);
++
++  return true;
++}
++
++void CWinSystemSteamLinkGLESContext::PresentRenderImpl(bool rendered)
++{
++  if (rendered)
++    m_pGLContext.SwapBuffers();
++}
++
++EGLDisplay CWinSystemSteamLinkGLESContext::GetEGLDisplay() const
++{
++  return m_pGLContext.m_eglDisplay;
++}
++
++EGLSurface CWinSystemSteamLinkGLESContext::GetEGLSurface() const
++{
++  return m_pGLContext.m_eglSurface;
++}
++
++EGLContext CWinSystemSteamLinkGLESContext::GetEGLContext() const
++{
++  return m_pGLContext.m_eglContext;
++}
++
++EGLConfig  CWinSystemSteamLinkGLESContext::GetEGLConfig() const
++{
++  return m_pGLContext.m_eglConfig;
++}
+diff --git a/xbmc/windowing/steamlink/WinSystemSteamLinkGLESContext.h b/xbmc/windowing/steamlink/WinSystemSteamLinkGLESContext.h
+new file mode 100644
+index 0000000000..de3064b4ba
+--- /dev/null
++++ b/xbmc/windowing/steamlink/WinSystemSteamLinkGLESContext.h
+@@ -0,0 +1,51 @@
++/*
++ *  Copyright (C) 2018 Team Kodi
++ *  This file is part of Kodi - https://kodi.tv
++ *
++ *  SPDX-License-Identifier: GPL-2.0-or-later
++ *  See LICENSES/README.md for more information.
++ */
++
++#pragma once
++
++#include "GLContextEGL.h"
++#include "WinSystemSteamLink.h"
++#include "rendering/gles/RenderSystemGLES.h"
++
++#include <memory>
++
++namespace KODI
++{
++namespace STEAMLINK
++{
++
++class CWinSystemSteamLinkGLESContext : public CWinSystemSteamLink,
++                                       public CRenderSystemGLES
++{
++public:
++  CWinSystemSteamLinkGLESContext() = default;
++  virtual ~CWinSystemSteamLinkGLESContext() = default;
++
++  // implementation of CWinSystemBase via CWinSystemSteamLink
++  CRenderSystemBase *GetRenderSystem() override { return this; }
++  bool InitWindowSystem() override;
++  bool DestroyWindowSystem() override;
++  bool CreateNewWindow(const std::string& name, bool fullScreen, RESOLUTION_INFO& res) override;
++  bool SetFullScreen(bool fullScreen, RESOLUTION_INFO& res, bool blankOtherDisplays) override;
++
++  EGLDisplay GetEGLDisplay() const;
++  EGLSurface GetEGLSurface() const;
++  EGLContext GetEGLContext() const;
++  EGLConfig  GetEGLConfig() const;
++
++protected:
++  // implementation of CWinSystemBase via CWinSystemSteamLink
++  void SetVSyncImpl(bool enable) override { }
++  void PresentRenderImpl(bool rendered) override;
++
++private:
++  CGLContextEGL m_pGLContext;
++};
++
++}
++}
